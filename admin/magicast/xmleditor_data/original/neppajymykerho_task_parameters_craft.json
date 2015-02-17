@@ -1,0 +1,94 @@
+[
+	{
+		"label": "Sivu 1: Kuva valmiista askartelusta",
+		"type": "node",
+		"data":
+		{
+			"name": "sivu",
+			"content":
+			[
+				{
+					"type": "asset",
+					"data": {}
+				}
+			]
+		}
+	},
+	
+	
+	
+		{
+		
+		"type": "node",
+		"data":
+		{
+			"name": "sivu",
+			"content":
+			[
+				
+				{
+					"label": "Sivu2 : Tarvikelista",
+					"type": "list",
+					"data": 
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data": 
+								{
+									"name": "vaihe",
+									"content": 
+									[
+										{
+											"type": "text",
+											"data": {}
+										}
+									]				
+								}
+							}
+						]
+					}
+				}
+				
+			]
+		}
+	},
+	{
+		
+		"type": "node",
+		"data":
+		{
+			"name": "sivu",
+			"content":
+			[
+				
+				{
+					"label": "Sivu3 : Ohjeet vaiheittain",
+					"type": "list",
+					"data": 
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data": 
+								{
+									"name": "vaihe",
+									"content": 
+									[
+										{
+											"type": "text",
+											"data": {}
+										}
+									]				
+								}
+							}
+						]
+					}
+				}
+				
+			]
+		}
+	}
+]

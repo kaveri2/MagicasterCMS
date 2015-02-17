@@ -1,0 +1,19 @@
+.objectmanager {
+	box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.55), -1px -1px 1px rgba(0, 0, 0, 0.20);
+	background: rgba(0, 0, 0, 0.06);
+	color: #d47525;
+	font-weight: 700;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 10pt;
+}
+
+.objectmanager a.object-button {
+	color: #937845;
+	margin-left: 5px;
+	font-size: 9pt;
+}
+
+.objectmanager_dialog h3 {
+	color: black;
+}

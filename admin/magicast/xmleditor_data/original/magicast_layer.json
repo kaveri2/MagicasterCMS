@@ -1,0 +1,406 @@
+[
+	{
+		"label": "ID",
+		"type": "attribute",
+		"data":
+		{
+			"name": "id",
+			"content": [ { "type": "text" } ]
+		}
+	},
+	{
+		"label": "Jyrää samanniminen kerros?",
+		"type": "node",
+		"data":
+		{
+			"name": "overwrite",
+			"content":
+			[
+				{
+					"type": "boolean",
+					"data":
+					{
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Luodaanko automaattisesti?",
+		"type": "node", 
+		"data":
+		{
+			"name": "autoCreate",
+			"content":
+			[
+				{
+					"type": "boolean",
+					"data":
+					{
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Lähettääkö hiiren tapahtumat (onPress, onRelease, onRollOver, onRollOut, onDragOver, onDragOut)?",
+		"type": "node", 
+		"data":
+		{
+			"name": "invokeMouseEvents",
+			"content":
+			[
+				{
+					"type": "boolean",
+					"data":
+					{
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Ohjeääni, kun hiiren vie päälle",
+		"type": "node", 
+		"data":
+		{
+			"name": "guideSoundAsset",
+			"content":
+			[
+				{
+					"type": "asset",
+					"data":
+					{
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Kursori muuttuu kädeksi, kun hiiren vie päälle? (Varoitus! Tämä estää swf-tiedostossa olevien nappien toimimisen)",
+		"type": "node", 
+		"data":
+		{
+			"name": "useHandCursor",
+			"content":
+			[
+				{
+					"type": "boolean",
+					"data":
+					{
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Yleiset ominaisuudet",
+		"type": "list", 
+		"data":
+		{
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "property",
+						"content":
+						[
+							{
+								"label": "Ominaisuus",
+								"type": "attribute",
+								"data":
+								{
+									"name": "name",
+									"content": [ 
+										{ "type": "text", "data": { "options": [
+											{"label": "X (prosentteina)", "value": "_REL_x"},
+											{"label": "Y (prosentteina)", "value": "_REL_y"},
+											{"label": "X (pikseleinä)", "value": "_ABS_x"},
+											{"label": "Y (pikseleinä)", "value": "_ABS_y"},
+											{"label": "X (prosentteina suhteessa omaan kokoon)", "value": "_SELF_REL_x"},
+											{"label": "Y (prosentteina suhteessa omaan kokoon)", "value": "_SELF_REL_y"},
+											{"label": "Referenssipisteen X (prosentteina)", "value": "_REL_referenceX"},
+											{"label": "Referenssipisteen Y (prosentteina)", "value": "_REL_referenceY"},
+											{"label": "Referenssipisteen X (pikseleinä)", "value": "_ABS_referenceX"},
+											{"label": "Referenssipisteen Y (pikseleinä)", "value": "_ABS_referenceY"},
+											{"label": "Kulma (asteina)", "value": "_rotation"},
+											{"label": "Läpinäkyvyys (prosentteina)", "value": "_alpha"},
+											{"label": "Leveyden skaalaus (prosentteina)", "value": "_xscale"},
+											{"label": "Korkeuden skaalaus (prosentteina)", "value": "_yscale"},
+											{"label": "Leveys (prosentteina)", "value": "_REL_width"},
+											{"label": "Korkeus (prosentteina)", "value": "_REL_height"},
+											{"label": "Leveys (pikseleinä)", "value": "_ABS_width"},
+											{"label": "Korkeus (pikseleinä)", "value": "_ABS_height"},
+											{"label": "Kuvasuhteen säilyminen (\"min\" tai \"max\")", "value": "_maintainAspectRatio"}
+										] } }
+									]
+								}
+							},
+							{
+								"label": "Arvo",
+								"type": "attribute",
+								"data":
+								{
+									"name": "value",
+									"content": [ { "type": "text" } ]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Sisältö",
+		"type": "select",
+		"data":
+		{
+			"options":
+			[
+				{
+					"label": "Tyhjä",
+					"content": 
+					[
+					]
+				},
+				{
+					"label": "Video",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_video.json"
+							}
+						}
+					]
+				},
+				{
+					"label": "Ääni",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_sound.json"
+							}
+						}
+					]
+				},
+				{
+					"label": "Etsimispeli",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_placeholderItemCollectionGame.json"
+							}
+						}
+					]
+				},
+				{
+					"label": "Magiscape",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_magiscape.json"
+							}
+						}
+					]
+				},
+				{
+					"label": "Lataus",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_loader.json"
+							}
+						}
+					]
+				},	
+				{
+					"label": "Tekstitys",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_subtitles.json"
+							}
+						}
+					]
+				},				
+				{
+					"label": "Partikkelit",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_particleEngine.json"
+							}
+						}
+					]
+				},				
+				{
+					"label": "Piirrustus",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_drawingTool.json"
+							}
+						}
+					]
+				},
+				{
+					"label": "Sekvenssi",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_sequence.json"
+							}
+						}
+					]
+				},				
+				{
+					"label": "Neppajymytehtävä",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_neppajymykerho_task.json"
+							}
+						}
+					]
+				},
+				
+
+				{
+					"label": "Etusivu",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_frontpage.json"
+							}
+						}
+					]
+				},
+				
+				
+				{
+					"label": "Taikametsä",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_taikametsa.json"
+							}
+						}
+					]
+				},	
+				
+				{
+					"label": "Aikuiset",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_parent.json"
+							}
+						}
+					]
+				},
+				
+				{
+					"label": "Taitoset",
+					"content": 
+					[
+						{
+							"type": "include",
+							"data": 
+							{
+								"url": "xmleditor_data/original/magicast_layer_taitoset.json"
+							}
+						}
+					]
+				},
+
+
+				{
+					"label": "Muu",
+					"content":
+					[
+						{
+							"label": "Asset",
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "asset"
+									}
+								]
+							}
+						},
+						{
+							"label": "Parametrit (XML)",
+							"type": "node",
+							"data":
+							{
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "text", 
+										"data": {
+											"multiline": true
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "include",
+							"data":
+							{
+								"url": "xmleditor_data/original/magicast_actions.json"
+							}
+						}
+					]
+				}
+			]
+		}
+	}	
+]

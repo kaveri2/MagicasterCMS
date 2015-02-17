@@ -1,0 +1,250 @@
+[
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "asset",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "package",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "YLE.P2.Magicast"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "name",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "layers/particleEngine.swf"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "node",
+		"data":
+		{
+			"errorCatcher": true,
+			"name": "parameters",
+			"content":
+			[
+				{ "label": "Käynnistä automaattisesti?", "type": "node", "data": { "name": "autoStart", "content": [ { "type": "boolean" } ] } }, 
+				{ "label": "Käynnistyshetki (sekunteina)", "type": "node", "data": { "name": "startTime", "content": [ { "type": "text" } ] } }, 
+				{ "label": "Sammumishetki (sekunteina)", "type": "node", "data": { "name": "stopTime", "content": [ { "type": "text" } ] } }, 
+				{
+					"label": "Partikkeleihin vaikuttavat voimat",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "interactor",
+									"content":
+									[
+										{ "label": "X-koordinaatti", "type": "node", "data": { "name": "x", "content": [ { "type": "text" } ] } }, 
+										{ "label": "Y-koordinaatti", "type": "node", "data": { "name": "y", "content": [ { "type": "text" } ] } }, 
+										{ "label": "Kesto (sekunteina)", "type": "node", "data": { "name": "activeTime", "content": [ { "type": "text" } ] } }, 
+										{ "label": "Suoravoimavakio", "type": "node", "data": { "name": "directConstant", "content": [ { "type": "text" } ] } }, 
+										{ "label": "Painovimavakio", "type": "node", "data": { "name": "gravityConstant", "content": [ { "type": "text" } ] } }, 
+										{ "label": "Jousivakio", "type": "node", "data": { "name": "elasticConstant", "content": [ { "type": "text" } ] } }, 
+										{ "label": "Seuraa hiirtä?", "type": "node", "data": { "name": "followMouse", "content": [ { "type": "boolean" } ] } }, 
+										{ "label": "Seurattava tapahtuma", "type": "node", "data": { "name": "followEvent", "content": [ { "type": "include", "data": { "url": "xmleditor_data/original/magicast_event.json" } } ] } }, 
+										{ "label": "Tuulen kesto (sekunteina)", "type": "node", "data": { "name": "windForceTime", "content": [ { "type": "text" } ] } }, 
+										{ "label": "Tuulen keston vaihtelu (sekunteina)", "type": "node", "data": { "name": "windForceTimeVariance", "content": [ { "type": "text" } ] } },
+										{
+											"label": "Tuulivoimat",
+											"type": "list",
+											"data":
+											{
+												"content":
+												[
+													{
+														"type": "node",
+														"data":
+														{
+															"name": "windForce",
+															"content":
+															[
+																{ "label": "Kulma (asteina, kello 3:sta myötäpäivään)", "type": "node", "data": { "name": "angle", "content": [ { "type": "text" } ] } }, 
+																{ "label": "Kulman vaihtelu", "type": "node", "data": { "name": "angleVariance", "content": [ { "type": "text" } ] } }, 
+																{ "label": "Voimakkuus", "type": "node", "data": { "name": "magnitude", "content": [ { "type": "text" } ] } }, 
+																{ "label": "Voimakkuuden vaihtelu", "type": "node", "data": { "name": "magnitudeVariance", "content": [ { "type": "text" } ] } }
+															]
+														}
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"label": "Partikkelien synnyttäjät",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "emitter",
+									"content":
+									[
+										{ "label": "X-koordinaatti", "type": "node", "data": { "name": "x", "content": [ { "type": "text" } ] } },
+										{ "label": "Y-koordinaatti", "type": "node", "data": { "name": "y", "content": [ { "type": "text" } ] } },
+										{ 
+											"type": "node", 
+											"data":
+											{
+												"name": "offset",
+												"content":
+												[
+													{ "label": "X-siirtymä", "type": "node", "data": { "name": "x", "content": [ { "type": "text" } ] } },
+													{ "label": "Y-siirtymä", "type": "node", "data": { "name": "y", "content": [ { "type": "text" } ] } }
+												]
+											}
+										},
+										{ "label": "Alueen leveys (suorakulmainen)", "type": "node", "data": { "name": "width", "content": [ { "type": "text" } ] } },
+										{ "label": "Alueen korkeus (suorakulmainen)", "type": "node", "data": { "name": "height", "content": [ { "type": "text" } ] } },
+										{ "label": "Alueen säde (pyöreä)", "type": "node", "data": { "name": "radius", "content": [ { "type": "text" } ] } },
+										{ "label": "Nopeus (partikkelia sekunnissa)", "type": "node", "data": { "name": "frequency", "content": [ { "type": "text" } ] } },
+										{ "label": "Kesto (sekunteina)", "type": "node", "data": { "name": "activeTime", "content": [ { "type": "text" } ] } }, 
+										{ "label": "Seuraa hiirtä?", "type": "node", "data": { "name": "followMouse", "content": [ { "type": "boolean" } ] } }, 
+										{ "label": "Seurattava tapahtuma", "type": "node", "data": { "name": "followEvent", "content": [ { "type": "include", "data": { "url": "xmleditor_data/original/magicast_event.json" } } ] } },
+										{ 
+											"type": "node", 
+											"data":
+											{
+												"name": "impulse",
+												"content":
+												[
+													{ "label": "Impulssin kulma", "type": "node", "data": { "name": "angle", "content": [ { "type": "text" } ] } },
+													{ "label": "Impulssin kulman vaihtelu", "type": "node", "data": { "name": "angleVariance", "content": [ { "type": "text" } ] } },
+													{ "label": "Impulssin suuruus", "type": "node", "data": { "name": "magnitude", "content": [ { "type": "text" } ] } },
+													{ "label": "Impulssin suuruuden vaihtelu", "type": "node", "data": { "name": "magnitudeVariance", "content": [ { "type": "text" } ] } },
+													{ "label": "Impulssin aiheuttama kulmanopeus", "type": "node", "data": { "name": "angleSpeed", "content": [ { "type": "text" } ] } },
+													{ "label": "Impulssin aiheuttaman kulmanopeuden vaihtelu", "type": "node", "data": { "name": "angleSpeedVariance", "content": [ { "type": "text" } ] } }
+												]
+											}
+										}, 							
+										{ 
+											"type": "node", 
+											"data":
+											{
+												"name": "particle",
+												"content":
+												[
+													{
+														"label": "Partikkelin tyyppi", 
+														"type": "select",
+														"data": 
+														{
+															"options":
+															[
+																{
+																	"label": "Magicastilla luotu bittikartta",
+																	"content":
+																	[
+																		{ "type": "node", "data": { "name": "createMethod", "content": [ { "type": "constant", "data": "bitmap" } ] } },
+																		{ "label": "Magicast tunniste", "type": "node", "data": { "name": "dataId", "content": [ { "type": "text" } ] } }
+																	]
+																},
+																{
+																	"label": "Kuvasta luotu bittikartta",
+																	"content":
+																	[
+																		{ "type": "node", "data": { "name": "createMethod", "content": [ { "type": "constant", "data": "bitmap" } ] } },
+																		{ "label": "Kuva", "type": "node", "data": { "name": "asset", "content": [ { "type": "asset" } ] } }
+																	]
+																},
+																{
+																	"label": "MovieClip SWF:n kirjastosta",
+																	"content":
+																	[
+																		{ "type": "node", "data": { "name": "createMethod", "content": [ { "type": "constant", "data": "library" } ] } },
+																		{ "label": "Kuva", "type": "node", "data": { "name": "asset", "content": [ { "type": "asset" } ] } },
+																		{ "label": "Kirjastotunniste", "type": "node", "data": { "name": "libraryId", "content": [ { "type": "text" } ] } }
+																	]
+																},
+																{
+																	"label": "P2Sprite",
+																	"content":
+																	[
+																		{ "type": "node", "data": { "name": "createMethod", "content": [ { "type": "constant", "data": "sprite" } ] } },
+																		{ "label": "Kuva", "type": "node", "data": { "name": "asset", "content": [ { "type": "asset" } ] } }
+																	]
+																}
+															]
+														}
+													},
+													{ "label": "Partikkelin massa", "type": "node", "data": { "name": "mass", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin massan vaihtelu", "type": "node", "data": { "name": "massVariance", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin elinaika (sekunteina)", "type": "node", "data": { "name": "destroyTime", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin elinajan vaihtelu (sekunteina)", "type": "node", "data": { "name": "destroyTimeVariance", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin katoamisaika (sekunteina)", "type": "node", "data": { "name": "alphaFadeTime", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin katoamisajan vaihtelu (sekunteina)", "type": "node", "data": { "name": "alphaFadeTimeVariance", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin katoamisen alkuaika (sekunteina)", "type": "node", "data": { "name": "alphaFadeStartTime", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin katoamisen alkuajan vaihtelu (sekunteina)", "type": "node", "data": { "name": "alphaFadeStartTimeVariance", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkeli tuhotaan kun se on kadonnut?", "type": "node", "data": { "name": "alphaFadeDestroy", "content": [ { "type": "boolean" } ] } },
+													{ "label": "Partikkelin skaalaus", "type": "node", "data": { "name": "scale", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin skaalauksen vaihtelu", "type": "node", "data": { "name": "scaleVariance", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin lähtökulma", "type": "node", "data": { "name": "angle", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin lähtökulman vaihtelu", "type": "node", "data": { "name": "angleVariance", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin keskipisteen X-koordinaatti", "type": "node", "data": { "name": "referenceX", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin keskipisteen Y-koordinaatti", "type": "node", "data": { "name": "referenceY", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin ilmanvastus", "type": "node", "data": { "name": "dragConstant", "content": [ { "type": "text" } ] } },
+													{ "label": "Partikkelin ilmanvastuksen vaihtelu", "type": "node", "data": { "name": "dragConstantVariance", "content": [ { "type": "text" } ] } }
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Toiminnot:<br />- start<br />- stop<br />- toggle</p>"
+		}
+	}	
+]

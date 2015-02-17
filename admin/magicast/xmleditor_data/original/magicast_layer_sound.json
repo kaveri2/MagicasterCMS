@@ -1,0 +1,155 @@
+[
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "asset",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "package",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "YLE.P2.Magicast"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "name",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "layers/sound.swf"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Ääni",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				},
+				{
+					"label": "Käynnistä automaattisesti?",
+					"type": "node",
+					"data":
+					{
+						"name": "autoStart",
+						"content": 
+						[
+							{
+								"type": "boolean"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistuva?",
+					"type": "node",
+					"data":
+					{
+						"name": "loop",
+						"content": 
+						[
+							{
+								"type": "boolean"
+							}
+						]
+					}
+				},
+				{
+					"label": "Cuet",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "cuePoint",
+									"content":
+									[
+										{
+											"label": "Aika (sekunteina)",
+											"type": "node",
+											"data":
+											{
+												"name": "time",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										},
+										{
+											"label": "Nimi",
+											"type": "node",
+											"data":
+											{
+												"name": "name",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}				
+			]
+		}
+	},
+	{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>- onLoop<br/>- onComplete</p><p>Toiminnot:<br/>- start<br/>- stop</p>"
+		}
+	}
+]

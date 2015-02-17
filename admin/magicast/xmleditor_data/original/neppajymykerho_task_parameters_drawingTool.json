@@ -1,0 +1,16 @@
+[
+	{
+		"label": "Taustakuva",
+		"type": "node",
+		"data": 
+		{
+			"name": "imageAsset",
+			"content": 
+			[
+				{
+					"type": "asset"
+				}
+			]
+		}
+	}
+]

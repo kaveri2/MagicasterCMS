@@ -1,0 +1,1 @@
+	{ "type": "include", "data": { "url": "xmleditor_data/original/magicast.json" } }

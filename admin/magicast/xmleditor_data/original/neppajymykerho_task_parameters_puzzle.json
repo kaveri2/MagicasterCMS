@@ -1,0 +1,62 @@
+[
+	
+	{
+		"label": "Kuva",
+		"type": "node",
+		"data":
+		{
+			"name": "imageAsset",
+			"content":
+			[
+				{
+					"type": "asset",
+					"data": {}
+				}
+			]
+		}
+	},
+	{
+		"label": "Rivejä",
+		"type": "node",
+		"data":
+		{
+			"name": "rows",
+			"content":
+			[
+				{
+					"type": "text"
+				}
+			]
+		}
+	},
+	{
+		"label": "Sarakkeita",
+		"type": "node",
+		"data":
+		{
+			"name": "cols",
+			"content":
+			[
+				{
+					"type": "text"
+				}
+			]
+		}
+	},
+	{
+		"label": "Pimeä?",
+		"type": "node",
+		"data":
+		{
+			"name": "dark",
+			"content":
+			[
+				{
+					"type": "boolean"
+				}
+			]
+		}
+	}
+
+]	
+	

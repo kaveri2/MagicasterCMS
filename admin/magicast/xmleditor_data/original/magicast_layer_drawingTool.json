@@ -1,0 +1,227 @@
+[
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "asset",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "package",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "YLE.P2.Magicast"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "name",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "layers/drawingTool.swf"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "node",
+		"data":
+		{
+			"errorCatcher": true,
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Magicast tunniste",
+					"type": "node",
+					"data":
+					{
+						"name": "dataId",
+						"content":						
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "cursor",
+						"content":						
+						[
+							{
+								"label": "Kynän kuva",
+								"type": "node",
+								"data":
+								{
+									"name": "asset",
+									"content":						
+									[
+										{
+											"type": "asset"
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "background",
+						"content":						
+						[
+							{
+								"label": "Taustan kuva",
+								"type": "node",
+								"data":
+								{
+									"name": "asset",
+									"content":						
+									[
+										{
+											"type": "asset"
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "canvas",
+						"content":						
+						[
+							{
+								"label": "Piirtoalueen kuva",
+								"type": "node",
+								"data":
+								{
+									"name": "asset",
+									"content":						
+									[
+										{
+											"type": "asset"
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "line",
+						"content":						
+						[
+							{
+								"label": "Viivan paksuus", 
+								"type": "node",
+								"data": 
+								{
+									"name": "width",
+									"content":
+									[
+										{
+											"type": "text"
+										}
+									]
+								}
+							},
+							{
+								"label": "Viivan väri", 
+								"type": "node",
+								"data": 
+								{
+									"name": "color",
+									"content":
+									[
+										{
+											"type": "text"
+										}
+									]
+								}
+							},
+							{
+								"label": "Viivan läpinäkyvyys (0-100)", 
+								"type": "node",
+								"data": 
+								{
+									"name": "alpha",
+									"content":
+									[
+										{
+											"type": "text"
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "bitmap",
+						"content":						
+						[
+							{
+								"label": "Tuotetun kuvan leveys", 
+								"type": "node",
+								"data": 
+								{
+									"name": "width",
+									"content":
+									[
+										{
+											"type": "text"
+										}
+									]
+								}
+							},
+							{
+								"label": "Tuotetun kuvan korkeus", 
+								"type": "node",
+								"data": 
+								{
+									"name": "height",
+									"content":
+									[
+										{
+											"type": "text"
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+]

@@ -1,0 +1,81 @@
+[
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "asset",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "package",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "YLE.P2.Magicast"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "name",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "layers/magiscape.swf"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "parameters",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "mainLoop",
+						"content": 
+						[
+							{
+								"label": "Tempo",
+								"type": "node",
+								"data":
+								{
+									"name": "tempo",
+									"content":
+									[
+										{
+											"type": "text",
+											"data": 
+											{
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"label": "Raaka-XML",
+					"type": "text", "data": {"multiline": true}
+				}
+			]
+		}
+	}
+]

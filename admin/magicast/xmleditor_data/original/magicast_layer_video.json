@@ -1,0 +1,169 @@
+[
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "asset",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "package",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "YLE.P2.Magicast"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "name",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "layers/video.swf"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Video",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistuva?",
+					"type": "node",
+					"data":
+					{
+						"name": "loop",
+						"content": 
+						[
+							{
+								"type": "boolean"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistumisen hetki (sekunteina)",
+					"type": "node",
+					"data":
+					{
+						"name": "loopPosition",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Bufferi (sekunteina, tyhjä = 5 sekuntia)",
+					"type": "node",
+					"data":
+					{
+						"name": "bufferTime",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Cuet",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "cuePoint",
+									"content":
+									[
+										{
+											"label": "Aika (sekunteina)",
+											"type": "node",
+											"data":
+											{
+												"name": "time",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										},
+										{
+											"label": "Nimi",
+											"type": "node",
+											"data":
+											{
+												"name": "name",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>- (jokainen cue)<br/>- onStart<br/>- onLoop<br/>- onComplete</p><p>Toiminnot:<br/>- cutVideo / &lt;index&gt;{index}&lt;/index&gt;</p>"
+		}
+	}
+]

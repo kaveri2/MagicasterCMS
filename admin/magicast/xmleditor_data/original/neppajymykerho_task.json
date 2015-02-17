@@ -1,0 +1,673 @@
+[
+	{
+		"type": "select",
+		"data": 
+		{
+			"options": 
+			[
+				{
+					"label": "Kuva",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/image/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": true,
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": {
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_image.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Piirrä",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/drawingTool/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": "true",
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": {
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_drawingTool.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Väritä",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/paintingTool/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": "true",
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": {
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_paintingTool.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Etsi parit",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/pairGame/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": "true",
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": {
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_pairGame.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Raahaa",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/dragGame/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": "true",
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": {
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_dragGame.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Etsi kuvasta",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/hotSpotGame/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": true,
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": 
+										{
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_hotSpotGame.json"
+										}
+									}										
+								]
+							}
+						}
+					]
+				},				
+				{
+					"label": "Laskuri",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/poll/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": "true",
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": 
+										{
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_poll.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Palapeli",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/puzzle/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": "true",
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": 
+										{
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_puzzle.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Muistipeli",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/memoryGame/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": "true",
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": 
+										{
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_memoryGame.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},	
+
+
+
+				{
+					"label": "Askartelu",
+					"content": 
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Neppajymykerho"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "tasks/craft/main.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"errorCatcher": "true",
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "include",
+										"data": 
+										{
+											"url": "xmleditor_data/original/neppajymykerho_task_parameters_craft.json"
+										}
+									}
+								]
+							}
+						}
+					]
+				},				
+				
+				
+					
+					
+					
+					
+				{
+					"label": "Muu",
+					"content": 
+					[
+						{
+							"label": "Asset",
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "asset",
+										"data": {}
+									}
+								]
+							}
+						},
+						{
+							"label": "Parametrit (XML)",
+							"type": "node",
+							"data":
+							{
+								"name": "parameters",
+								"content":
+								[
+									{
+										"type": "text", 
+										"data": {
+											"multiline": true
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	}
+]

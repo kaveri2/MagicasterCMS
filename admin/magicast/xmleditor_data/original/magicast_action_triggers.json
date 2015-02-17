@@ -1,0 +1,119 @@
+[
+	{
+		"label": "Toiminnon laukaisijat",
+		"type": "list", 
+		"data":
+		{
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "trigger",
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "event",
+									"content":
+									[
+										{
+											"type": "include",
+											"data":
+											{
+												"url": "xmleditor_data/original/magicast_event.json"
+											}
+										}
+									]
+								}
+							},
+							{
+								"label": "Muuttujien ehdot",
+								"type": "list", 
+								"data":
+								{
+									"content":
+									[
+										{
+											"type": "node",
+											"data":
+											{
+												"name": "condition",
+												"content":
+												[
+													{
+														"label": "Vertailtavan muuttujan nimi",
+														"type": "node",
+														"data":
+														{
+															"name": "variable",
+															"content":
+															[
+																{
+																	"type": "text",
+																	"data":
+																	{
+																	}
+																}													
+															]
+														}
+													},										
+													{
+														"label": "Vertailufunktio",
+														"type": "node",
+														"data":
+														{
+															"name": "comparisonFunction",
+															"content":
+															[
+																{
+																	"type": "text",
+																	"data":
+																	{
+																		"options":
+																		[
+																			{"label": "=", "value": "eq"},
+																			{"label": "&ne;", "value": "ne"},																
+																			{"label": "&lt;", "value": "lt"},
+																			{"label": "&gt;", "value": "gt"},
+																			{"label": "tyhjä", "value": "NULL"},
+																			{"label": "ei tyhjä", "value": "NOT NULL"}
+																		]
+																	}
+																}													
+															]
+														}
+													},
+													{
+														"label": "Vertailtava arvo",
+														"type": "node",
+														"data":
+														{
+															"name": "comparisonValue",
+															"content":
+															[
+																{
+																	"type": "text",
+																	"data":
+																	{
+																	}
+																}													
+															]
+														}
+													}													
+												]
+											}
+										}
+									]
+								}
+							}							
+						]
+					}
+				}
+			]
+		}
+	}
+]

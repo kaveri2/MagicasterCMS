@@ -1,0 +1,93 @@
+[
+	{
+		"label": "Taustakuva",
+		"type": "node",
+		"data":
+		{
+			"name": "backgroundImageAsset",
+			"content":
+			[
+				{
+					"type": "asset"
+				}
+			]
+		}
+	},
+	{
+		"label": "Valmis tekstinväri",
+		"type": "node",
+		"data":
+		{
+			"name": "completeMessageColor",
+			"content":
+			[
+				{
+					"type": "text"
+				}
+			]
+		}
+	},	
+	{
+		"label": "Elementit",
+		"type": "list",
+		"data": 
+		{
+			"headerSelector": "input:eq(0)",
+			"content": 
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "item",
+						"content":
+						[
+							{
+								"label": "Avain",
+								"type": "node",
+								"data":
+								{
+									"name": "key",
+									"content":
+									[
+										{
+											"type": "text"
+										}
+									]
+								}
+							},
+							{
+								"label": "Ohjeääni",
+								"type": "node",
+								"data":
+								{
+									"name": "guideSoundAsset",
+									"content":
+									[
+										{
+											"type": "asset"
+										}
+									]
+								}
+							},
+							{
+								"label": "Kuva",
+								"type": "node",
+								"data":
+								{
+									"name": "imageAsset",
+									"content":
+									[
+										{
+											"type": "asset"
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+]

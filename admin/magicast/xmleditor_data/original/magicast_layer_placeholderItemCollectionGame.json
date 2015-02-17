@@ -1,0 +1,153 @@
+[
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "asset",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "package",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "YLE.P2.Magicast"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "name",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "layers/placeholderItemCollectionGame.swf"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "node",
+		"data":
+		{
+			"errorCatcher": true,
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Elementit",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "item",
+									"content":
+									[
+										{
+											"label": "Kuva",
+											"type": "node",
+											"data":
+											{
+												"name": "asset",
+												"content":
+												[
+													{
+														"type": "asset"
+													}
+												]
+											}
+										},
+										{
+											"label": "Löytymisääni",
+											"type": "node",
+											"data":
+											{
+												"name": "foundSoundAsset",
+												"content":
+												[
+													{
+														"type": "asset"
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"label": "Yleiset löytymisäänet",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "foundSoundAsset",
+									"content":
+									[
+										{
+											"type": "asset"
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"label": "Lopetusääni",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "completeSoundAsset",
+									"content":
+									[
+										{
+											"type": "asset"
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>- onPlaceHolderItemRequest</p>"
+		}
+	}
+]

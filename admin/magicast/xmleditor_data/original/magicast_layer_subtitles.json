@@ -1,0 +1,109 @@
+[
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "asset",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "package",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "YLE.P2.Magicast"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "name",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "layers/subtitles.swf"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "node",
+		"data":
+		{
+			"errorCatcher": true,
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Tekstitykset",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "subtitle",
+									"content":
+									[
+										{
+											"label": "Rivit",
+											"type": "list",
+											"data":
+											{
+												"content":
+												[
+													{
+														"type": "node",
+														"data":
+														{
+															"name": "line",
+															"content":
+															[
+																{
+																	"type": "text"
+																}
+															]
+														}
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}			
+			]
+		}
+	},
+	{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>N/A</p><p>Toiminnot:<br/>- change</p>"
+		}
+	}
+]

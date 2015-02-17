@@ -1,0 +1,53 @@
+[
+	{ "type": "select", "data": { "options": [
+	
+		{ "label": "Linkit", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.ParentPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/linkit.swf" } ] } } 
+			] } },
+		
+			{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 
+				{ "label": "Linkkilistaus", "type": "list", "data": { "content": [
+					{ "type": "node", "data": { "errorCatcher": "true", "name": "link", "content": [
+						
+						{ "label": "Linkin teksti", "type": "node", "data": { "name": "linkkiteksti", "content": [
+							{ "type": "text", "data": { } }
+						] } },
+						{ "label": "URL", "type": "node", "data": { "name": "url", "content": [
+							{ "type": "text", "data": { } }
+						] } }
+					] } }
+				] } }
+			] } }
+			
+		] 
+	},
+	
+	
+	{ "label": "Otsikko", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.ParentPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/otsikko.swf" } ] } } 
+			] } },
+		
+			{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 	
+				{ "label": "Otsikko", "type": "node", "data": { "name": "otsikko", "content": 
+				[
+					{ "label": "Otsikon teksti", "type": "node", "data": { "name": "otsikkoteksti", "content": [
+							{ "type": "text", "data": { } }
+					] } }
+					
+				] } }
+			
+		] } }
+	] }		
+	
+			
+	] 
+	} 
+	} 
+	
+	
+	
+]

@@ -1,0 +1,230 @@
+.assetContainer {
+	box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.55), -1px -1px 1px rgba(0, 0, 0, 0.20);
+	background: rgba(0, 0, 0, 0.06);
+	padding: 10px;
+	margin: 0 0 10px 0;
+	cursor: pointer;
+}
+
+.assetContainer span {
+	vertical-align: middle;
+	font-size: 12pt;
+}
+
+.assetButton {
+	width: 56px;
+	height: 56px;
+	padding: 3px;
+	text-align: middle;
+	overflow: hidden;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	background: rgba(0, 0, 0, 0.10);
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.chooseAsset {
+	line-height: 50px;
+	display: block;
+}
+
+.assetmanager-dialog {
+	padding: 10px;
+}
+
+.assetmanager-dialog label {
+	width: auto;
+	min-width: 0%;
+}
+
+.assetmanager-dialog .big-button {
+	color: #937845;
+}
+
+.assetmanager-dialog .typeSelection {
+	width: 200px;
+}
+
+.assetmanager-dialog .filters {
+	padding: 2px;
+	display: inline;
+	margin-left: 10px;
+}
+
+.assetmanager-dialog .filters label.filter-label {
+	font-size: 100%;
+	font-weight: normal;
+	color: #222;
+}
+
+.assetmanager-dialog .filters input {
+	vertical-align: -5%;
+}
+
+.assetmanager-dialog .address-bar {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.assetmanager-dialog .back {
+	display: table-cell;
+	padding-right: 10px;
+}
+
+.assetmanager-dialog .back .small-button {
+	font-size: 13pt;
+	padding-top: 0;
+	vertical-align: -5%;
+	color: #9c7840;
+}
+
+.assetmanager-dialog .path {
+	display: table-cell;
+	margin: 0;
+	background: #efefef;
+	border: 1px solid #aaa;
+	width: 100%;
+	height: 28px;
+	line-height: 25px;
+	padding-left: 5px;
+}
+
+.assetmanager-dialog .details {
+	float: left;
+	width: 300px;
+	padding: 0 10px; 
+}
+
+.assetmanager-dialog  .details .choose {
+	margin: 10px 0px 10px 0px;
+	width: 300px;
+	text-align: center;
+	background-color: green;
+	padding: 10px 0px 10px 0px;
+	color: white;
+	font-weight: bold;
+}
+
+.assetmanager-dialog .details .remove {
+	width: 300px;
+	text-align: center;
+	background-color: red;
+	padding: 10px 0px 10px 0px;
+	color: white;
+	font-weight: bold;
+}
+
+.assetmanager-dialog .details .details-preview {
+	display: block;
+	border: 2px solid #aa9060;
+	width: 355px;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.assetmanager-dialog .details .details-unknown {
+	width: 355px;
+	height: 355px;
+	text-align: center;
+	line-height: 355px;
+}
+
+.assetmanager-dialog .details .videoplayer {
+	width: 355px;
+	height: 200px;
+}
+
+.assetmanager-dialog .details .parameters {
+	margin-bottom: 10px;
+}
+
+.assetmanager-dialog .listing {
+	clear: both;
+	float: left;
+	margin: 0;
+	width: 520px;
+	height: 500px;
+	overflow-y: scroll;
+	border: 2px solid #aa9060;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.assetmanager-dialog .listing ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.assetmanager-dialog .listing li {
+	list-style-type: none;
+	margin: 0 0 0 0;
+	padding: 2px;
+	display: block;
+	width: 490px;
+	height: 50px;
+	float: left;
+	clear: both;
+}
+
+.assetmanager-dialog .listing ul li a {
+	display: block;
+	text-decoration: none;
+	float: left;
+	position: relative;
+	clear: both;
+	margin-bottom: 5px;
+	width: 100%;
+	background-color: transparent;
+	padding: 2px;
+	height: 50px;
+}
+
+.assetmanager-dialog .listing ul li a:hover {
+	background: #d47525;
+	color: #fffeef;
+}
+
+.assetmanager-dialog .listing ul li a.selected {
+	color: #444;
+	background: #f69747;
+}
+
+.assetmanager-dialog .listing ul li a img {
+	float: left;
+}
+
+.assetmanager-dialog .listing ul li a p {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.assetmanager-dialog span.thumbHolder {
+	display: inline-block;
+	float: left;
+	width: 50px;
+	margin-right: 10px;
+}
+
+.assetmanager-dialog span.thumbHolder img {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.assetmanager-dialog span.small {
+	font-size: 10pt;
+	color: #666;
+	font-style: italic;
+}
+
+.assetmanager-dialog span.dirName {
+	display: block;
+	overflow: hidden;
+	max-width: 414px;
+	font-weight: bold;
+}

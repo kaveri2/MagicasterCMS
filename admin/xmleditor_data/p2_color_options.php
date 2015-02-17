@@ -1,0 +1,10 @@
+{ "label": "Blue", "value": "blue" },
+{ "label": "Dark green", "value": "darkGreen" },
+{ "label": "Turquoise", "value": "turquoise" },
+{ "label": "Light green", "value": "lightGreen" },
+{ "label": "Yellow", "value": "yellow" },
+{ "label": "Orange", "value": "orange" },
+{ "label": "Pink", "value": "pink" },
+{ "label": "Red", "value": "red" },
+{ "label": "White", "value": "white" },
+{ "label": "Black", "value": "black" }

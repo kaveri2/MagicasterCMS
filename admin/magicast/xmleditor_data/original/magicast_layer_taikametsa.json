@@ -1,0 +1,147 @@
+[
+	{
+		"type": "select",
+		"data":
+		{
+			"options":
+			[
+				{
+					"label": "Taikanappi",
+					"content":
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Magicast.Content"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "set/taikametsa/magicButton.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "parameters",
+								"content":
+								[
+									{
+										"label": "Teksti",
+										"type": "node",
+										"data":
+										{
+											"name": "label",
+											"content": 
+											[
+												{
+													"type": "text"
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Katso uudestaan -nappi",
+					"content":
+					[
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "asset",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "package",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "YLE.P2.Magicast.Content"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "name",
+											"content":
+											[
+												{
+													"type": "constant",
+													"data": "set/taikametsa/playAgainButton.swf"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "node",
+							"data":
+							{
+								"name": "parameters",
+								"content":
+								[
+									{
+										"label": "Teksti",
+										"type": "node",
+										"data":
+										{
+											"name": "label",
+											"content": 
+											[
+												{
+													"type": "text"
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	}
+]

@@ -1,0 +1,188 @@
+[
+	{
+		"label": "Pääkuva",
+		"type": "node",
+		"data": 
+		{
+			"name": "imageAsset",
+			"content":
+			[
+				{
+					"type": "asset",
+					"data": {}
+				}
+			]
+		}
+	},
+	{
+		"label": "Löytyneen kohdan kuva",
+		"type": "node",
+		"data": 
+		{
+			"name": "foundSymbolAsset",
+			"content":
+			[
+				{
+					"type": "asset",
+					"data": {}
+				}
+			]
+		}
+	},
+	{
+		"label": "Onnitteluäänivaihtoehdot",
+		"type": "list",
+		"data": 
+		{
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "foundSoundAsset",
+						"content":
+						[
+							{
+								"type": "asset",
+								"data": {}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Löydettävät kohdat suhteessa pääkuvaan?",
+		"type": "node",
+		"data": 
+		{
+			"name": "relativeToImage",
+			"content":
+			[
+				{
+					"type": "boolean",
+					"data": {}
+				}
+			]
+		}
+	},
+	{
+		"label": "Pääkuvan skaalaus (tyhjä = ei skaalausta, max = ei palkkeja, min = palkit)",
+		"type": "node",
+		"data": 
+		{
+			"name": "scaleMode",
+			"content":
+			[
+				{
+					"type": "text",
+					"data": {}
+				}
+			]
+		}
+	},
+	{
+		"label": "Löydettävät kohdat",
+		"type": "list",
+		"data": 
+		{
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "hotSpot",
+						"content":
+						[
+							{
+								"label": "Avain",
+								"type": "node",
+								"data": 
+								{
+									"name": "key",
+									"content":
+									[
+										{
+											"type": "text"
+										}
+									]
+								}
+							},
+							{
+								"label": "Löytyneen kohdan kuva",
+								"type": "node",
+								"data":
+								{
+									"name": "foundSymbolAsset",
+									"content":
+									[
+										{
+											"type": "asset",
+											"data": {}
+										}
+									]
+								}
+							},
+							{
+								"label": "Onnitteluääni",
+								"type": "node",
+								"data":
+								{
+									"name": "foundSoundAsset",
+									"content":
+									[
+										{
+											"type": "asset",
+											"data": {}
+										}
+									]
+								}
+							},
+							{
+								"label": "Kohdan keskipiste (1), tai kohdan rajaavat pisteet (2 tai enemmän)",
+								"type": "list",
+								"data": 
+								{
+									"content":
+									[
+										{
+											"type": "node",
+											"data": 
+											{
+												"name": "point",
+												"content":
+												[
+													{
+														"label": "x",
+														"type": "attribute",
+														"data":
+														{
+															"name": "x",
+															"content": [ { "type": "text" } ]
+														}
+													},
+													{
+														"label": "y",
+														"type": "attribute",
+														"data":
+														{
+															"name": "y",
+															"content": [ { "type": "text" } ]
+														}
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+]

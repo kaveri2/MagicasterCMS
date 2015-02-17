@@ -1,0 +1,110 @@
+.xmleditor-wrapper {
+	font-size: 10pt;
+}
+
+.xmleditor-wrapper label {
+	font-size: 10pt;	
+	margin: 2pt 0pt;
+	clear: both;
+}
+
+.xmleditor-wrapper .ui-tabs .ui-tabs-nav li a {
+	font-size: 10pt;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.xmleditor-wrapper span.header-text {
+	font-size: 12pt;
+	line-height: 20pt;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.xmleditor-wrapper fieldset {
+	box-shadow: 0px 0px 0px #000;
+	background: rgba(211, 192, 168, 0.15);
+	padding: 10px;
+	border: 1px solid #9c7840;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.xml-item-text  {
+	display: block;
+}
+
+.xml-item-boolean select {
+	width: auto;
+}
+
+.xmleditor-wrapper input[type=text], .xmleditor-wrapper  textarea, .xmleditor-wrapper  select {
+	display: block;
+	box-sizing: border-box;
+	background: #fffeef;
+	padding: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #aa9060;
+}
+
+.xmleditor-wrapper input[type=text], .xmleditor-wrapper  textarea {
+	width: 100%;
+}
+
+.xmleditor-wrapper legend {
+	font-size: 10pt;
+	background: transparent;
+	border: 0px;
+	padding: 0 5px;
+}
+
+.xml-item-asset, .xml-item-access, .xml-item-object, .xml-item-help, .xml-item-select, .xml-item-list, .xml-item-attribute, .xml-item-boolean, .xml-item-node {
+	display: block;
+}
+
+.xml-item-select {
+}
+
+.xmleditor-wrapper .item-actions {
+}
+
+.action_create {
+	margin-top: 5px;
+	cursor: pointer; 
+	padding: 10px 0px; 
+	width: 100%;
+	border: 1px dashed green; 
+	font-weight: bold; 
+	color: green; 
+	text-align: center; 
+	opacity: 1;
+}
+
+.xmleditor-wrapper span.action_icon {
+	display: block;
+	box-sizing: border-box;
+	margin: 2px 0px 0px 5px;
+	float: right;
+	padding: 2px;
+}
+
+.xmleditor-wrapper span.action_icon img {
+	display: block;
+}
+
+.xmleditor-wrapper span.action_icon:hover {
+}
+
+.xmleditor-wrapper span.action_icon:active {
+}
+
+.xmleditor-wrapper .ui-tabs-panel {
+    padding: 10px 0px 0px 0px;
+}
+.xmleditor-wrapper  .ui-tabs,
+.xmleditor-wrapper  .ui-accordion-content {
+    padding: 10px;
+}

@@ -1,0 +1,95 @@
+[
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "asset",
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "package",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "YLE.P2.Magicast"
+							}
+						]
+					}
+				},
+				{
+					"type": "node",
+					"data":
+					{
+						"name": "name",
+						"content":
+						[
+							{
+								"type": "constant",
+								"data": "layers/neppajymykerhoTask.swf"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Ääni, joka soitetaan kun tehtävä avataan",
+					"type": "node",
+					"data": 
+					{
+						"name": "startGuideSoundAsset",
+						"content": 
+						[
+							{
+								"type": "asset",
+								"data": {}
+							}
+						]
+					}
+				},
+				{
+					"label": "Ääni, joka soitetaan kun tehtävä on suoritettu",
+					"type": "node",
+					"data": 
+					{
+						"name": "completeGuideSoundAsset",
+						"content": 
+						[
+							{
+								"type": "asset",
+								"data": {}
+							}
+						]
+					}
+				},			
+				{
+					"type": "include",
+					"data":
+					{
+						"url": "xmleditor_data/original/neppajymykerho_task.json"
+					}
+				}
+			]
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>- onComplete</p>"
+		}
+	}	
+]

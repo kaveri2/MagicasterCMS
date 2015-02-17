@@ -1,0 +1,72 @@
+[
+	{
+		"type": "node",
+		"data": 
+		{
+			"errorCatcher": true,
+			"name": "action",
+			"content":
+			[
+				{
+					"label": "Metodi",
+					"type": "node",
+					"data": 
+					{
+						"name": "method",
+						"content":
+						[
+							{
+								"type": "text", 
+								"data": 
+								{
+								}
+							}
+						]
+					}
+				},
+				{
+					"label": "Parametrit (XML)",
+					"type": "node",
+					"data": 
+					{
+						"name": "parameters",
+						"content":
+						[
+							{
+								"type": "text", 
+								"data": 
+								{
+									"multiline": true
+								}
+							}
+						]
+					}
+				},
+				{
+					"label": "Välitön?",
+					"type": "node",
+					"data": 
+					{
+						"name": "immediate",
+						"content":
+						[
+							{
+								"type": "boolean", 
+								"data": 
+								{
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "include", 
+					"data":
+					{
+						"url": "xmleditor_data/original/magicast_action_triggers.json"
+					}
+				}				
+			]
+		}
+	}
+]

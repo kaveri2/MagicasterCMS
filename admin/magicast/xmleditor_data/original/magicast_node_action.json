@@ -1,0 +1,1326 @@
+[
+	{
+		"type": "node",
+		"data": 
+		{
+			"name": "action",
+			"content":
+			[
+				{
+					"type": "select",
+					"data":
+					{
+						"options":
+						[
+							{
+								"label": "Laskurin lisäys",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "addCounter"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Nimi",
+													"type": "node",
+													"data": 
+													{
+														"name": "id",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												}	
+											]
+										}
+									}			
+								]
+							},
+							{
+								"label": "Noodin vaihto",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "changeNode"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Vaihtoehdot",
+													"type": "list",
+													"data": 
+													{
+														"content":
+														[
+															{
+																"type": "node",
+																"data": 
+																{
+																	"name": "node",
+																	"content":
+																	[
+																		{
+																			"label": "ID",
+																			"type": "node", 
+																			"data": 
+																			{
+																				"name": "id",
+																				"content":
+																				[
+																					{
+																						"type": "text", 
+																						"data": 
+																						{
+																						}
+																					}
+																				]
+																			}
+																		},
+																		{
+																			"label": "Painoarvo",
+																			"type": "node",
+																			"data": 
+																			{
+																				"name": "weight",
+																				"content":
+																				[
+																					{
+																						"type": "text", 
+																						"data": 
+																						{
+																						}
+																					}
+																				]
+																			}
+																		}
+																	]
+																}
+															}
+														]
+													}
+												}
+											]
+										}
+									}			
+								]
+							},
+							{
+								"label": "Muuttujan arvon asettaminen",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "setVariable"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Nimi",
+													"type": "node",
+													"data": 
+													{
+														"name": "name",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Arvo (tyhjä = otetaan laukaisevan tapahtuman parametrista)",
+													"type": "node",
+													"data": 
+													{
+														"name": "value",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												}
+											]
+										}
+									}			
+								]
+							},
+							{
+								"label": "Muuttujaa muuttava funktio",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "variableFunction"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Muuttujan nimi",
+													"type": "node",
+													"data": 
+													{
+														"name": "name",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Funktio",
+													"type": "node",
+													"data":
+													{
+														"name": "function",
+														"content":
+														[
+															{
+																"type": "text",
+																"data":
+																{
+																	"options":
+																	[
+																		{"label": "summa", "value": "add"},
+																		{"label": "erotus", "value": "sub"},																
+																		{"label": "tulo", "value": "mul"},
+																		{"label": "osamäärä", "value": "div"},
+																		{"label": "tekstin yhdistys", "value": "concat"}
+																	]
+																}
+															}													
+														]
+													}
+												},
+												{
+													"label": "Argumentti (tyhjä = otetaan laukaisevan tapahtuman parametrista)",
+													"type": "node",
+													"data":
+													{
+														"name": "argument",
+														"content":
+														[
+															{
+																"type": "text",
+																"data":
+																{
+																}
+															}													
+														]
+													}
+												}
+											]
+										}
+									}			
+								]
+							},							
+							{
+								"label": "Tapahtuman käynnistäminen",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "invokeEvent"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Tapahtuma",
+													"type": "node",
+													"data": 
+													{
+														"name": "name",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Parametri",
+													"type": "node",
+													"data": 
+													{
+														"name": "parameters",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												}
+											]
+										}
+									}			
+								]
+							},							
+							{
+								"label": "Kerroksen luominen",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "createLayer"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Kerros",
+													"type": "node",
+													"data": 
+													{
+														"name": "id",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												}	
+											]
+										}
+									}			
+								]
+							},
+							{
+								"label": "Kerroksen tuhoaminen",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "removeLayer"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Kerros",
+													"type": "node",
+													"data": 
+													{
+														"name": "id",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												}	
+											]
+										}
+									}			
+								]
+							},
+							{
+								"label": "Kerroksen ominaisuuden muutos",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "changeLayerProperty"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Kerros",
+													"type": "node",
+													"data": 
+													{
+														"name": "id",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Ominaisuus",
+													"type": "node",
+													"data": 
+													{
+														"name": "property",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																	"options":
+																	[
+																		{"label": "X (prosentteina)", "value": "_REL_x"},
+																		{"label": "Y (prosentteina)", "value": "_REL_y"},
+																		{"label": "X (pikseleinä)", "value": "_ABS_x"},
+																		{"label": "Y (pikseleinä)", "value": "_ABS_y"},
+																		{"label": "X (prosentteina suhteessa omaan kokoon)", "value": "_SELF_REL_x"},
+																		{"label": "Y (prosentteina suhteessa omaan kokoon)", "value": "_SELF_REL_y"},
+																		{"label": "Referenssipisteen X (prosentteina)", "value": "_REL_referenceX"},
+																		{"label": "Referenssipisteen Y (prosentteina)", "value": "_REL_referenceY"},
+																		{"label": "Referenssipisteen X (pikseleinä)", "value": "_ABS_referenceX"},
+																		{"label": "Referenssipisteen Y (pikseleinä)", "value": "_ABS_referenceY"},
+																		{"label": "Kulma (asteina)", "value": "_rotation"},
+																		{"label": "Läpinäkyvyys (prosentteina)", "value": "_alpha"},
+																		{"label": "Leveyden skaalaus (prosentteina)", "value": "_xscale"},
+																		{"label": "Korkeuden skaalaus (prosentteina)", "value": "_yscale"},
+																		{"label": "Leveys (prosentteina)", "value": "_REL_width"},
+																		{"label": "Korkeus (prosentteina)", "value": "_REL_height"},
+																		{"label": "Leveys (pikseleinä)", "value": "_ABS_width"},
+																		{"label": "Korkeus (pikseleinä)", "value": "_ABS_height"},
+																		{"label": "Kuvasuhteen säilyminen (\"min\" tai \"max\")", "value": "_maintainAspectRatio"}
+																	]
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Uusi arvo",
+													"type": "node",
+													"data": 
+													{
+														"name": "value",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Kesto (sekunteina)",
+													"type": "node",
+													"data": 
+													{
+														"name": "time",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Tyyli",
+													"type": "node",
+													"data": 
+													{
+														"name": "ease",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																	"options":
+																	[
+{"value": "easeInBack", "label": "easeInBack"}, {"value": "easeInBounce", "label": "easeInBounce"}, {"value": "easeInCirc", "label": "easeInCirc"}, {"value": "easeInCubic", "label": "easeInCubic"}, {"value": "easeInElastic", "label": "easeInElastic"}, {"value": "easeInExpo", "label": "easeInExpo"}, {"value": "easeInOutBack", "label": "easeInOutBack"}, {"value": "easeInOutBounce", "label": "easeInOutBounce"}, {"value": "easeInOutCirc", "label": "easeInOutCirc"}, {"value": "easeInOutCubic", "label": "easeInOutCubic"}, {"value": "easeInOutElastic", "label": "easeInOutElastic"}, {"value": "easeInOutExpo", "label": "easeInOutExpo"}, {"value": "easeInOutQuad", "label": "easeInOutQuad"}, {"value": "easeInOutQuart", "label": "easeInOutQuart"}, {"value": "easeInOutQuint", "label": "easeInOutQuint"}, {"value": "easeInOutSine", "label": "easeInOutSine"}, {"value": "easeInQuad", "label": "easeInQuad"}, {"value": "easeInQuart", "label": "easeInQuart"}, {"value": "easeInQuint", "label": "easeInQuint"}, {"value": "easeInSine", "label": "easeInSine"}, {"value": "easeOutBack", "label": "easeOutBack"}, {"value": "easeOutBounce", "label": "easeOutBounce"}, {"value": "easeOutCirc", "label": "easeOutCirc"}, {"value": "easeOutCubic", "label": "easeOutCubic"}, {"value": "easeOutElastic", "label": "easeOutElastic"}, {"value": "easeOutExpo", "label": "easeOutExpo"}, {"value": "easeOutInBack", "label": "easeOutInBack"}, {"value": "easeOutInBounce", "label": "easeOutInBounce"}, {"value": "easeOutInCirc", "label": "easeOutInCirc"}, {"value": "easeOutInCubic", "label": "easeOutInCubic"}, {"value": "easeOutInElastic", "label": "easeOutInElastic"}, {"value": "easeOutInExpo", "label": "easeOutInExpo"}, {"value": "easeOutInQuart", "label": "easeOutInQuart"}, {"value": "easeOutInQuint", "label": "easeOutInQuint"}, {"value": "easeOutInSine", "label": "easeOutInSine"}, {"value": "easeOutQuad", "label": "easeOutQuad"}, {"value": "easeOutQuart", "label": "easeOutQuart"}, {"value": "easeOutQuint", "label": "easeOutQuint"}, {"value": "easeOutSine", "label": "easeOutSine"}, {"value": "linear", "label": "linear"}
+																	]
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Odotus (sekunteina)",
+													"type": "node",
+													"data": 
+													{
+														"name": "wait",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												},
+												{
+													"label": "Tapahtuma, joka ammutaan kun valmis",
+													"type": "node",
+													"data": 
+													{
+														"name": "onCompleteEventName",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												}	
+											]
+										}
+									}																			
+								]
+							},
+							{
+								"label": "Sisällön vaihto",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "changeHash"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Hash (risuaidan jälkeinen osuus)",
+													"type": "node",
+													"data": 
+													{
+														"name": "hash",
+														"content":
+														[
+															{
+																"type": "text" 
+															}
+														]
+													}
+												}
+											]
+										}
+									}			
+								]
+							},							
+							{
+								"label": "Huonedialogin luominen",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "createRoomDialog"
+												}
+											]
+										}
+									},
+									{							
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"type": "select",
+													"data":
+													{
+														"options":
+														[
+															{
+																"label": "Magicast",
+																"content":
+																[
+																	{
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "asset",
+																			"content":
+																			[
+																				{
+																					"type": "node", 
+																					"data": 
+																					{
+																						"name": "package",
+																						"content":
+																						[
+																							{
+																								"type": "constant",
+																								"data": "YLE.P2.FrontPage"
+																							}
+																						]
+																					}
+																				},
+																				{
+																					"type": "node", 
+																					"data": 
+																					{
+																						"name": "name",
+																						"content":
+																						[
+																							{
+																								"type": "constant",
+																								"data": "magicastDialog.swf"
+																							}
+																						]
+																					}
+																				}
+																			]
+																		}
+																	},
+																	{
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "parameters",
+																			"content":
+																			[
+																				{
+																					"label": "ID",
+																					"type": "node",
+																					"data": 
+																					{
+																						"name": "id",
+																						"content":
+																						[
+																							{
+																								"type": "text" 
+																							}
+																						]
+																					}
+																				}
+																			]
+																		}
+																	}
+																]
+															},
+															
+															
+															
+															{
+																"label": "Magicast (iso)",
+																"content":
+																[
+																	{
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "asset",
+																			"content":
+																			[
+																				{
+																					"type": "node", 
+																					"data": 
+																					{
+																						"name": "package",
+																						"content":
+																						[
+																							{
+																								"type": "constant",
+																								"data": "YLE.P2.FrontPage"
+																							}
+																						]
+																					}
+																				},
+																				{
+																					"type": "node", 
+																					"data": 
+																					{
+																						"name": "name",
+																						"content":
+																						[
+																							{
+																								"type": "constant",
+																								"data": "magicastDialog_iso.swf"
+																							}
+																						]
+																					}
+																				}
+																			]
+																		}
+																	},
+																	{
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "parameters",
+																			"content":
+																			[
+																				{
+																					"label": "ID",
+																					"type": "node",
+																					"data": 
+																					{
+																						"name": "id",
+																						"content":
+																						[
+																							{
+																								"type": "text" 
+																							}
+																						]
+																					}
+																				}
+																			]
+																		}
+																	}
+																]
+															},
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															{
+																"label": "Mediasoitin (keltainen)",
+																"content":
+																[
+																	{
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "asset",
+																			"content":
+																			[
+																				{
+																					"type": "node", 
+																					"data": 
+																					{
+																						"name": "package",
+																						"content":
+																						[
+																							{
+																								"type": "constant",
+																								"data": "YLE.P2.FrontPage"
+																							}
+																						]
+																					}
+																				},
+																				{
+																					"type": "node", 
+																					"data": 
+																					{
+																						"name": "name",
+																						"content":
+																						[
+																							{
+																								"type": "constant",
+																								"data": "mediaPlayerDialog_yellow.swf"
+																							}
+																						]
+																					}
+																				}
+																			]
+																		}
+																	},
+																	{
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "parameters",
+																			"content":
+																			[
+																				{
+																					"label": "Tiedosto",
+																					"type": "node",
+																					"data": 
+																					{
+																						"name": "asset",
+																						"content":
+																						[
+																							{
+																								"type": "asset" 
+																							}
+																						]
+																					}
+																				},
+																				{
+																					"label": "Laskurin nimen alku (loppuun lisätään _start ja _complete)",
+																					"type": "node",
+																					"data": 
+																					{
+																						"name": "counterId",
+																						"content":
+																						[
+																							{
+																								"type": "text" 
+																							}
+																						]
+																					}
+																				}
+																			]
+																		}
+																	}
+																]
+															},
+															
+															
+															
+															
+															
+															
+															{
+																"label": "Mediasoitin (sininen)",
+																"content":
+																[
+																	{
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "asset",
+																			"content":
+																			[
+																				{
+																					"type": "node", 
+																					"data": 
+																					{
+																						"name": "package",
+																						"content":
+																						[
+																							{
+																								"type": "constant",
+																								"data": "YLE.P2.FrontPage"
+																							}
+																						]
+																					}
+																				},
+																				{
+																					"type": "node", 
+																					"data": 
+																					{
+																						"name": "name",
+																						"content":
+																						[
+																							{
+																								"type": "constant",
+																								"data": "mediaPlayerDialog.swf"
+																							}
+																						]
+																					}
+																				}
+																			]
+																		}
+																	},
+																	{
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "parameters",
+																			"content":
+																			[
+																				{
+																					"label": "Tiedosto",
+																					"type": "node",
+																					"data": 
+																					{
+																						"name": "asset",
+																						"content":
+																						[
+																							{
+																								"type": "asset" 
+																							}
+																						]
+																					}
+																				},
+																				{
+																					"label": "Laskurin nimen alku (loppuun lisätään _start ja _complete)",
+																					"type": "node",
+																					"data": 
+																					{
+																						"name": "counterId",
+																						"content":
+																						[
+																							{
+																								"type": "text" 
+																							}
+																						]
+																					}
+																				}
+																			]
+																		}
+																	}
+																]
+															},
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															{
+																"label": "Muu",
+																"content":
+																[
+																	{
+																		"label": "Assetti",
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "asset",
+																			"content":
+																			[
+																				{
+																					"type": "asset" 
+																				}
+																			]
+																		}
+																	},
+																	{
+																		"label": "Parametrit (XML)",
+																		"type": "node",
+																		"data":
+																		{
+																			"name": "parameters",
+																			"content":
+																			[
+																				{
+																					"type": "text",
+																					"multiline": true
+																				}
+																			]
+																		}
+																	}
+																]
+															}
+														]
+													}
+												}
+											]
+										}
+									}			
+								]
+							},
+							{	
+								"label": "Noodin vaihto (VANHA)",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "branchNode"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Noodi",
+													"type": "node",
+													"data": 
+													{
+														"name": "targetNode",
+														"content":
+														[
+															{
+																"type": "text", 
+																"data": 
+																{
+																}
+															}
+														]
+													}
+												}	
+											]
+										}
+									}			
+								]
+							},
+{
+								"label": "Huoneen vaihto (VANHA)",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "changeRoom"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Assetti",
+													"type": "node",
+													"data": 
+													{
+														"name": "asset",
+														"content":
+														[
+															{
+																"type": "asset" 
+															}
+														]
+													}
+												},	
+												{
+													"label": "Parametrit (XML)",
+													"type": "node",
+													"data": 
+													{
+														"name": "parameters",
+														"content":
+														[
+															{
+																"type": "text",
+																"data": 
+																{
+																	"multiline": true
+																}
+															}
+														]
+													}
+												}	
+											]
+										}
+									}			
+								]
+							},
+							{
+								"label": "Selaimen avaaminen (VANHA)",
+								"content":
+								[
+									{
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "constant", 
+													"data": "openBrowser"
+												}
+											]
+										}
+									},
+									{
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"label": "Internetosoite",
+													"type": "node",
+													"data": 
+													{
+														"name": "url",
+														"content":
+														[
+															{
+																"type": "text" 
+															}
+														]
+													}
+												}	
+											]
+										}
+									}			
+								]
+							},							
+							{
+								"label": "Muu",
+								"content":
+								[
+									{
+										"label": "Kerros",
+										"type": "node",
+										"data":
+										{
+											"name": "layer",
+											"content":
+											[
+												{
+													"type": "text"
+												}
+											]
+										}
+									},
+									{
+										"label": "Metodi",
+										"type": "node",
+										"data":
+										{
+											"name": "method",
+											"content":
+											[
+												{
+													"type": "text"
+												}
+											]
+										}
+									},
+									{
+										"label": "Parametrit (XML)",
+										"type": "node",
+										"data": 
+										{
+											"name": "parameters",
+											"content":
+											[
+												{
+													"type": "text",
+													"data": {
+														"multiline": true
+													}
+												}
+											]
+										}
+									}			
+								]
+							}
+						]
+					}
+				},
+				{
+					"label": "Välitön?",
+					"type": "node",
+					"data": 
+					{
+						"name": "immediate",
+						"content":
+						[
+							{
+								"type": "boolean", 
+								"data": 
+								{
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "include", 
+					"data":
+					{
+						"url": "xmleditor_data/original/magicast_action_triggers.json"
+					}
+				}				
+			]
+		}
+	}
+]

@@ -1,0 +1,36 @@
+[
+	{
+		"label": "Kerros",
+		"type": "node",
+		"data":
+		{
+			"name": "layer",
+			"content":
+			[
+				{
+					"type": "text",
+					"data":
+					{
+					}
+				}													
+			]
+		}
+	},
+	{
+		"label": "Tapahtuma",
+		"type": "node",
+		"data":
+		{
+			"name": "name",
+			"content":
+			[
+				{
+					"type": "text",
+					"data":
+					{
+					}
+				}													
+			]
+		}
+	}
+]

@@ -1,0 +1,283 @@
+[
+	{ "type": "select", "data": { "options": [
+	
+	
+	
+	
+	
+		{ "label": "Kuvateksti", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.Taitoset" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "tekstikentta.swf" } ] } } 
+			] } },
+		
+			{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 	
+				
+					{ "label": "Kuvateksti", "type": "node", "data": { "name": "teksti", "content": [
+							{ "type": "text", "data": { } }
+					] } }
+					
+				
+			
+		] } }
+	] },		
+		
+		
+		
+		
+		
+	{ "label": "Nappi", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.Taitoset" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "btnAskartelu.swf" } ] } } 
+			] } },
+		
+		{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 	
+
+		{
+		"type": "node",
+		"data":
+		{
+			"name": "ikoni",
+			"content":
+			[
+				{
+					"label": "Napin kuva",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}	
+			]
+		}
+	},
+	
+	{ "label": "Askartelun nimi", "type": "node", "data": { "name": "askarteluNimi", "content": 
+				[
+					
+							{ "type": "text", "data": { } }
+					
+					
+				] 
+	} },
+	
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "guidesound",
+			"content":
+			[
+				{
+					"label": "Ohjeääni",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}
+			
+			
+				
+			]
+		}
+	}
+	
+	] }
+	}	
+	]},
+	
+	
+	{ "label": "Hertan vinkki", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.Taitoset" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "vinkkikehys.swf" } ] } } 
+			] } },
+		
+		{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 	
+
+		{
+		"type": "node",
+		"data":
+		{
+			"name": "ikoni",
+			"content":
+			[
+				{
+					"label": "Vinkin kuva",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}	
+			]
+		}
+	},
+	
+	{ "label": "Vinkin nimi", "type": "node", "data": { "name": "vinkkiNimi", "content": 
+				[
+					
+							{ "type": "text", "data": { } }
+					
+					
+				] 
+	} },
+	
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "guidesound",
+			"content":
+			[
+				{
+					"label": "Vinkki",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}
+			
+			
+				
+			]
+		}
+	}
+	
+	] }
+	}	
+	]},
+	
+	
+	
+	{ "label": "Printtivintti-nappi", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.Taitoset" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "btnPrintti.swf" } ] } } 
+			] } },
+		
+		{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 	
+
+		{
+		"type": "node",
+		"data":
+		{
+			"name": "ikoni",
+			"content":
+			[
+				{
+					"label": "Napin ikoni",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}	
+			]
+		}
+	},
+	
+	{ "label": "Napin nimi", "type": "node", "data": { "name": "napinNimi", "content": 
+				[
+					
+							{ "type": "text", "data": { } }
+					
+					
+				] 
+	} },
+	
+	
+		{ "label": "URL", "type": "node", "data": { "name": "url", "content": 
+				[
+					
+							{ "type": "text", "data": { } }
+					
+					
+				] 
+	} },
+	
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "guidesound",
+			"content":
+			[
+				{
+					"label": "Ohjeääni",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}
+			
+			
+				
+			]
+		}
+	}
+
+	
+		
+	
+	] }
+	}	
+	]}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+	] 
+	} 
+	} 
+	
+	
+	
+]

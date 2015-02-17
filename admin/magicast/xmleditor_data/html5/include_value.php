@@ -1,0 +1,5 @@
+[
+<?
+	include("value.php");
+?>
+]

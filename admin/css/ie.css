@@ -1,0 +1,18 @@
+/* Replace the gradient fill not supported by IE below version 10 */
+.menu-items li a {
+	background: #dd8f2d;
+}
+
+/* Fix the vertical alignment of radiobuttons, select and checkbox on IE (WTF IE?) */
+input[type=radio], input[type=checkbox], select {
+	vertical-align: -10%;
+}
+
+/* Replace the buggy box-shadow declaration with simple borders */
+fieldset {
+	box-shadow: 0px 0px 0px #000;
+	border-top: 1px solid #b5b89a;
+	border-left: 1px solid #b5b89a;
+	border-bottom: 1px solid #f1e7d9;
+	border-right: 1px solid #f1e7d9;
+}

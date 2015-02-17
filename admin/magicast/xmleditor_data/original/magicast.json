@@ -1,0 +1,77 @@
+[
+	{
+		"label": "Noodit",
+		"type": "list", 
+		"data":
+		{
+			"content":
+			[
+				{
+					"type": "node",
+					"data":
+					{
+						"errorCatcher": false,
+						"name": "node",
+						"content":
+						[
+							{
+								"label": "ID",
+								"type": "attribute",
+								"data":
+								{
+									"name": "id",
+									"content": [ { "type": "text" } ]
+								}
+							},
+							{
+								"label": "Kerrokset",
+								"type": "list", 
+								"data":
+								{
+									"content":
+									[
+										{
+											"type": "node",
+											"data":
+											{
+												"errorCatcher": false,
+												"name": "layer",
+												"content":
+												[
+													{
+														"type": "include",
+														"data":
+														{
+															"url": "xmleditor_data/original/magicast_layer.json"
+														}
+													}
+												]
+											}
+										}
+									]
+								}
+							},
+							{
+								"label": "Toiminnot",
+								"type": "list", 
+								"data":
+								{
+									"content":
+									[
+										{
+											"type": "include",
+											"data":
+											{
+												"url": "xmleditor_data/original/magicast_node_action.json"
+											}
+										}
+									]
+								}
+							}
+						]
+					}					
+				}
+			]
+		}
+	}
+]

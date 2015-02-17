@@ -1,0 +1,862 @@
+[
+	{ "type": "select", "data": { "options": [
+	
+		{ "label": "Nostot: pallot", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/nostot.swf" } ] } } 
+			] } },
+		
+			{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 
+				{ "label": "Nostot (max. 6 kappaletta)", "type": "list", "data": { "content": [
+					{ "type": "node", "data": { "errorCatcher": "true", "name": "nosto", "content": [
+						{ "label": "Kuva", "type": "node", "data": { "name": "icon", "content": [
+							{ "type": "asset", "data": { } }
+						] } },
+						{ "label": "Ohjeääni", "type": "node", "data": { "name": "guidesound", "content": [
+							{ "type": "asset", "data": { } }
+						] } },
+						{ "label": "Hash", "type": "node", "data": { "name": "hash", "content": [
+							{ "type": "text", "data": { } }
+						] } }
+					] } }
+				] } }
+			] } }
+			
+		] 
+	},
+	
+	
+	{ "label": "Nostot: puu", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/nostot_puu.swf" } ] } } 
+			] } },
+		
+			{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 
+				{ "label": "Nostot (max. 6 kappaletta)", "type": "list", "data": { "content": [
+					{ "type": "node", "data": { "errorCatcher": "true", "name": "nosto", "content": [
+						{ "label": "Kuva", "type": "node", "data": { "name": "icon", "content": [
+							{ "type": "asset", "data": { } }
+						] } },
+						{ "label": "Ohjeääni", "type": "node", "data": { "name": "guidesound", "content": [
+							{ "type": "asset", "data": { } }
+						] } },
+						{ "label": "Hash", "type": "node", "data": { "name": "hash", "content": [
+							{ "type": "text", "data": { } }
+						] } }
+					] } }
+				] } }
+			] } },
+			
+				{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	}
+			
+		] 
+	},
+	
+		
+	{ "label": "Ohje", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/ohje.swf" } ] } } 
+			] } },
+		
+			{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 	
+				{ "label": "Ohjeen tyyppi", "type": "node", "data": { "name": "ohje", "content": 
+				[
+					{ "type": "attribute", "data": { "name": "type", "content": [ { "type": "text", "data": { "options": [							
+						{"label": "Etsi parit", "value": "etsiParit"},
+						{"label": "Klikkaa", "value": "klikkaa"}
+					] } } ] } }
+				] } }
+			
+		] } }
+	] },		
+	
+			{ "label": "Linkit", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/btnLinkki_tulosta.swf" } ] } } 
+			] } },
+		
+			{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 
+				{ "label": "Linkkilistaus", "type": "list", "data": { "content": [
+					{ "type": "node", "data": { "errorCatcher": "true", "name": "link", "content": [
+						
+						{ "label": "Linkin teksti", "type": "node", "data": { "name": "linkkiteksti", "content": [
+							{ "type": "text", "data": { } }
+						] } },
+						{ "label": "URL", "type": "node", "data": { "name": "url", "content": [
+							{ "type": "text", "data": { } }
+						] } }
+					] } }
+				] } }
+			] } }
+			
+		] 
+	},
+	
+	{ "label": "Aloita jakso -nappi", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/btnAloitaJakso.swf" } ] } } 
+			] } },
+		
+		{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 	
+
+		
+			
+				{ "label": "Valitse animaatio", "type": "node", "data": { "name": "animaatio", "content": 
+						[
+							{ "type": "attribute", "data": { "name": "type", "content": [ { "type": "text", "data": { "options": [
+								{"label": "Auto", "value": "auto"},
+								{"label": "Muna", "value": "muna"},
+								{"label": "Siili", "value": "siili"},
+								{"label": "Kone", "value": "kone"},
+								{"label": "Lintu", "value": "lintu"}
+							] } } ] } }
+						] 
+					} 
+				},
+			
+	
+
+	
+		
+		
+		{
+		"type": "node",
+		"data":
+		{
+			"name": "ikoni",
+			"content":
+			[
+				{
+					"label": "Napin kuva",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}	
+			]
+		}
+	},
+	
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "guidesound",
+			"content":
+			[
+				{
+					"label": "Ohjeääni",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}
+			
+			
+				
+			]
+		}
+	}
+	
+	] }
+	}	
+	]},	
+	
+	
+	
+	
+	
+	
+		
+	{ "label": "Nappi", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/btnPallo.swf" } ] } } 
+			] } },
+		
+		{ "type": "node", "data": { "errorCatcher": "true", "name": "parameters", "content": [ 	
+
+		{
+		"type": "node",
+		"data":
+		{
+			"name": "ikoni",
+			"content":
+			[
+				{
+					"label": "Napin kuva",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}	
+			]
+		}
+	},
+	
+	{
+		"type": "node",
+		"data":
+		{
+			"name": "guidesound",
+			"content":
+			[
+				{
+					"label": "Ohjeääni",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				}
+			
+			
+				
+			]
+		}
+	}
+	
+	] }
+	}	
+	]},	
+	
+	
+		
+		
+			
+		{ "label": "Video kehyksella", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/video_kehys.swf" } ] } } 
+			] } },
+		
+			
+
+			{
+		"type": "node",
+		"data":
+		{
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Video",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistuva?",
+					"type": "node",
+					"data":
+					{
+						"name": "loop",
+						"content": 
+						[
+							{
+								"type": "boolean"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistumisen hetki (sekunteina)",
+					"type": "node",
+					"data":
+					{
+						"name": "loopPosition",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Bufferi (sekunteina, tyhjä = 5 sekuntia)",
+					"type": "node",
+					"data":
+					{
+						"name": "bufferTime",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Cuet",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "cuePoint",
+									"content":
+									[
+										{
+											"label": "Aika (sekunteina)",
+											"type": "node",
+											"data":
+											{
+												"name": "time",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										},
+										{
+											"label": "Nimi",
+											"type": "node",
+											"data":
+											{
+												"name": "name",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>- (jokainen cue)<br/>- onStart<br/>- onLoop<br/>- onComplete</p><p>Toiminnot:<br/>- cutVideo / &lt;index&gt;{index}&lt;/index&gt;</p>"
+		}
+	}
+			
+	
+		] 
+		
+	},
+	
+	
+	
+	
+	
+		
+			
+		{ "label": "Video oven takana", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/video_ovi.swf" } ] } } 
+			] } },
+		
+			
+
+			{
+		"type": "node",
+		"data":
+		{
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Video",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistuva?",
+					"type": "node",
+					"data":
+					{
+						"name": "loop",
+						"content": 
+						[
+							{
+								"type": "boolean"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistumisen hetki (sekunteina)",
+					"type": "node",
+					"data":
+					{
+						"name": "loopPosition",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Bufferi (sekunteina, tyhjä = 5 sekuntia)",
+					"type": "node",
+					"data":
+					{
+						"name": "bufferTime",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Cuet",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "cuePoint",
+									"content":
+									[
+										{
+											"label": "Aika (sekunteina)",
+											"type": "node",
+											"data":
+											{
+												"name": "time",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										},
+										{
+											"label": "Nimi",
+											"type": "node",
+											"data":
+											{
+												"name": "name",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>- (jokainen cue)<br/>- onStart<br/>- onLoop<br/>- onComplete</p><p>Toiminnot:<br/>- cutVideo / &lt;index&gt;{index}&lt;/index&gt;</p>"
+		}
+	}
+			
+	
+		] 
+		
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+		
+			
+		{ "label": "Video piparikehyksellä", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/video_piparireuna.swf" } ] } } 
+			] } },
+		
+			
+
+			{
+		"type": "node",
+		"data":
+		{
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Video",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistuva?",
+					"type": "node",
+					"data":
+					{
+						"name": "loop",
+						"content": 
+						[
+							{
+								"type": "boolean"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistumisen hetki (sekunteina)",
+					"type": "node",
+					"data":
+					{
+						"name": "loopPosition",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Bufferi (sekunteina, tyhjä = 5 sekuntia)",
+					"type": "node",
+					"data":
+					{
+						"name": "bufferTime",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Cuet",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "cuePoint",
+									"content":
+									[
+										{
+											"label": "Aika (sekunteina)",
+											"type": "node",
+											"data":
+											{
+												"name": "time",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										},
+										{
+											"label": "Nimi",
+											"type": "node",
+											"data":
+											{
+												"name": "name",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>- (jokainen cue)<br/>- onStart<br/>- onLoop<br/>- onComplete</p><p>Toiminnot:<br/>- cutVideo / &lt;index&gt;{index}&lt;/index&gt;</p>"
+		}
+	}
+			
+	
+		] 
+		
+	},
+	
+	
+	
+				
+		{ "label": "Video hissillä", "content": [
+			{ "type": "node", "data": { "name": "asset", "content": [ 
+				{ "type": "node", "data": { "name": "package", "content": [ { "type": "constant", "data": "YLE.P2.FrontPage" } ] } }, 
+				{ "type": "node", "data": { "name": "name", "content": [ { "type": "constant", "data": "layers/video_hissi.swf" } ] } } 
+			] } },
+		
+			
+
+			{
+		"type": "node",
+		"data":
+		{
+			"name": "parameters",
+			"content":
+			[
+				{
+					"label": "Video",
+					"type": "node",
+					"data":
+					{
+						"name": "asset",
+						"content": 
+						[
+							{
+								"type": "asset"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistuva?",
+					"type": "node",
+					"data":
+					{
+						"name": "loop",
+						"content": 
+						[
+							{
+								"type": "boolean"
+							}
+						]
+					}
+				},
+				{
+					"label": "Toistumisen hetki (sekunteina)",
+					"type": "node",
+					"data":
+					{
+						"name": "loopPosition",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Bufferi (sekunteina, tyhjä = 5 sekuntia)",
+					"type": "node",
+					"data":
+					{
+						"name": "bufferTime",
+						"content": 
+						[
+							{
+								"type": "text"
+							}
+						]
+					}
+				},
+				{
+					"label": "Cuet",
+					"type": "list",
+					"data":
+					{
+						"content":
+						[
+							{
+								"type": "node",
+								"data":
+								{
+									"name": "cuePoint",
+									"content":
+									[
+										{
+											"label": "Aika (sekunteina)",
+											"type": "node",
+											"data":
+											{
+												"name": "time",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										},
+										{
+											"label": "Nimi",
+											"type": "node",
+											"data":
+											{
+												"name": "name",
+												"content":
+												[
+													{
+														"type": "text"
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	{
+		"type": "include",
+		"data":
+		{
+			"url": "xmleditor_data/original/magicast_actions.json"
+		}
+	},
+	{
+		"label": "Tietoa",
+		"type": "help",
+		"data": 
+		{
+			"html": "<p>Eventit:<br/>- (jokainen cue)<br/>- onStart<br/>- onLoop<br/>- onComplete</p><p>Toiminnot:<br/>- cutVideo / &lt;index&gt;{index}&lt;/index&gt;</p>"
+		}
+	}
+			
+	
+		] 
+		
+	}
+		
+		
+	] 
+	} 
+	} 
+	
+	
+	
+]

@@ -1,0 +1,31 @@
+.accessmanager {
+	font-size: 10pt;
+}
+
+.accessmanager .text {
+	box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.55), -1px -1px 1px rgba(0, 0, 0, 0.20);
+	background: rgba(0, 0, 0, 0.06);
+	color: #d47525;
+	font-weight: bold;
+	padding: 10px;
+	margin-bottom: 0;
+}
+
+.accessmanager .access-button {
+	color: #937845;
+	margin-left: 5px;
+	font-size: 9pt;
+}
+
+#accessmanager_container label {
+	margin-right: 0;
+}
+
+#accessmanager_container table.list tbody td:last-child {
+	
+}
+
+#accessmanager_container table.list {
+	margin-top: 10px;
+}
+

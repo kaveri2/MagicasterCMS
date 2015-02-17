@@ -1,0 +1,19 @@
+[
+	{
+		"label": "Toiminnot",
+		"type": "list", 
+		"data":
+		{
+			"content":
+			[
+				{
+					"type": "include",
+					"data":
+					{
+						"url": "xmleditor_data/original/magicast_action.json"
+					}
+				}
+			]
+		}
+	}
+]
