@@ -12,7 +12,7 @@
 	include("variable.php");
 ?>
 		] } }
-	] },	
+	] },
 	{ "label": "Property", "content": [
 		{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "property", "hint": { "failure": true, "success": true } } ] } },
 		{ "type": "node", "data": { "name": "value", "content": [ 
@@ -86,5 +86,30 @@
 				] } }
 			] } }
 		] } }
-	] }
+	] },
+	{ "label": "Array", "content": [
+		{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "array", "hint": { "failure": true, "success": true } } ] } },
+		{ "type": "node", "data": { "name": "value", "content": [ 
+			{ "label": "Items", "type": "list", "data": { "content": [
+				{ "type": "node", "data": { "name": "item", "content": [
+					{ "type": "include", "data": { "url": "xmleditor_data/html5/include_value.php" } }
+				] } }
+			] } }
+		] } }
+	] },
+	{ "label": "Array item (TODO)", "content": [
+		{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "arrayItem", "hint": { "failure": true, "success": true } } ] } },
+		{ "type": "node", "data": { "name": "value", "content": [ 
+			{ "label": "Array", "type": "node", "data": { "name": "array", "content": [
+			] } },
+			{ "label": "Index", "type": "node", "data": { "name": "Index", "content": [
+			] } }
+		] } }
+	] },
+	{ "label": "Other", "content": [
+		{ "label": "Type", "type": "node", "data": { "name": "type", "content": [ { "type": "text" } ] } },
+		{ "label": "Value", "type": "node", "data": { "name": "value", "content": [ 
+			{ "type": "text", "data": { "multiline": true } } 
+		] } }
+	] }	
 ] } }

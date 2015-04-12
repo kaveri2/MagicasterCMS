@@ -123,7 +123,12 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "openBrowser", "hint": {"failure": true, "success": true} } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "label": "URL", "type": "node", "data": { "name": "URL", "content": [ { "type": "text" } ] } },
-					{ "label": "Target", "type": "node", "data": { "name": "target", "content": [ { "type": "text" } ] } }
+					{ "label": "Target", "type": "node", "data": { "name": "target", "content": [ { "type": "text", "data": { "options": [
+						{ "label": "New window", "value": "_blank" },
+						{ "label": "This frame", "value": "_self" },
+						{ "label": "Parent frame", "value": "_parent" },
+						{ "label": "Top frame", "value": "_top" }
+					] } } ] } }
 				] } }
 			] }
 		] } } 

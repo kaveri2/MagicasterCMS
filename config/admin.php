@@ -164,11 +164,12 @@ $CONFIG = array_merge($CONFIG, array(
 	),
 	
 	"magicast" => array(
-		"test_buttons" => array(
-			array("label" => "Flash Main", "url" => $client_base_url . "test_flash_main.php", "shortcut" => "alt+ctrl+m"),
-			array("label" => "Flash Popup", "url" => $client_base_url . "test_flash_popup.php", "shortcut" => "alt+ctrl+p"),
-			array("label" => "HTML5 Fullscreen", "url" => $client_base_url . "test_html5_fullscreen.php", "shortcut" => "alt+ctrl+f"),
-			array("label" => "HTML5 Stretch", "url" => $client_base_url ."test_html5_strech.php", "shortcut" => "alt+ctrl+s")
+		"action_buttons" => array(
+			array("label" => "Test / Flash Main", "url" => $client_base_url . "test_flash_main.php", "shortcut" => "alt+ctrl+m"),
+			array("label" => "Test / Flash Popup", "url" => $client_base_url . "test_flash_popup.php", "shortcut" => "alt+ctrl+p"),
+			array("label" => "Test / HTML5 Fullscreen", "url" => $client_base_url . "test_html5_fullscreen.php", "shortcut" => "alt+ctrl+f"),
+			array("label" => "Test / HTML5 Stretch", "url" => $client_base_url ."test_html5_strech.php", "shortcut" => "alt+ctrl+s"),
+			array("label" => "Export / HTML5", "url" => $client_base_url . "export_html5.php", "shortcut" => "alt+ctrl+e")
 		)
 	),
 	
@@ -235,14 +236,11 @@ $CONFIG = array_merge($CONFIG, array(
 			array("label" => "Service", "include_file" => "layer_service.php"),
 			array("label" => "Magicaster", "include_file" => "layer_magicaster.php")
 		),
-		"magicast_action_options" => array(
-			array("label" => "Magicaster", "include_file" => "magicast_action_magicaster.php"),
-			array("label" => "Audio", "include_file" => "magicast_action_audio.php")
-		),
-		"layer_action_options" => array(
-			array("label" => "Generic", "include_file" => "layer_action_generic.php"),
-			array("label" => "Generic", "include_file" => "layer_action_service.php"),
-			array("label" => "Magicaster", "include_file" => "layer_action_magicaster.php")
+		"action_options" => array(
+			array("label" => "Magicast", "include_file" => "action_magicast.php"),
+			array("label" => "Magicaster", "include_file" => "action_magicaster.php"),
+			array("label" => "Generic", "include_file" => "action_generic.php"),
+			array("label" => "Service", "include_file" => "action_service.php")
 		),
 		"event_options" => array(
 		)

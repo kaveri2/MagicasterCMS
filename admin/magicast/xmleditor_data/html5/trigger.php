@@ -34,30 +34,24 @@
 		{ "label": "Wait (seconds)", "type": "node", "data": { "name": "wait", "content": [ { "type": "text" } ] } },
 		{ "label": "Magicast", "type": "node", "data": { "name": "magicast", "content": [ { "type": "text" } ] } },
 		{ "type": "select", "data": { "options": [
-			{ "label": "Magicast actions", "content": [
 <?
-	include("magicast_action.php");
+foreach ($CONFIG['magicast/xmleditor_data/html5']['action_options'] as $option) {
 ?>
-			] },
-			{ "label": "Layer actions", "content": [
-				{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
-				{ "type": "select", "data": { "options": [
-<?
-foreach ($CONFIG['magicast/xmleditor_data/html5']['layer_action_options'] as $option) {
-?>
-					{ "label": "<?= $option['label'] ?>", "content": [
+			{ "label": "<?= $option['label'] ?>", "content": [
 <?
 	include($option['include_file']);
 ?>
-					] },
+			] },
 <?
 }
 ?>
-					{ "label": "Other", "content": [
-						{ "label": "Method", "type": "node", "data": { "name": "method", "content": [ { "type": "text" } ] } },
-						{ "label": "Parameters", "type": "node", "data": { "name": "parameters", "content": [ { "type": "text", "data": { "multiline": true } } ] } }
-					] }
-				] } }
+			{ "label": "Other", "content": [
+				{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
+<?
+	include("value.php");
+?>
+				] } },
+				{ "label": "Parameters", "type": "node", "data": { "name": "parameters", "content": [ { "type": "text", "data": { "multiline": true } } ] } }
 			] }
 		] } }
 	] } }

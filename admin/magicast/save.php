@@ -80,10 +80,12 @@
 		
 	<p>
 		<input class="big-button" type="submit" id="save" value="Save" title="ctrl+s" />
+	</p>
+	<p>
 <?
-		foreach ($CONFIG['magicast']['test_buttons'] as $index => $b) {
+		foreach ($CONFIG['magicast']['action_buttons'] as $index => $b) {
 ?>	
-			<input class="big-button" type="button" id="testButton_<?= $index ?>" value="Test / <?= $b['label'] ?>" title="<?= $b['shortcut'] ?>" />
+			<input class="big-button" type="button" id="actionButton_<?= $index ?>" value="<?= $b['label'] ?>" title="<?= $b['shortcut'] ?>" />
 <?
 		}
 ?>
@@ -108,19 +110,19 @@
 			return true;
 		});
 <?
-		foreach ($CONFIG['magicast']['test_buttons'] as $index => $b) {
+		foreach ($CONFIG['magicast']['action_buttons'] as $index => $b) {
 ?>	
 
-		$("#testButton_<?= $index ?>").click(function() {
+		$("#actionButton_<?= $index ?>").click(function() {
 			var xml = $("#data").xmleditor("val");					
-			$("body").append("<form id='form_test' method='post' action='<?= $b['url'] ?>' target='_blank'><textarea name='data'>" + xml + "</textarea></form>");
-			$("#form_test").submit();
-			$("#form_test").remove();
+			$("body").append("<form id='form_action' method='post' action='<?= $b['url'] ?>' target='_blank' style='display: none;'><textarea name='data'>" + xml + "</textarea></form>");
+			$("#form_action").submit();
+			$("#form_action").remove();
 			return false;
 		});
 
 		$(document).bind('keydown', '<?= $b["shortcut"] ?>', function() {
-			$('input#testButton_<?= $index ?>').trigger('click');
+			$('input#actionButton_<?= $index ?>').trigger('click');
 			return false;
 		});
 <?

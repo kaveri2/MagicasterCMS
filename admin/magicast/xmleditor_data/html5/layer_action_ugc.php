@@ -1,2 +1,0 @@
-{ "type": "select", "data": { "options": [
-] } }
