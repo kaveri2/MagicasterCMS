@@ -9,17 +9,17 @@
 <?
 	include("value.php");
 ?>
-			] } },
+			], "delay": true } },
 			{ "label": "Label", "type": "node", "data": { "name": "label", "content": [
 <?
 	include("value.php");
 ?>
-			] } },
+			], "delay": true } },
 			{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
 <?
 	include("value.php");
 ?>
-			] } }
+			], "delay": true } }
 		] } }
 	] },
 	{ "label": "Grant session access", "content": [
@@ -52,7 +52,7 @@
 <?
 	include("value.php");
 ?>
-			] } }
+			], "delay": true } }
 		] } }
 	] }
 ] } }

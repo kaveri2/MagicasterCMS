@@ -5,7 +5,11 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "components/2015/video.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
-			{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [ { "type": "asset" } ] } },
+			{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
+<?
+	include("value.php");
+?>
+			], "delay": true } },
 			{ "label": "Cuepoints", "type": "list", "data": { "content": [ 
 				{ "type": "node", "data": { "name": "cue", "content": [ 
 					{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [ { "type": "text" } ] } },
@@ -25,9 +29,9 @@
 		{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 			{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
 <?
-	include("asset.php");
+	include("value.php");
 ?>
-			] } },
+			], "delay": true } },
 			{ "label": "Cuepoints", "type": "list", "data": { "content": [ 
 				{ "type": "node", "data": { "name": "cue", "content": [ 
 					{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [ { "type": "text" } ] } },
@@ -48,16 +52,16 @@
 				{ "label": "Asset", "content": [
 					{ "type": "node", "data": { "name": "asset", "content": [
 <?
-	include("asset.php");
+	include("value.php");
 ?>
-					] } }
+					], "delay": true } }
 				] },
 				{ "label": "Data", "content": [
 					{ "type": "node", "data": { "name": "data", "content":  [
 <?
 	include("value.php");
 ?>
-					] } }
+					], "delay": true } }
 				] }
 			] } }
 		] } }
@@ -72,7 +76,7 @@
 <?
 	include("value.php");
 ?>
-			] } },
+			], "delay": true } },
 			{ "label": "Scale", "type": "node", "data": { "name": "scale", "content": [ { "type": "text", "data": { "options": [
 				{ "label": "None", "value": "none" },
 				{ "label": "Up", "value": "up" },

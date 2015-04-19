@@ -42,6 +42,8 @@
 </div>
 
 <div id="templates">
+	<h3>Step 1: Select template</h3>
+	<p>
 <?
 	$magicasts = DB::search(
 		array(
@@ -55,6 +57,15 @@
 <?
 	}
 ?>
+	</p>
+	<h3>Step 2: Fill in language data</h3>
+	<p>
+	<textarea id="templateLanguage" style="height: 400px"></textarea>
+	</p>
+	<h3>Step 3: Generate</h3>
+	<p>
+	<a href="#" id="templateConfirmation">Confirm</a>
+	</p>
 </div>
 
 <div id="content">
@@ -95,11 +106,36 @@
 <script type="text/javascript">		
 	var buttonPressed = false;
 	$(function() {
+		var templateData = "";
 		$(".templateButton").click(function() {
+			$(".templateButton").removeClass('selected');
+			$(this).addClass('selected');
 			$.get('getMagicastData.php?id=' + $(this).attr('magicastId'), function(data) {
-				$("#data").xmleditor("val", data);
-				$("#data").xmleditor("tab", 0);			
+				templateData = data;
+				var elements = templateData.match(/\{([A-ZÅÄÖa-zåäö0-9-_]+)\}/g);
+				var lines = "";
+				if (elements) {
+					for (var i=0 ; i<elements.length ; i++) {
+						var element = elements[i];
+						element = element.replace("{", "").replace("}", "");
+						lines = lines + element + "=" + "\n";
+					}
+				}
+				$('#templateLanguage').val(lines);
 			});
+			return false;
+		});
+		$("#templateConfirmation").click(function() {
+			var data = templateData;
+			var lines = $('#templateLanguage').val().split('\n');			
+			if (lines) {
+				for (var i=0 ; i<lines.length ; i++) {
+					var a = lines[i].split('=');
+					data = data.replace("{" + a.shift() + "}", a.join('='));
+				}
+			}
+			$("#data").xmleditor("val", data);
+			$("#data").xmleditor("tab", 0);
 			return false;
 		});
 		$("#data").xmleditor('load', 'xmleditor_data/magicast.php'); 		

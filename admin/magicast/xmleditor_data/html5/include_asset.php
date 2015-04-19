@@ -1,5 +1,0 @@
-[
-<?
-	include("asset.php");
-?>
-]

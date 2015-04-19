@@ -5,29 +5,33 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2015/controlyoutube.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
-			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
+			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
+<?
+	include("value.php");
+?>
+			], "delay": true } },
 			{ "type": "select", "data": { "options": [
 				{ "label": "Play", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "play", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "play" } ] } }
 				] },
 				{ "label": "Seek", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek", "hint": {"failure": true} } ] } },
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "label": "Time (s)", "type": "node", "data": { "name": "time", "content": [
 <?
 	include("value.php");
 ?>
-						] } }
+						], "delay": true } }
 					] } }
 				] },
 				{ "label": "Pause", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "pause", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "pause" } ] } }
 				] },
 				{ "label": "Resume", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "resume", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "resume" } ] } }
 				] },
 				{ "label": "Stop", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "stop", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "stop" } ] } }
 				] }
 			] } }
 		] } }

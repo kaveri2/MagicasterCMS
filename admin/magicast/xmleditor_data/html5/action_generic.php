@@ -5,29 +5,33 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/controlaudio.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
-			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
+			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
+<?
+	include("value.php");
+?>
+			], "delay": true } },
 			{ "type": "select", "data": { "options": [
 				{ "label": "Play", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "play", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "play" } ] } }
 				] },
 				{ "label": "Seek", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek", "hint": {"failure": true} } ] } },
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "label": "Time (s)", "type": "node", "data": { "name": "time", "content": [
 <?
 	include("value.php");
 ?>
-						] } }
+						], "delay": true } }
 					] } }
 				] },
 				{ "label": "Pause", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "pause", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "pause" } ] } }
 				] },
 				{ "label": "Resume", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "resume", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "resume" } ] } }
 				] },
 				{ "label": "Stop", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "stop", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "stop" } ] } }
 				] }
 			] } }
 		] } }
@@ -38,26 +42,30 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/controlimage.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
-			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
+			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
+<?
+	include("value.php");
+?>
+			], "delay": true } },
 			{ "type": "select", "data": { "options": [
 				{ "label": "Set asset", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setAsset", "hint": {"failure": true} } ] } },
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setAsset" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "type": "node", "data": { "name": "value", "content": [
 <?
-	include("asset.php");
+	include("value.php");
 ?>
-						] } }
+						], "delay": true } }
 					] } }
 				] },
 				{ "label": "Set data", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setData", "hint": {"failure": true} } ] } },
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setData" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "type": "node", "data": { "name": "value", "content": [ 
 <?
 	include("value.php");
 ?>
-						] } }
+						], "delay": true } }
 					] } }
 				] }
 			] } }
@@ -69,16 +77,20 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/controltext.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
-			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
+			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
+<?
+	include("value.php");
+?>
+			], "delay": true } },
 			{ "type": "select", "data": { "options": [
 				{ "label": "Set text", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setText", "hint": {"failure": true} } ] } },
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setText" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "type": "node", "data": { "name": "value", "content": [ 
 <?
 	include("value.php");
 ?>
-						] } }
+						], "delay": true } }
 					] } }
 				] }
 			] } }
@@ -90,29 +102,33 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/controlvideo.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
-			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
+			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
+<?
+	include("value.php");
+?>
+			], "delay": true } },
 			{ "type": "select", "data": { "options": [
 				{ "label": "Play", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "play", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "play" } ] } }
 				] },
 				{ "label": "Seek", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek", "hint": {"failure": true} } ] } },
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "label": "Time (s)", "type": "node", "data": { "name": "time", "content": [
 <?
 	include("value.php");
 ?>
-						] } }
+						], "delay": true } }
 					] } }
 				] },
 				{ "label": "Pause", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "pause", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "pause" } ] } }
 				] },
 				{ "label": "Resume", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "resume", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "resume" } ] } }
 				] },
 				{ "label": "Stop", "content": [
-					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "stop", "hint": {"failure": true} } ] } }
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "stop" } ] } }
 				] }
 			] } }
 		] } }

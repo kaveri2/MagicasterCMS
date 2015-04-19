@@ -10,27 +10,18 @@
 ?>
 	] } }
 ] } },
-{ "label": "Conditions", "type": "list", "data": { "content": [ 
-	{ "type": "node", "data": { "name": "condition", "content": [ 
-		{ "label": "Operator", "type": "node", "data": { "name": "operator", "content": [ { "type": "text", "data": { "options": [
-			{ "label": "==", "value": "eq" },
-			{ "label": "!=", "value": "ne" },
-			{ "label": "&gt;", "value": "gt" },
-			{ "label": "&lt;", "value": "lt" },
-			{ "label": "IS NULL", "value": "isNull" },
-			{ "label": "IS NOT NULL", "value": "isNotNull" }
-		] } } ] } },
-		{ "label": "Values", "type": "list", "data": { "content": [ 
-			{ "type": "node", "data": { "name": "value", "content": [
+{ "label": "Condition", "type": "node", "data": { "name": "condition", "content": [
 <?
 	include("value.php");
 ?>
-			] } }
-		] } }
-	] } }
-] } },
+], "delay": true } },
 { "label": "Actions to run", "type": "list", "data": { "content": [ 
 	{ "type": "node", "data": { "name": "action", "content": [ 
+		{ "label": "Condition", "type": "node", "data": { "name": "condition", "content": [
+<?
+	include("value.php");
+?>
+		], "delay": true } },
 		{ "label": "Wait (seconds)", "type": "node", "data": { "name": "wait", "content": [ { "type": "text" } ] } },
 		{ "label": "Magicast", "type": "node", "data": { "name": "magicast", "content": [ { "type": "text" } ] } },
 		{ "type": "select", "data": { "options": [
@@ -50,9 +41,9 @@ foreach ($CONFIG['magicast/xmleditor_data/html5']['action_options'] as $option) 
 <?
 	include("value.php");
 ?>
-				] } },
+				], "delay": true } },
 				{ "label": "Parameters", "type": "node", "data": { "name": "parameters", "content": [ { "type": "text", "data": { "multiline": true } } ] } }
 			] }
 		] } }
-	] } }
+	] }, "hint": { "success": true } }
 ] } }

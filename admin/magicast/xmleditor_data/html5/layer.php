@@ -15,7 +15,12 @@
 	}
 ?>
 	{ "label": "Other", "content": [
-		{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [ { "type": "asset" } ] } } 
+		{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
+<?
+	include("value.php");
+?>
+		], "delay": true } },
+		{ "label": "Parameters", "type": "node", "data": { "name": "asset", "content": [ { "type": "text", "data": { "multiline": true } } ] } } 
 	] }
 ] } },
 { "label": "Overwrite existing layer?", "type": "node", "data": { "name": "overwrite", "content": [ { "type": "boolean" } ] } },

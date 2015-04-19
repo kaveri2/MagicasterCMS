@@ -247,13 +247,22 @@ function Item_Select(data, hint) {
 			items.push(item);
 		}	
 	}
-	construct();	
+	construct();
 	
 	this.getHeader = function() {
 		if (selectedIndex==-1) {
 			return "";
 		} else {
 			var header = items[selectedIndex].getHeader();
+			/*
+			if (header == "") {
+				var xml = $.xmlDOM("<xml></xml>").contents();
+				items[selectedIndex].produceXML(xml);
+				if (getInnerXMLString(xml) == "") {
+					return "";
+				}
+			}
+			*/
 			return "<span style='color: " + (data.options[selectedIndex].color) + "'>" + data.options[selectedIndex].label + "</span>" + (header ? " [ " + header + " ] " : "");
 		}
 	}	
@@ -319,6 +328,7 @@ function Item_Select(data, hint) {
 			cloneXml = xml.clone();
 			var result = items[i].consumeXML(cloneXml);
 			items[i] = new Item_Root(data.options[i].content, null);
+			items[i].delay = true;
 			if (tabs) {
 				items[i].tab = tabs.find('#tabs-' + u + '-' + i);
 			}
@@ -361,7 +371,7 @@ function Item_Select(data, hint) {
 
 function Item_List(data, hint) {
 
-	var items = [];
+	var items;
 	var place;
 	
 	function construct() {
@@ -369,7 +379,8 @@ function Item_List(data, hint) {
 	construct();	
 	
 	this.getHeader = function() {
-		return false;
+		if (!items) return "";
+		return "" + items.length + " items";
 	}
 	
 	function setHeader(item) {
@@ -434,13 +445,19 @@ function Item_List(data, hint) {
 		
 	function refresh(index) {
 		var i;
+		
+		if (!items) {
+			items = [];
+		}
 	
 		// "rescue" items' jQuery objects to temp div, 
 		// as their "home" div will be destroyed in accordion recreation
 		var tmp = $("<div></div>").appendTo($('body'));
-		for (i=0 ; i<items.length ; i++) {
-			var item = items[i];
-			if (item.UI) tmp.append(item.UI);
+		if (items) {
+			for (i=0 ; i<items.length ; i++) {
+				var item = items[i];
+				if (item.UI) tmp.append(item.UI);
+			}
 		}
 		
 		// empty place and create new html_items container
@@ -623,8 +640,10 @@ function Item_List(data, hint) {
 	
 	this.produceXML = function(xml) {
 		var i;
-		for (i=0 ; i<items.length ; i++) {
-			if (items[i]) items[i].produceXML(xml);
+		if (items) {
+			for (i=0 ; i<items.length ; i++) {
+				if (items[i]) items[i].produceXML(xml);
+			}
 		}
 	}
 }
@@ -677,7 +696,8 @@ function Item_Boolean(data, hint) {
 	construct();
 
 	this.getHeader = function() {
-		return ""; //value ? "true" : "false";
+		if (!value) return "";
+		return "<i>" + (value == "true" ? "Yes" : "No") + "</i>";
 	}
 	
 	this.createUI = function() {
@@ -717,10 +737,12 @@ function Item_Text(data, hint) {
 				}
 			}
 		}
-		if (data && data.multiline) {
-			return "";
+		if (value == "") return "";
+		value = value.replace("\n", "");
+		if (value.length > 32) {
+			value = value.substr(0, 32) + "..."
 		}
-		return value;
+		return "<i>" + value + "</i>";
 	}
 	
 	this.createUI = function() {
@@ -772,23 +794,91 @@ function Item_Text(data, hint) {
 
 function Item_Node(data, hint) {
 
-	var root;
+	var item;
 	var errorCatcher;
 	var errorCatcherContent;
 	
+	var place;
+	
 	function construct() {
-		root = new Item_Root(data.content, null);
-		root.delay = true;
+		item = new Item_Root(data.content, null);
+		item.delay = true;
 	}
 	construct();
 
 	this.getHeader = function() {
-		return root.getHeader();
+		return item.getHeader();
 	}
+	
+	function setHeader(item) {
+		var tmp = $('<span class="header-text"></span>');
+		var s = item.getHeader();
+		if (!s) s = "N/A";
+		tmp.append($("<span>" + s + "</span>"));
+		item.header.find("a").html(tmp);
+	}	
 
 	this.createUI = function() {
-		var place = $('<div class="xml-item-node"></div>');
-		place.append(root.createUI());
+		place = $('<div class="xml-item-node"></div>');
+		if (data.delay) {
+
+			// "rescue" items' jQuery objects to temp div, 
+			// as their "home" div will be destroyed in accordion recreation
+			var tmp = $("<div></div>").appendTo($('body'));
+			if (item.UI) tmp.append(item.UI);
+			
+			// empty place and create new html_items container
+			var html_items = $("<div></div>");
+			place.empty().append(html_items);
+			
+			var html_item = $("<div class='item'></div>");
+			$.data(html_item.get(0), "xmleditor_node_item", item);
+			
+			var header = $("<h3><a href='#'></a></h3>");
+			var content = $("<div></div>");			
+
+			item.header = header;
+			item.content = content;
+			
+			setHeader(item);
+
+			html_item.append(header);
+			html_item.append(content);
+			html_items.append(html_item);
+			
+			// remove the temp div
+			tmp.remove();
+			
+			html_items.accordion({
+				header: "> div > h3",
+				active: false,
+				heightStyle: "content",
+				collapsible: true,
+				animate: {
+					duration: 150,
+					easing: "swing"
+				},
+				beforeActivate: function(event, ui) {
+					if (ui.newHeader.length>0) {					
+						// (re)create UI for new element
+						var item = $.data(ui.newHeader.parent().get(0), "xmleditor_node_item");
+						if (item.content.html()=="") {
+							if (!item.UI) item.UI = item.createUI();					
+							item.content.html(item.UI);
+						}
+						setHeader(item);
+					}
+					if (ui.oldHeader.length>0) {
+						// set header for old element
+						var item = $.data(ui.oldHeader.parent().get(0), "xmleditor_node_item");
+						setHeader(item);
+					}
+				}
+			});
+		} else {
+			place.append(item.createUI());
+		}
+		
 		if (data.errorCatcher) {
 			errorCatcher = $("<div><h3 style='color: red'>XML parse error!</h3><textarea style='width: 200px; height: 50px;'></textarea></div>");
 			if (errorCatcherContent) {
@@ -798,14 +888,20 @@ function Item_Node(data, hint) {
 			}
 			place.append(errorCatcher);
 		}
+		
 		return place; 
-	}
+	}	
 	
 	this.consumeXML = function(xml) {
 		var content = xml.find("> " + data.name);
 		if (content.length>0) {
 			content = content.eq(0);
-			var result = root.consumeXML(content);
+			if (data.delay) {
+				item.consumeXML(content, true);
+				content.remove();
+				return 1;
+			}
+			var result = item.consumeXML(content);
 			if (result==-1) {
 				return -1;
 			}
@@ -833,7 +929,7 @@ function Item_Node(data, hint) {
 	
 	this.produceXML = function(xml) {
 		var result = $.xmlDOM("<" + data.name + "/>").contents();
-		root.produceXML(result);
+		item.produceXML(result);
 		// if node XML or attributes have changed, add to the result XML tree
 		var innerXML = $.trim(getInnerXMLString(result));
 		var attributes = result.get(0).attributes.length;
@@ -850,26 +946,22 @@ function Item_Root(data, hint) {
 	this.delay = false;
 	var delayedXML = null;
 
-	function construct() {
-		var i;
-		for (i=0 ; i<data.length ; i++) {
-			var item = createItem(data[i], data[i].type, data[i].data, data[i].hint);
-			components.push(item);
-		}
-	}
-	construct();
-
 	this.getHeader = function() {
 		var i;
 		var s = "";
-		for (i=0 ; i<components.length ; i++) {
-			var header = components[i].getHeader();
-			if (header) {
-				if (s!="") s = s + ", ";
-				s = s + header;
+		for (i=0 ; i<data.length ; i++) {
+			if (components[i]) {
+				var header = components[i].getHeader();
+				if (header) {
+					if (s != "") s = s + ", ";
+					s = s + header;
+				}
 			}
 		}
 		if (delayedXML!=null) {
+			if (s == "") {
+				s = "...";
+			}
 			s = "(" + s + ")";
 		}
 		return s;
@@ -883,19 +975,31 @@ function Item_Root(data, hint) {
 		}
 		var place = $("<div><div>");
 		var i;
-		for (i=0 ; i<components.length ; i++) {
+		for (i=0 ; i<data.length ; i++) {
+			if (!components[i]) {
+				var item = createItem(data[i], data[i].type, data[i].data, data[i].hint);
+				components[i] = item;
+			}
 			place.append(components[i].createUI());
 		}
 		return place;
 	}
 	
-	this.consumeXML = function(xml) {
+	this.consumeXML = function(xml, success) {
 		var i;
 		var retVal = 0;
 		if (this.delay) {
 			delayedXML = xml.clone();
+			if (success) {
+				xml.empty();
+				return 1;
+			}
 		}
-		for (i=0 ; i<components.length ; i++) {
+		for (i=0 ; i<data.length ; i++) {
+			if (!components[i]) {
+				var item = createItem(data[i], data[i].type, data[i].data, data[i].hint);
+				components[i] = item;
+			}
 			var result = components[i].consumeXML(xml);
 			if (result==-1) {
 				return -1;
@@ -910,9 +1014,7 @@ function Item_Root(data, hint) {
 			}
 			retVal = Math.max(retVal, result);
 		}
-		if (this.delay) {
-			delayedXML = null;
-		}
+		delayedXML = null;
 		return retVal;
 	}
 	
@@ -942,7 +1044,7 @@ function ItemWrapper(data, item) {
 	}
 		
 	this.createUI = function() {
-		var start = new Date();
+//		var start = new Date();
 		var place = $();
 		if (data.type == "list") {
 			var fieldset = $("<fieldset class='xml-item-wrapper'></fieldset>");
@@ -958,24 +1060,24 @@ function ItemWrapper(data, item) {
 			place.append(item.createUI());
 		} 
 		
-		var end = new Date();
-		var time = end.getTime() - start.getTime();
+//		var end = new Date();
+//		var time = end.getTime() - start.getTime();
 //		console.log("createUI " + data.type, data, time);
 		return place;
 	}
 	
 	this.consumeXML = function(xml) {
-		var start = new Date();
+//		var start = new Date();
 		var result = item.consumeXML(xml);
-		var end = new Date();
-		var time = end.getTime() - start.getTime();
+//		var end = new Date();
+//		var time = end.getTime() - start.getTime();
 //		console.log("consumeXML " + data.type, data, time);
 		return result;
 	}
 	
 	this.produceXML = function(xml) {
-		var start = new Date();
-		item.produceXML(xml);
+//		var start = new Date();
+//		item.produceXML(xml);
 		var end = new Date();
 		var time = end.getTime() - start.getTime();
 //		console.log("produceXML " + data.type, data, time);
@@ -983,8 +1085,7 @@ function ItemWrapper(data, item) {
 }
 
 function createItem(wrapperData, type, data, hint) {
-//	console.log("createItem", type, data, hint);
-
+//	var start = new Date();
 	var item;
 	switch(type) {
 		case "include":
@@ -1030,7 +1131,9 @@ function createItem(wrapperData, type, data, hint) {
 			item = new Item_Null(data, hint);
 			break;
 	}
-		
+//	var end = new Date();		
+//	var time = end.getTime() - start.getTime();
+//	console.log("createItem " + type, data, time);		
 	return new ItemWrapper(wrapperData, item);
 }
 
@@ -1050,7 +1153,11 @@ function createCodemirror(textfield) {
 $.fn.xmleditor = function(p1, p2) {
 
 	if (p1=='tab') {
-		$(this).find(".xmleditor-wrapper div").tabs("select", p2);
+		try {
+			$(this).find(".xmleditor-wrapper div").tabs("select", p2);
+		} catch (e) {
+			// throws an error for some reason...
+		}
 	}
 
 	if (p1=='templates') {

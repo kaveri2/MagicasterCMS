@@ -20,7 +20,7 @@
 <?
 	include("value.php");
 ?>
-			] } }
+			], "delay": true } }
 		] } }
 	] },
 	{ "label": "Change property", "content": [
@@ -38,7 +38,7 @@
 <?
 	include("value.php");
 ?>
-			] } },
+			], "delay": true } },
 			{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [ { "type": "text" } ] } },
 			{ "label": "Ease", "type": "node", "data": { "name": "ease", "content": [ { "type": "text", "data": { "options": [
 <?
@@ -67,7 +67,7 @@
 <?
 	include("value.php");
 ?>
-			] } }
+			], "delay": true } }
 		] } }
 	] },
 	{ "label": "Set array item", "content": [
@@ -159,12 +159,12 @@
 <?
 	include("value.php");
 ?>
-			] } },
+			], "delay": true } },
 			{ "label": "Target", "type": "node", "data": { "name": "target", "content": [
 <?
 	include("value.php");
 ?>
-			] } }
+			], "delay": true } }
 		] } }
 	] }
 ] } }
