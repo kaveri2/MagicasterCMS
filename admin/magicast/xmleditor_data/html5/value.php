@@ -22,9 +22,9 @@
 			] },	
 			{ "label": "Event argument", "content": [
 				{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "eventArgument", "hint": { "failure": true, "success": true } } ] } },
-				{ "type": "node", "data": { "name": "value", "content": [ 
-					{ "label": "Name", "type": "text" } 
-				] } }
+				{ "Label": "Name", "type": "node", "data": { "name": "value", "content": [ 
+					{ "type": "include", "data": { "url": "xmleditor_data/html5/include_value.php" } }
+				], "delay": true } }
 			] },
 			{ "label": "Calculation", "content": [
 				{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "calculation", "hint": { "failure": true, "success": true } } ] } },
@@ -49,7 +49,7 @@
 					{ "label": "Arguments", "type": "list", "data": { "content": [
 						{ "type": "node", "data": { "name": "argument", "content": [ 
 							{ "type": "include", "data": { "url": "xmleditor_data/html5/include_value.php" } }
-						] } }
+						], "delay": true } }
 					] } }
 				] } }
 			] },
@@ -87,7 +87,7 @@
 					{ "label": "Items", "type": "list", "data": { "content": [
 						{ "type": "node", "data": { "name": "item", "content": [
 							{ "type": "include", "data": { "url": "xmleditor_data/html5/include_value.php" } }
-						] } }
+						], "delay": true } }
 					] } }
 				] } }
 			] },
@@ -96,10 +96,10 @@
 				{ "type": "node", "data": { "name": "value", "content": [ 
 					{ "label": "Array", "type": "node", "data": { "name": "array", "content": [
 						{ "type": "include", "data": { "url": "xmleditor_data/html5/include_value.php" } }
-					] } },
+					], "delay": true } },
 					{ "label": "Index", "type": "node", "data": { "name": "Index", "content": [
 						{ "type": "include", "data": { "url": "xmleditor_data/html5/include_value.php" } }
-					] } }
+					], "delay": true } }
 				] } }
 			] },
 			{ "label": "Constant", "content": [

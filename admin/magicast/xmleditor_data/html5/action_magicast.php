@@ -29,9 +29,45 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/changeproperty.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
-			{ "label": "Property", "type": "node", "data": { "name": "property", "content": [
+			{ "type": "node", "data": { "name": "property", "content": [
 <?
 	include("property.php");
+?>
+			] } },
+			{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
+<?
+	include("value.php");
+?>
+			], "delay": true } },
+			{ "type": "select", "data": { "options": [
+				{ "label": "Time (seconds)", "content": [
+					{ "type": "node", "data": { "name": "time", "content": [ { "type": "text" } ] } }
+				] },
+				{ "label": "Speed (units/s)", "content": [
+					{ "type": "node", "data": { "name": "speed", "content": [ { "type": "text" } ] } }
+				] }
+			] } },
+			{ "label": "Ease", "type": "node", "data": { "name": "ease", "content": [ { "type": "text", "data": { "options": [
+<?
+	include("ease_names.php");
+?>
+			] } } ] } },
+			{ "label": "Complete event", "type": "node", "data": { "name": "completeEvent", "content": [
+<?
+	include("event_to_trigger.php");
+?>
+			] } }
+		] } }
+	] },
+	{ "label": "Change CSS property", "content": [
+		{ "type": "node", "data": { "name": "asset", "content": [ 
+			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/changecssproperty.js", "hint": {"failure": true, "success": true} } ] } }
+		] } },
+		{ "type": "node", "data": { "name": "parameters", "content": [ 
+			{ "type": "node", "data": { "name": "property", "content": [
+<?
+	include("css_property.php");
 ?>
 			] } },
 			{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
@@ -51,14 +87,14 @@
 ?>
 			] } }
 		] } }
-	] },
+	] },	
 	{ "label": "Set variable", "content": [
 		{ "type": "node", "data": { "name": "asset", "content": [ 
 			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/setvariable.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [
-			{ "label": "Variable", "type": "node", "data": { "name": "variable", "content": [
+			{ "type": "node", "data": { "name": "variable", "content": [
 <?
 	include("variable.php");
 ?>
@@ -166,5 +202,21 @@
 ?>
 			], "delay": true } }
 		] } }
-	] }
+	] },
+	{ "label": "Request fullscreen", "content": [
+		{ "type": "node", "data": { "name": "asset", "content": [ 
+			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/requestfullscreen.js", "hint": {"failure": true, "success": true} } ] } }
+		] } },
+		{ "type": "node", "data": { "name": "parameters", "content": [ 
+		] } }
+	] },
+	{ "label": "Cancel fullscreen", "content": [
+		{ "type": "node", "data": { "name": "asset", "content": [ 
+			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/cancelfullscreen.js", "hint": {"failure": true, "success": true} } ] } }
+		] } },
+		{ "type": "node", "data": { "name": "parameters", "content": [ 
+		] } }
+	] }	
 ] } }

@@ -84,25 +84,54 @@
 				{ "label": "Both", "value": "both" }
 			] } } ] } },
 			{ "label": "Word wrap?", "type": "node", "data": { "name": "wordWrap", "content": [ { "type": "boolean" } ] } },
-			{ "label": "Clip?", "type": "node", "data": { "name": "clip", "content": [ { "type": "boolean" } ] } },
 			{ "label": "Color (CSS value)", "type": "node", "data": { "name": "color", "content": [ { "type": "text" } ] } },
-			{ "label": "Font family", "type": "node", "data": { "name": "fontFamily", "content": [ { "type": "text" } ] } },
-			{ "label": "Font size (px)", "type": "node", "data": { "name": "fontSize", "content": [ { "type": "text" } ] } },
-			{ "label": "Align", "type": "node", "data": { "name": "align", "content": [ { "type": "text", "data": { "options": [
+			{ "label": "Font family (CSS value)", "type": "node", "data": { "name": "fontFamily", "content": [ { "type": "text" } ] } },
+			{ "label": "Font size (CSS value)", "type": "node", "data": { "name": "fontSize", "content": [ { "type": "text" } ] } },
+			{ "label": "Align (CSS value)", "type": "node", "data": { "name": "align", "content": [ { "type": "text", "data": { "options": [
 				{ "label": "Left", "value": "left" },
 				{ "label": "Right", "value": "right" },
 				{ "label": "Center", "value": "center" },
 				{ "label": "Justify", "value": "justify" }
 			] } } ] } },
-			{ "label": "Line height (px)", "type": "node", "data": { "name": "lineHeight", "content": [ { "type": "text" } ] } },
-			{ "label": "Letter spacing (px)", "type": "node", "data": { "name": "letterSpacing", "content": [ { "type": "text" } ] } },
-			{ "label": "Decoration", "type": "node", "data": { "name": "decoration", "content": [ { "type": "text", "data": { "options": [
+			{ "label": "Line height (CSS value)", "type": "node", "data": { "name": "lineHeight", "content": [ { "type": "text" } ] } },
+			{ "label": "Letter spacing (CSS value)", "type": "node", "data": { "name": "letterSpacing", "content": [ { "type": "text" } ] } },
+			{ "label": "Decoration (CSS value)", "type": "node", "data": { "name": "decoration", "content": [ { "type": "text", "data": { "options": [
 				{ "label": "None", "value": "none" },
 				{ "label": "Underline", "value": "underline" },
 				{ "label": "Overline", "value": "overline" },
 				{ "label": "Line-through", "value": "line-through" }
 			] } } ] } }
 		] } }		
+	] },
+	{ "label": "Box", "content": [
+		{ "type": "node", "data": { "name": "asset", "content": [ 
+			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "components/2015/box.js", "hint": {"failure": true, "success": true} } ] } }
+		] } },
+		{ "type": "node", "data": { "name": "parameters", "content": [ 
+			{ "type": "select", "data": { "options": [
+				{ "label": "Texture asset", "content": [
+					{ "type": "node", "data": { "name": "textureAsset", "content": [
+<?
+	include("value.php");
+?>
+					], "delay": true } }
+				] },
+				{ "label": "Texture data", "content": [
+					{ "type": "node", "data": { "name": "textureData", "content":  [
+<?
+	include("value.php");
+?>
+					], "delay": true } }
+				] }
+			] } },
+			{ "label": "Width (px)", "type": "node", "data": { "name": "width", "content": [ { "type": "text" } ] } },
+			{ "label": "Height (px)", "type": "node", "data": { "name": "height", "content": [ { "type": "text" } ] } },
+			{ "label": "Texture position (CSS value)", "type": "node", "data": { "name": "texturePosition", "content": [ { "type": "text" } ] } },
+			{ "label": "Color (CSS value)", "type": "node", "data": { "name": "color", "content": [ { "type": "text" } ] } },
+			{ "label": "Border (CSS value)", "type": "node", "data": { "name": "border", "content": [ { "type": "text" } ] } },
+			{ "label": "Border radius (CSS value)", "type": "node", "data": { "name": "borderRadius", "content": [ { "type": "text" } ] } }
+		] } }	
 	] },
 	{ "label": "Dummy", "content": [
 		{ "type": "node", "data": { "name": "asset", "content": [ 

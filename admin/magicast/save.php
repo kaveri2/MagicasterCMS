@@ -131,7 +131,7 @@
 			if (lines) {
 				for (var i=0 ; i<lines.length ; i++) {
 					var a = lines[i].split('=');
-					data = data.replace("{" + a.shift() + "}", a.join('='));
+					data = data.replace(new RegExp("{" + a.shift() + "}", "g"), a.join('='));
 				}
 			}
 			$("#data").xmleditor("val", data);
@@ -142,7 +142,7 @@
 		$("#data").xmleditor('templates').append($('#templates')); 		
 		$("#save").click(function() {
 			buttonPressed = true;
-			$("#form").append("<textarea name=\"data\">" + $("#data").xmleditor("val") + "</textarea>");			
+			$("#form").append("<textarea name=\"data\">" + $("#data").xmleditor("val") + "</textarea>");
 			return true;
 		});
 <?
@@ -151,7 +151,7 @@
 
 		$("#actionButton_<?= $index ?>").click(function() {
 			var xml = $("#data").xmleditor("val");					
-			$("body").append("<form id='form_action' method='post' action='<?= $b['url'] ?>' target='_blank' style='display: none;'><textarea name='data'>" + xml + "</textarea></form>");
+			$("body").append("<form id='form_action' method='post' action='<?= $b['url'] ?>' target='_blank' style='display: none;'><textarea name='data'>" + xml + "</textarea><input type='text' name='id' value='<?= $magicast->id ?>' /></form>");
 			$("#form_action").submit();
 			$("#form_action").remove();
 			return false;

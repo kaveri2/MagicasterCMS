@@ -3,8 +3,8 @@
 		{ "type": "node", "data": { "name": "level", "content": [ { "type": "constant", "data": "global", "hint": { "failure": true, "success": true } } ] } },
 		{ "label": "Name", "type": "node", "data": { "name": "name", "content": [ { "type": "text" } ] } }
 	] }, 
-	{ "label": "Node", "content": [
-		{ "type": "node", "data": { "name": "level", "content": [ { "type": "constant", "data": "node", "hint": { "failure": true, "success": true } } ] } },
+	{ "label": "Magicast", "content": [
+		{ "type": "node", "data": { "name": "level", "content": [ { "type": "constant", "data": "magicast", "hint": { "failure": true, "success": true } } ] } },
 		{ "label": "Magicast (empty = this)", "type": "node", "data": { "name": "magicast", "content": [ { "type": "text" } ] } },
 		{ "label": "Name", "type": "node", "data": { "name": "name", "content": [ { "type": "text" } ] } }
 	] }, 

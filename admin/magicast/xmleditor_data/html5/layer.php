@@ -41,7 +41,7 @@
 	{ "label": "CSS / Classes", "type": "list", "data": { "content": [
 		{ "type": "node", "data": { "name": "class", "content": [ { "type": "text", "data": { "multiline": false } } ] } }
 	] } },
-	{ "label": "CSS / Style", "type": "node", "data": { "name": "style", "content": [ 
+	{ "label": "CSS / Text", "type": "node", "data": { "name": "text", "content": [ 
 		{ "type": "text", "data": { "multiline": true } } 
 	] } }
 ] } }

@@ -39,7 +39,12 @@ function isEmptyXML(xml) {
 function getInnerXMLString(xml) {
 	var s = "";
 	for (var i=0 ; i<xml.contents().length ; i++) {
-		s = s + (new XMLSerializer()).serializeToString(xml.contents().get(i));
+		var node = xml.contents().get(i);
+		if (node.nodeType == 4) {
+			return node.data;
+		} else {
+			s = s + (new XMLSerializer()).serializeToString(node);
+		}
 	}
 	return s;
 }
@@ -254,15 +259,13 @@ function Item_Select(data, hint) {
 			return "";
 		} else {
 			var header = items[selectedIndex].getHeader();
-			/*
 			if (header == "") {
 				var xml = $.xmlDOM("<xml></xml>").contents();
 				items[selectedIndex].produceXML(xml);
-				if (getInnerXMLString(xml) == "") {
+				if (isEmptyXML(xml)) {
 					return "";
 				}
 			}
-			*/
 			return "<span style='color: " + (data.options[selectedIndex].color) + "'>" + data.options[selectedIndex].label + "</span>" + (header ? " [ " + header + " ] " : "");
 		}
 	}	
@@ -328,7 +331,6 @@ function Item_Select(data, hint) {
 			cloneXml = xml.clone();
 			var result = items[i].consumeXML(cloneXml);
 			items[i] = new Item_Root(data.options[i].content, null);
-			items[i].delay = true;
 			if (tabs) {
 				items[i].tab = tabs.find('#tabs-' + u + '-' + i);
 			}
@@ -380,7 +382,7 @@ function Item_List(data, hint) {
 	
 	this.getHeader = function() {
 		if (!items) return "";
-		return "" + items.length + " items";
+		return "" + items.length + " item" + (items.length == 1 ? "" : "s");
 	}
 	
 	function setHeader(item) {
@@ -738,11 +740,11 @@ function Item_Text(data, hint) {
 			}
 		}
 		if (value == "") return "";
-		value = value.replace("\n", "");
-		if (value.length > 32) {
-			value = value.substr(0, 32) + "..."
+		var s = value.replace("\n", "");
+		if (s.length > 32) {
+			s = s.substr(0, 32) + "..."
 		}
-		return "<i>" + value + "</i>";
+		return "<i>" + s + "</i>";
 	}
 	
 	this.createUI = function() {
@@ -785,10 +787,22 @@ function Item_Text(data, hint) {
 		if (hint && hint.success) return 2;
 		return 1;
 	}
-	this.produceXML = function(xml) {	
-		if (input) value = input.val();
-		var content = $.xmlDOM("<xml>" + value + "</xml>").contents();
-		xml.append(content.contents());
+	this.produceXML = function(xml) {
+		if (input) {
+			value = input.val();
+		}
+		if (value) {
+			/*
+			if (value.indexOf("&") > -1 ||
+				value.indexOf("<") > -1 ||
+				value.indexOf(">") > -1) {
+			}
+			*/
+			var s = value;
+			s = "<![CDATA[" + value + "]]>";
+			var content = $.xmlDOM("<xml>" + s + "</xml>").contents();
+			xml.append(content.contents());
+		}
 	}
 }
 
@@ -958,9 +972,23 @@ function Item_Root(data, hint) {
 				}
 			}
 		}
-		if (delayedXML!=null) {
+		if (delayedXML != null) {
 			if (s == "") {
-				s = "...";
+				for (i=0 ; i<delayedXML.contents().length ; i++) {
+					var node = delayedXML.contents().get(i);
+					if (node.nodeType == 4) {
+						s = node.data;
+						break;
+					} else if (node.nodeType == 3) {
+						s = s + $.trim((new XMLSerializer()).serializeToString(node));
+					}
+				}
+				if (s=="") {
+					s = "...";
+				}
+				if (s.length > 32) {
+					s = s.substr(0, 32) + "...";
+				}
 			}
 			s = "(" + s + ")";
 		}
@@ -968,11 +996,11 @@ function Item_Root(data, hint) {
 	}
 	
 	this.createUI = function() {
+		this.delay = false;
 		if (delayedXML) {
-			this.delay = false;
 			this.consumeXML(delayedXML);
-			delayedXML = null;
 		}
+		delayedXML = null;
 		var place = $("<div><div>");
 		var i;
 		for (i=0 ; i<data.length ; i++) {
@@ -1006,11 +1034,12 @@ function Item_Root(data, hint) {
 			}
 			if (result==2 && this.delay) {
 				if (isEmptyXML(xml)) {
+					this.delay = false;
 					delayedXML = null;
 				} else {
 					xml.empty();
-					return 2;
 				}
+				return 2;
 			}
 			retVal = Math.max(retVal, result);
 		}
@@ -1077,9 +1106,9 @@ function ItemWrapper(data, item) {
 	
 	this.produceXML = function(xml) {
 //		var start = new Date();
-//		item.produceXML(xml);
-		var end = new Date();
-		var time = end.getTime() - start.getTime();
+		item.produceXML(xml);
+//		var end = new Date();
+//		var time = end.getTime() - start.getTime();
 //		console.log("produceXML " + data.type, data, time);
 	}
 }

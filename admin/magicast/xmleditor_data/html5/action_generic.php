@@ -96,6 +96,41 @@
 			] } }
 		] } }
 	] },	
+	{ "label": "Box", "content": [
+		{ "type": "node", "data": { "name": "asset", "content": [ 
+			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/controlbox.js", "hint": {"failure": true, "success": true} } ] } }
+		] } },
+		{ "type": "node", "data": { "name": "parameters", "content": [ 
+			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
+<?
+	include("value.php");
+?>
+			], "delay": true } },
+			{ "type": "select", "data": { "options": [
+				{ "label": "Set texture asset", "content": [
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setTextureAsset" } ] } },
+					{ "type": "node", "data": { "name": "parameters", "content": [ 
+						{ "type": "node", "data": { "name": "value", "content": [
+<?
+	include("value.php");
+?>
+						], "delay": true } }
+					] } }
+				] },
+				{ "label": "Set texture data", "content": [
+					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setTextureData" } ] } },
+					{ "type": "node", "data": { "name": "parameters", "content": [ 
+						{ "type": "node", "data": { "name": "value", "content": [ 
+<?
+	include("value.php");
+?>
+						], "delay": true } }
+					] } }
+				] }
+			] } }
+		] } }
+	] },	
 	{ "label": "Video", "content": [
 		{ "type": "node", "data": { "name": "asset", "content": [ 
 			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },

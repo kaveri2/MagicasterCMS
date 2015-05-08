@@ -1,5 +1,5 @@
 <?php
-header("Content-Disposition: attachment; filename=embed.html");
+header("Content-Disposition: attachment; filename=magicast_export.html");
 header("Content-Type: application/download");
 ob_start();
 ?>
@@ -9,15 +9,17 @@ ob_start();
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no"/>
-	<script type="text/javascript" src="../kickstart-1.js"></script>
+	<script type="text/javascript" src="/2015/kickstart-5.js"></script>
 </head>
 
-<body style="margin: 0px; padding: 0px; background-color: #ffffff;">
+<body style="margin: 0px; padding: 0px; background-color: #000000;">
+	<div style="position: absolute; width: 100%; height: 100%; background-image: url('http://tubequiz.s3.amazonaws.com/2015/loading.gif'); background-repeat: no-repeat; background-position: 50% 50%;">
+	</div>
 <? 
 	if ($_REQUEST['data']) { 
 ?>
 	<div style="position: absolute; width: 100%; height: 100%;" data-magicaster-magicast-xml>
-		<textarea style="display: none;"><data><?= $_REQUEST['data'] ?></data></textarea>
+		<textarea style="display: none;"><id><?= (0 + $_REQUEST['id']) ?></id><data><?= $_REQUEST['data'] ?></data></textarea>
 	</div>
 <? 
 	} 

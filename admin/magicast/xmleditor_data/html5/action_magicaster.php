@@ -2,7 +2,7 @@
 	{ "label": "Send analytics", "content": [
 		{ "type": "node", "data": { "name": "asset", "content": [ 
 			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
-			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2015/sendanalytics.js", "hint": {"failure": true, "success": true} } ] } }
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/sendanalytics.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Event", "type": "node", "data": { "name": "event", "content": [
@@ -25,7 +25,7 @@
 	{ "label": "Grant session access", "content": [
 		{ "type": "node", "data": { "name": "asset", "content": [ 
 			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
-			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2015/grantsessionaccess.js", "hint": {"failure": true, "success": true} } ] } }
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/grantsessionaccess.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "attribute", "data": { "name": "Magicaster_injectCheck", "content": [ { "type": "constant", "data": "SessionAccess" } ] } },
@@ -35,7 +35,7 @@
 	{ "label": "Send broadcast message", "content": [
 		{ "type": "node", "data": { "name": "asset", "content": [ 
 			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
-			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2015/sendbroadcastmessage.js", "hint": {"failure": true, "success": true} } ] } }
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/sendbroadcastmessage.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Channel", "type": "node", "data": { "name": "channel", "content": [ { "type": "text", "data": {"multiline": false } } ] } },
@@ -45,7 +45,7 @@
 	{ "label": "Change path", "content": [
 		{ "type": "node", "data": { "name": "asset", "content": [ 
 			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
-			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2015/changepath.js", "hint": {"failure": true, "success": true} } ] } }
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/changepath.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Name", "type": "node", "data": { "name": "name", "content": [

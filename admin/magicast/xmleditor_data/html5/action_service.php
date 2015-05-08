@@ -2,7 +2,7 @@
 	{ "label": "YouTube", "content": [
 		{ "type": "node", "data": { "name": "asset", "content": [ 
 			{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "source" } ] } },
-			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2015/controlyoutube.js", "hint": {"failure": true, "success": true} } ] } }
+			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/controlyoutube.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [

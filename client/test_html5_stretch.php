@@ -8,18 +8,17 @@
 	<script type="text/javascript" src="js/kickstart-dev.js?v=1"></script>
 </head>
 
-<body style="margin: 0px; padding: 0px; background-color: #ffffff;">
+<body style="margin: 0px; padding: 0px; background-color: #000000;">
+	<div style="position: absolute; width: 100%; height: 100%; background-image: url('http://tubequiz.s3.amazonaws.com/2015/loading.gif'); background-repeat: no-repeat; background-position: 50% 50%;">
+	</div>
 <? 
 	if ($_REQUEST['data']) { 
 ?>
 	<div style="margin: 10px; width: 500px; border: 1px solid red" data-magicaster-magicast-xml>
-		<textarea><data><?= $_REQUEST['data'] ?></data></textarea>
+		<textarea style="display: none;"><id><?= $_REQUEST['id'] ?></id><data><?= $_REQUEST['data'] ?></data></textarea>
 	</div>
 <? 
-	} 
-?>
-<? 
-	if ($_REQUEST['id']) { 
+	} else if ($_REQUEST['id']) { 
 ?>
 	<div style="margin: 10px; width: 500px; border: 1px solid red" data-magicaster-magicast-id="<?= $_REQUEST['id'] ?>">
 	</div>

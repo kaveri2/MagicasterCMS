@@ -17,13 +17,16 @@
 ], "delay": true } },
 { "label": "Actions to run", "type": "list", "data": { "content": [ 
 	{ "type": "node", "data": { "name": "action", "content": [ 
+		{ "label": "Wait (seconds)", "type": "node", "data": { "name": "wait", "content": [
+<?
+	include("value.php");
+?>
+		] } },
 		{ "label": "Condition", "type": "node", "data": { "name": "condition", "content": [
 <?
 	include("value.php");
 ?>
 		], "delay": true } },
-		{ "label": "Wait (seconds)", "type": "node", "data": { "name": "wait", "content": [ { "type": "text" } ] } },
-		{ "label": "Magicast", "type": "node", "data": { "name": "magicast", "content": [ { "type": "text" } ] } },
 		{ "type": "select", "data": { "options": [
 <?
 foreach ($CONFIG['magicast/xmleditor_data/html5']['action_options'] as $option) {
