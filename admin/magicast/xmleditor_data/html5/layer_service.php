@@ -6,31 +6,31 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 			{ "label": "Video ID", "type": "node", "data": { "name": "videoId", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			] } },
 			{ "label": "Cuepoints", "type": "list", "data": { "content": [ 
 				{ "type": "node", "data": { "name": "cue", "content": [ 
 					{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					] } },
 					{ "label": "Name", "type": "node", "data": { "name": "name", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
 				] } }
 			] } },
 			{ "label": "Start Time", "type": "node", "data": { "name": "startTime", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			] } },
 			{ "label": "End Time", "type": "node", "data": { "name": "endTime", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			] } },
@@ -47,31 +47,31 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 			{ "label": "ID", "type": "node", "data": { "name": "id", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			] } },
 			{ "label": "Cuepoints", "type": "list", "data": { "content": [ 
 				{ "type": "node", "data": { "name": "cue", "content": [ 
 					{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					] } },
 					{ "label": "Name", "type": "node", "data": { "name": "name", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
 				] } }
 			] } },
 			{ "label": "Start Time", "type": "node", "data": { "name": "startTime", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			] } },
 			{ "label": "End Time", "type": "node", "data": { "name": "endTime", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			] } },

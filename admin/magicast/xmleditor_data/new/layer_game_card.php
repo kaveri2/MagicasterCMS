@@ -39,7 +39,7 @@
 			] },
 			{ "label": "Value", "content": [
 				{ "type": "node", "data": { "name": "selectedImageValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 				] } }
@@ -51,7 +51,7 @@
 			] },
 			{ "label": "Value", "content": [
 				{ "type": "node", "data": { "name": "backBackgroundImageValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 				] } }
@@ -63,19 +63,19 @@
 			] },
 			{ "label": "Value", "content": [
 				{ "type": "node", "data": { "name": "frontBackgroundImageValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 				] } }
 			] }
 		] } },
 		{ "label": "Style", "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
 		{ "label": "Style (selected)", "type": "node", "data": { "name": "selectedStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
@@ -175,7 +175,7 @@
 									] },
 									{ "label": "Value", "content": [
 										{ "type": "node", "data": { "name": "backImageValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 										] } }
@@ -187,7 +187,7 @@
 									] },
 									{ "label": "Value", "content": [
 										{ "type": "node", "data": { "name": "frontImageValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 										] } }

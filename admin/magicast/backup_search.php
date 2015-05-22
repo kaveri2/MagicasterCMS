@@ -1,4 +1,4 @@
-<?
+<?php
 	require_once("../core.php");
 	$page = isset($_REQUEST['page']) ? 0 + $_REQUEST['page'] : 0;
 	$per_page = 15;
@@ -9,7 +9,7 @@
 
 <legend>Select an older version</legend>
 
-<?
+<?php
 	if ($page != -1) {
 
 		$where = "magicastId LIKE '%" . $mId  . "%'";

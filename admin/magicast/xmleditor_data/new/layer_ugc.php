@@ -10,7 +10,7 @@
 					] },
 					{ "label": "Value", "content": [
 						{ "type": "node", "data": { "name": "imageValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 						] } }

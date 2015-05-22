@@ -1,4 +1,4 @@
-<?
+<?php
 class Path
 {
 	public $adminName = "";

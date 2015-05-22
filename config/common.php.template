@@ -7,9 +7,10 @@ $CONFIG = array(
 	"DB_debug" => true,
 
 	"db_host" => "localhost",
-	"db_database" => "magicaster",
 	"db_username" => "magicaster",
 	"db_password" => "magicaster",
+	"db_database" => "magicaster",
+	"db_port" => "3306",
 	"db_table_prefix" => "magicaster_",
 	
 	"mc_servers" => array(

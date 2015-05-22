@@ -33,7 +33,7 @@
 	<div id="content-head">
 		
 		<div id="content-head-left">
-			<h1><?= $item->id ? "Edit" : "Create" ?> UGC Item</h1>
+			<h1><?php echo $item->id ? "Edit" : "Create" ?> UGC Item</h1>
 		</div>
 		
 		<div id="content-head-right">
@@ -50,15 +50,15 @@
 	
 		<p>
 			<label class="top-label">UGC Context</label>
-			<div id="UGC_context"><?= $item->UGC_context->id ?></div>
+			<div id="UGC_context"><?php echo $item->UGC_context->id ?></div>
 			<label class="top-label">UGC Item Type</label>
-			<div id="UGC_itemType"><?= $item->UGC_itemType->id ?></div>
+			<div id="UGC_itemType"><?php echo $item->UGC_itemType->id ?></div>
 			<label class="top-label">Data</label>
-			<div id="xmleditor_data"><textarea><?= $item->data ?></textarea></div>
+			<div id="xmleditor_data"><textarea><?php echo $item->data ?></textarea></div>
 			<label class="top-label">Created</label>
-			<input type="text" name="created" class="datetimepicker" value="<?= $item->created ?>" />
+			<input type="text" name="created" class="datetimepicker" value="<?php echo $item->created ?>" />
 			<label class="top-label">Published</label>
-			<input type="text" name="published" class="datetimepicker" value="<?= $item->published ?>" />
+			<input type="text" name="published" class="datetimepicker" value="<?php echo $item->published ?>" />
 		</p>
 		<p>
 			<input id="save" name="save" type="submit" class="big-button" value="Save" />
@@ -72,10 +72,10 @@
 		$('#UGC_itemType').objectmanager("create", "UGC_ItemType");		
 		$("#UGC_itemType").objectmanager("change", function() {
 			var val = $("#xmleditor_data").xmleditor("val");
-			$("#xmleditor_data").xmleditor('load', 'xmleditor_data/<?= $CONFIG['UGC_item']['xmleditor_data_path'] ?>/' + $("#UGC_itemType").objectmanager("val") + '.php'); 
+			$("#xmleditor_data").xmleditor('load', 'xmleditor_data/<?php echo $CONFIG['UGC_item']['xmleditor_data_path'] ?>/' + $("#UGC_itemType").objectmanager("val") + '.php'); 
 			$("#xmleditor_data").xmleditor("val", val);
 		});
-		$("#xmleditor_data").xmleditor('load', 'xmleditor_data/<?= $CONFIG['UGC_item']['xmleditor_data_path'] ?>/' + $("#UGC_itemType").objectmanager("val") + '.php'); 
+		$("#xmleditor_data").xmleditor('load', 'xmleditor_data/<?php echo $CONFIG['UGC_item']['xmleditor_data_path'] ?>/' + $("#UGC_itemType").objectmanager("val") + '.php'); 
 		$("#save").click(function() {
 			$("#form").append("<input type=\"hidden\" name=\"UGC_contextId\" value=\"" + $("#UGC_context").objectmanager("val") + "\" />");
 			$("#form").append("<input type=\"hidden\" name=\"UGC_itemTypeId\" value=\"" + $("#UGC_itemType").objectmanager("val") + "\" />");
@@ -90,6 +90,6 @@
 	});
 	</script>
 	
-<?
+<?php
 	include("../footer.php");
 ?>

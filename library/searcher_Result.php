@@ -1,4 +1,4 @@
-<?
+<?php
 class searcher_Result
 {
 	public $id 					= 0;
@@ -28,12 +28,12 @@ class searcher_Result
 	
 	public function addSearch_keyword($searcher_keyword) {
 		$sql = "INSERT INTO " . DB::$table_prefix . "searcher_resultSearcher_keyword (searcher_resultId, searcher_keywordId) VALUES (" . $this->id . ", " . $searcher_keyword->id . ")";
-		$result = DB::mysql_query($sql);
+		$result = DB::mysqli_query($sql);
 	}
 
 	public function removeSearch_keyword($searcher_keyword) {
 		$sql = "DELETE FROM " . DB::$table_prefix . "searcher_resultSearcher_keyword WHERE searcher_resultId=" . $this->id . " AND searcher_keywordId=" . $searcher_keyword->id;
-		$result = DB::mysql_query($sql);
+		$result = DB::mysqli_query($sql);
 	}
 	
 }

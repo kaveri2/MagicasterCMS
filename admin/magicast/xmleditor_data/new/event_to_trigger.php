@@ -1,20 +1,20 @@
-<?
+<?php
 	if (count($CONFIG['magicast/xmleditor_data/new']['event_options'])>0) {
 ?>
 { "type": "select", "data": { "options": [
-<?
+<?php
 		foreach ($CONFIG['magicast/xmleditor_data/new']['event_options'] as $option) {
 ?>
-	{ "label": "<?= $option['label'] ?>", "content": [
-<?
+	{ "label": "<?php echo $option['label'] ?>", "content": [
+<?php
 			include($option['include_file']);
 ?>
 	] },
-<?
+<?php
 		}
 ?>
 	{ "label": "Other", "content": [
-<?
+<?php
 			include('event.php');
 ?>,
 		{ "label": "Arguments", "type": "list", "data": { "content": [
@@ -27,10 +27,10 @@
 		] } }
 	] }
 ] } }
-<?
+<?php
 	} else  {
 ?>
-<?
+<?php
 	include('event.php');
 ?>,
 { "label": "Arguments", "type": "list", "data": { "content": [
@@ -41,6 +41,6 @@
 		] } }
 	] } }
 ] } }
-<?
+<?php
 	}
 ?>

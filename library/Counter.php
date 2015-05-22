@@ -29,6 +29,6 @@ class Counter
 	
 	public function add() {
 		$q = "INSERT INTO " . DB::getTableName($this) . " (id, clientId, value) values (\"" . $this->id . "\", " . ($this->client ? $this->client->id : "NULL") . ", 1) ON DUPLICATE KEY UPDATE value = value + 1";
-		$r = DB::mysql_query($q);
+		$r = DB::mysqli_query($q);
 	}
 }

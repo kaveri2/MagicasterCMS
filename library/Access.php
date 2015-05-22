@@ -1,4 +1,4 @@
-<?
+<?php
 class Access
 {
 	public $id 					= 0;

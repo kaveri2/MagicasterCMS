@@ -1,4 +1,4 @@
-<?
+<?php
 class UGC_SentItem
 {
 	public $id 					= 0;
@@ -38,10 +38,10 @@ class UGC_SentItem
 	}
 	
 	public function loadUsingHash() {
-		$hash = DB::mysql_real_escape_string($this->hash);
+		$hash = DB::mysqli_real_escape_string($this->hash);
 		$sql = "SELECT * FROM " . DB::getTableName($this) . " WHERE hash='$hash'";
-		$result = DB::mysql_query($sql);
-		$row = mysql_fetch_object($result);
+		$result = DB::mysqli_query($sql);
+		$row = mysqli_fetch_object($result);
 		if ($row) {
 			DB::load($this, $row);
 		}

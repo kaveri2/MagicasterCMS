@@ -1,4 +1,4 @@
-<?
+<?php
 class UGC_Item
 {
 	public $id 					= 0;

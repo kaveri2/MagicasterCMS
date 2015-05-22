@@ -106,7 +106,7 @@
 	
 	<div id="content-head-right">
 		<form id="search" method="get">
-			<div id="UGC_context"><?= $UGC_context->id ?></div>
+			<div id="UGC_context"><?php echo $UGC_context->id ?></div>
 			<input type="submit" id="searchSubmit" class="big-button" value="Search" />
 		</form>
 	</div>
@@ -131,10 +131,10 @@
 ?>
 
 	<form id="skip-form" method="get">
-		<input type="hidden" id="UGC_contextId" name="UGC_contextId" value="<?= $UGC_context->id ?>" />
-		<input type="hidden" id="skip" name="skip" value="<?= isset($UGC_sentItem) ? $UGC_sentItem->id : $skip ?>" />
+		<input type="hidden" id="UGC_contextId" name="UGC_contextId" value="<?php echo $UGC_context->id ?>" />
+		<input type="hidden" id="skip" name="skip" value="<?php echo isset($UGC_sentItem) ? $UGC_sentItem->id : $skip ?>" />
 		<p>
-			<label class="top-label">Total: <?= $count1 + $count2 ?> / Skipped: <?= $count1 ?></label>
+			<label class="top-label">Total: <?php echo $count1 + $count2 ?> / Skipped: <?php echo $count1 ?></label>
 			<input id="skip-button" type="submit" class="big-button" value="Skip this" />
 			<input id="reset-button" type="submit" class="big-button" value="Reset" />
 		</p>
@@ -167,15 +167,15 @@
 	<form id="form" method="post">	
 		<p>
 			<label class="top-label">Image</label>
-			<img src="img.php?id=<?= $UGC_sentItem->id ?>" width="500" />
+			<img src="img.php?id=<?php echo $UGC_sentItem->id ?>" width="500" />
 			<label class="top-label">UGC Context</label>
-			<div id="UGC_context"><?= $UGC_sentItem->UGC_context->id ?></div>
+			<div id="UGC_context"><?php echo $UGC_sentItem->UGC_context->id ?></div>
 			<label class="top-label">UGC Item Type</label>
-			<div id="UGC_itemType"><?= $itemTypeId ?></div>
+			<div id="UGC_itemType"><?php echo $itemTypeId ?></div>
 			<label class="top-label">Data</label>
-			<div id="xmleditor_data"><textarea><?= $data ?></textarea></div>
+			<div id="xmleditor_data"><textarea><?php echo $data ?></textarea></div>
 			<label class="top-label">Created</label>
-			<input type="text" name="created" class="datetimepicker" value="<?= $UGC_sentItem->created ?>" />
+			<input type="text" name="created" class="datetimepicker" value="<?php echo $UGC_sentItem->created ?>" />
 			<label class="top-label">Published</label>
 			<input type="text" name="published" class="datetimepicker" value="" />
 		</p>
@@ -188,13 +188,13 @@
 <?php
 	} else {
 ?>
-			Kuvan lähettäjä on antanut luvan kuvan julkaisemiseen. Sähköposti julkaisusta lähetetään osoitteeseen: <?= $xml->email ?>
+			Kuvan lähettäjä on antanut luvan kuvan julkaisemiseen. Sähköposti julkaisusta lähetetään osoitteeseen: <?php echo $xml->email ?>
 <?php
 	}
 ?>
 		</p>
 		<p>
-			<input type="hidden" name="UGC_sentItemid" value="<?= $UGC_sentItem->id ?>" />
+			<input type="hidden" name="UGC_sentItemid" value="<?php echo $UGC_sentItem->id ?>" />
 <?php
 	if ("" . $xml->approval == "true") {
 ?>
@@ -212,10 +212,10 @@
 		$('#UGC_itemType').objectmanager("create", "UGC_itemType");		
 		$("#UGC_itemType").objectmanager("change", function() {
 			var val = $("#xmleditor_data").xmleditor("val");
-			$("#xmleditor_data").xmleditor('load', 'xmleditor_data/<?= $CONFIG['UGC_item']['xmleditor_data_path'] ?>/' + $("#UGC_itemType").objectmanager("val") + '.php'); 
+			$("#xmleditor_data").xmleditor('load', 'xmleditor_data/<?php echo $CONFIG['UGC_item']['xmleditor_data_path'] ?>/' + $("#UGC_itemType").objectmanager("val") + '.php'); 
 			$("#xmleditor_data").xmleditor("val", val);
 		});
-		$("#xmleditor_data").xmleditor('load', 'xmleditor_data/<?= $CONFIG['UGC_item']['xmleditor_data_path'] ?>/' + $("#UGC_itemType").objectmanager("val") + '.php');
+		$("#xmleditor_data").xmleditor('load', 'xmleditor_data/<?php echo $CONFIG['UGC_item']['xmleditor_data_path'] ?>/' + $("#UGC_itemType").objectmanager("val") + '.php');
 		$("#save").click(function() {
 			if (window.confirm("SAVE? Are you sure?")) {
 				$("#form").append("<input type=\"hidden\" name=\"UGC_contextId\" value=\"" + $("#form #UGC_context").objectmanager("val") + "\" />");

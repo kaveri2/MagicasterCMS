@@ -13,11 +13,11 @@
 	$colors_diff = array("#660000","#000066","#006600","#660066","#006666","#666600","#666666","#660033","#006633","#663300","#330066","#003366","#336600");
 	
 	// counter ids
-	$sql = "SELECT DISTINCT (id) AS id FROM " . $table_name . " WHERE id REGEXP '" . DB::mysql_real_escape_string($id) . "' AND clientId IN ($in_clientIds)";
+	$sql = "SELECT DISTINCT (id) AS id FROM " . $table_name . " WHERE id REGEXP '" . DB::mysqli_real_escape_string($id) . "' AND clientId IN ($in_clientIds)";
 	
-	$result = DB::mysql_query($sql);
+	$result = DB::mysqli_query($sql);
 	$ids = array();
-	while ($row = mysql_fetch_assoc($result)) { 
+	while ($row = mysqli_fetch_assoc($result)) { 
 		$ids[] = $row['id'];
 	}
 	$in_ids = "'" . implode("','", $ids) . "'";
@@ -33,10 +33,10 @@
 		$end = $start + 1;
 		$interval_length = 1;
 	
-		$sql = "SELECT DISTINCT (id) AS id FROM " . $table_name2 . " WHERE id REGEXP '" . DB::mysql_real_escape_string($id) . "' AND clientId IN ($in_clientIds)";
+		$sql = "SELECT DISTINCT (id) AS id FROM " . $table_name2 . " WHERE id REGEXP '" . DB::mysqli_real_escape_string($id) . "' AND clientId IN ($in_clientIds)";
 		
-		$result = DB::mysql_query($sql);
-		while ($row = mysql_fetch_assoc($result)) { 
+		$result = DB::mysqli_query($sql);
+		while ($row = mysqli_fetch_assoc($result)) { 
 			$ids[] = $row['id'];
 		}
 		$in_ids = "'" . implode("','", $ids) . "'";
@@ -54,8 +54,8 @@
 			GROUP BY
 				id, clientId";
 
-		$result = DB::mysql_query($sql);
-		while ($row = mysql_fetch_assoc($result)) {
+		$result = DB::mysqli_query($sql);
+		while ($row = mysqli_fetch_assoc($result)) {
 			if (!isset($intervals[-1][$row['id']])) {
 				$intervals[-1][$row['id']] = array();
 			}
@@ -78,8 +78,8 @@
 	
 		// stamp min & max
 		$sql = "SELECT MIN(stamp) as stamp_min, MAX(stamp) as stamp_max FROM " . $table_name . " WHERE id IN ($in_ids) AND clientId IN ($in_clientIds)";
-		$result = DB::mysql_query($sql);
-		$row = mysql_fetch_assoc($result);
+		$result = DB::mysqli_query($sql);
+		$row = mysqli_fetch_assoc($result);
 		$stamp_min = strtotime($row['stamp_min']);
 		$stamp_max = strtotime($row['stamp_max']);
 			
@@ -110,8 +110,8 @@
 			GROUP BY
 				id, clientId";
 
-		$result = DB::mysql_query($sql);
-		while ($row = mysql_fetch_assoc($result)) {
+		$result = DB::mysqli_query($sql);
+		while ($row = mysqli_fetch_assoc($result)) {
 			if (!isset($intervals[-1][$row['id']])) {
 				$intervals[-1][$row['id']] = array();
 			}
@@ -131,8 +131,8 @@
 			GROUP BY
 				id, clientId";
 
-		$result = DB::mysql_query($sql);
-		while ($row = mysql_fetch_assoc($result)) {
+		$result = DB::mysqli_query($sql);
+		while ($row = mysqli_fetch_assoc($result)) {
 			if (!isset($intervals[-1][$row['id']])) {
 				$intervals[-1][$row['id']] = array();
 			}
@@ -164,9 +164,9 @@
 				GROUP BY
 					id, clientId";
 					
-			$result = DB::mysql_query($sql);
+			$result = DB::mysqli_query($sql);
 			
-			while ($row = mysql_fetch_assoc($result)) {
+			while ($row = mysqli_fetch_assoc($result)) {
 				if (!isset($intervals[$start])) {
 					$intervals[$start] = array();
 				}

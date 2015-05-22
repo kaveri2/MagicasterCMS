@@ -79,12 +79,12 @@
 			}
 		},
 		{ "label": "Style", "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
 		{ "label": "Style (selected)", "type": "node", "data": { "name": "selectedStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },

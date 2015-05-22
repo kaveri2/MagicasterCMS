@@ -8,3 +8,5 @@
 Icon?
 ehthumbs.db
 [Tt]humbs.db
+client/*
+!client/example.php

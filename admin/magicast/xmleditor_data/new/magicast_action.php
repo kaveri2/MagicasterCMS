@@ -4,7 +4,7 @@
 			{ "label": "Trigger event", "content": [
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "triggerEvent", "hint": { "failure": true, "success": true} } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
-<?
+<?php
 	include("event_to_trigger.php");
 ?>
 				] } }
@@ -13,7 +13,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "changeNode", "hint": {"failure": true, "success": true} } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
@@ -23,23 +23,23 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "changeProperty", "hint": {"failure": true, "success": true } } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "label": "Property", "type": "node", "data": { "name": "property", "content": [
-<?
+<?php
 	include("property.php");
 ?>
 					] } },
 					{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					] } },
 					{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [ { "type": "text" } ] } },
 					{ "label": "Ease", "type": "node", "data": { "name": "ease", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("ease_names.php");
 ?>
 					] } } ] } },
 					{ "label": "Complete event", "type": "node", "data": { "name": "completeEvent", "content": [
-<?
+<?php
 	include("event_to_trigger.php");
 ?>
 					] } }
@@ -49,12 +49,12 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setVariable", "hint": {"failure": true, "success": true} } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [
 					{ "type": "node", "data": { "name": "variable", "content": [
-<?
+<?php
 	include("variable.php");
 ?>
 					] } },
 					{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
@@ -65,7 +65,7 @@
 				{ "type": "node", "data": { "name": "parameters", "content": [
 					{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
 					{ "type": "node", "data": { "name": "collisionDetectionGroup", "content": [ 
-<?
+<?php
 	include("collisionDetectionGroup.php");
 ?>
 					] } }
@@ -76,7 +76,7 @@
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
 					{ "label": "Variables", "type": "node", "data": { "name": "variable", "content": [
-<?
+<?php
 	include("variable.php");
 ?>
 					] } }
@@ -133,15 +133,15 @@
 			] }
 		] } } 
 	] },
-<?
+<?php
 foreach ($CONFIG['magicast/xmleditor_data/new']['magicast_action_options'] as $option) {
 ?>
-	{ "label": "<?= $option['label'] ?>", "content": [
-<?
+	{ "label": "<?php echo $option['label'] ?>", "content": [
+<?php
 	include($option['include_file']);
 ?>
 	] },
-<?
+<?php
 }
 ?>
 	{ "label": "Other", "content": [

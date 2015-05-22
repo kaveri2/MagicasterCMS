@@ -19,10 +19,10 @@ class Client
 	}
 
 	public function loadUsingName() {
-		$name = DB::mysql_real_escape_string($this->name);
+		$name = DB::mysqli_real_escape_string($this->name);
 		$sql = "SELECT * FROM " . DB::getTableName($this) . " WHERE name='$name'";
-		$result = DB::mysql_query($sql);
-		$row = mysql_fetch_object($result);
+		$result = DB::mysqli_query($sql);
+		$row = mysqli_fetch_object($result);
 		if ($row) {
 			DB::load($this, $row);
 		}
@@ -34,19 +34,19 @@ class Client
 
 	public function addAccess($access) {
 		$sql = "INSERT INTO " . DB::$table_prefix . "clientAccess (clientId, accessId) VALUES (" . $this->id . ", " . $access->id . ")";
-		$result = DB::mysql_query($sql);
+		$result = DB::mysqli_query($sql);
 	}
 
 	public function removeAccess($access) {
 		$sql = "DELETE FROM " . DB::$table_prefix . "clientAccess WHERE clientId=" . $this->id . " AND accessId=" . $access->id;
-		$result = DB::mysql_query($sql);
+		$result = DB::mysqli_query($sql);
 	}
 
 	public function calculateAccessCache() {
 		$a = array();
 		$sql = "SELECT accessId FROM " . DB::$table_prefix . "clientAccess WHERE clientId=" . $this->id;
-		$result = DB::mysql_query($sql);
-		if ($result) while ($row = mysql_fetch_object($result)) {
+		$result = DB::mysqli_query($sql);
+		if ($result) while ($row = mysqli_fetch_object($result)) {
 			$a[$row->accessId] = null;
 		}
 		return $a;

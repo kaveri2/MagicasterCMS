@@ -30,7 +30,7 @@
 ?>
 	<div id="content-head">
 		<div id="content-head-left">
-			<h1><?= $access->id ? "Edit" : "New" ?> access</h1>
+			<h1><?php echo $access->id ? "Edit" : "New" ?> access</h1>
 		</div>
 		<div id="content-head-right">
 			
@@ -44,19 +44,19 @@
 	<form id="saveForm" method="post">
 		<p>
 			<label class="top-label">Admin name</label>
-			<input type="text" name="adminName" id="adminName" value="<?= $access->adminName; ?>" />
+			<input type="text" name="adminName" id="adminName" value="<?php echo $access->adminName; ?>" />
 		</p>
 		<p>
 			<input name="save" type="submit" class="big-button" value="Save" />
 		</p>
 	</form>	
 	
-<?
+<?php
 	if ($access->id) {
 ?>
 	<fieldset class="grouping">
 	<legend>Publish windows</legend>
-<?
+<?php
 	function deletePublishWindow($object) {
 		global $access;
 		return "<a class='delete' href='save.php?id=" . $access->id . "&delete_accessPublishWindow_id=" . $object->id . "'>[delete]</a>";
@@ -98,7 +98,7 @@
 	</form>
 	</fieldset>
 	</fieldset>
-<?
+<?php
 	}
 ?>
 
@@ -117,6 +117,6 @@
 	});
 	</script>
 	
-<?
+<?php
 	include("../footer.php");
 ?>

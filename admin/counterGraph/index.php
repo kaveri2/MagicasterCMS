@@ -37,7 +37,7 @@
 <div id="content-head">
 		
 			<div id="content-head-left">
-				<h1><?= $id ?></h1>
+				<h1><?php echo $id ?></h1>
 			</div>
 			
 			<div id="content-head-right"></div>
@@ -54,12 +54,12 @@
 			<form>
 				<p>
 					<label>Counter(s): </label>
-					<input type="text" name="id" value="<?= $id; ?>" />
+					<input type="text" name="id" value="<?php echo $id; ?>" />
 				</p>
 				<p>
 					<label>Client(s):</label>
 					<div>
-<?
+<?php
 foreach ($clients as $client) {
 	$checked = false;
 	foreach ($clientIds as $clientId) {
@@ -68,23 +68,23 @@ foreach ($clients as $client) {
 		}
 	}
 ?>
-						<input type="checkbox" name="clientIds[]" value="<?= $client->id ?>"<?= $checked ? " checked" : "" ?>> <?= $client->name ?><br />
-<?
+						<input type="checkbox" name="clientIds[]" value="<?php echo $client->id ?>"<?php echo $checked ? " checked" : "" ?>> <?php echo $client->name ?><br />
+<?php
 }
 ?>
 					</div>
 				</p>
 				<p>
 					<label>Start:</label>
-					<input type="text" name="start" class="dateTime" value = "<?= $start_formatted ?>" />
+					<input type="text" name="start" class="dateTime" value = "<?php echo $start_formatted ?>" />
 				</p>
 				<p>
 					<label>End:</label>
-					<input type="text" name="end" class="dateTime" value = "<?= $end_formatted ?>" />
+					<input type="text" name="end" class="dateTime" value = "<?php echo $end_formatted ?>" />
 				</p>
 				<p>
 					<label>Interval (seconds):</label>
-					<input type="text" name="interval" value = "<?= $interval ?>" />
+					<input type="text" name="interval" value = "<?php echo $interval ?>" />
 				</p>
 				<p>
 					<input type="submit" class="big-button" />
@@ -102,10 +102,10 @@ $(function() {
 	});
 	
 	swfobject.embedSWF("../open-flash-chart.swf", "my_chart", "940", "760", "9.0.0", "expressInstall.swf", {
-		"data-file": "<?= urlencode("ajax_counterGraph.php?id=" . urlencode($id) . "&$clientIds_GET&start=$start&end=$end&interval=$interval") ?>"
+		"data-file": "<?php echo urlencode("ajax_counterGraph.php?id=" . urlencode($id) . "&$clientIds_GET&start=$start&end=$end&interval=$interval") ?>"
 	});
 });
 </script>
 
-<?
+<?php
 include("../footer.php");

@@ -3,19 +3,19 @@
 { "label": "Name", "type": "node", "data": { "name": "name", "content": [ { "type": "text", "hint": { "success": true } } ] } },
 { "label": "Properties", "type": "list", "data": { "content": [ { "type": "node", "data": { "name": "property", "content": [
 	{ "label": "Name", "type": "node", "data": { "name": "name", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("node_property_names.php");
 ?>
 	] } } ] } },
 	{ "label": "Value", "type": "node", "data": { "name": "value", "content": [ { "type": "text" } ] } }
 ] } } ] } },
 { "label": "Layers", "type": "list", "data": { "content": [ { "type": "node", "data": { "errorCatcher": true, "name": "layer", "content": [
-<?
+<?php
 	include("layer.php");
 ?>
 ] } } ] } },
 { "label": "Triggers", "type": "list", "data": { "content": [ { "type": "node", "data": { "errorCatcher": true, "name": "trigger", "content": [
-<?
+<?php
 	include("trigger.php");
 ?>
 ] } } ] } }

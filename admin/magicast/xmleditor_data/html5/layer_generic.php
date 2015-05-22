@@ -6,7 +6,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 			{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -28,7 +28,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 			{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -51,14 +51,14 @@
 			{ "type": "select", "data": { "options": [
 				{ "label": "Asset", "content": [
 					{ "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					], "delay": true } }
 				] },
 				{ "label": "Data", "content": [
 					{ "type": "node", "data": { "name": "data", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 					], "delay": true } }
@@ -73,7 +73,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Text", "type": "node", "data": { "name": "text", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -112,14 +112,14 @@
 			{ "type": "select", "data": { "options": [
 				{ "label": "Texture asset", "content": [
 					{ "type": "node", "data": { "name": "textureAsset", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					], "delay": true } }
 				] },
 				{ "label": "Texture data", "content": [
 					{ "type": "node", "data": { "name": "textureData", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 					], "delay": true } }

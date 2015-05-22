@@ -3,16 +3,16 @@
 ?>
 [
 	{ "type": "select", "data": { "options": [
-<?
+<?php
 	foreach ($CONFIG['magicast/xmleditor_data']['format_options'] as $option) {
 ?>
-		{ "label": "<?= $option['label'] ?>", "content": [
-			{ "type": "node", "data": { "name": "format", "content": [ { "type": "constant", "data":  "<?= $option['value'] ?>", "hint": {"failure": false, "success": true} } ] } },
-<?
+		{ "label": "<?php echo $option['label'] ?>", "content": [
+			{ "type": "node", "data": { "name": "format", "content": [ { "type": "constant", "data":  "<?php echo $option['value'] ?>", "hint": {"failure": false, "success": true} } ] } },
+<?php
 	include($option['include_file']);
 ?>
 		] },
-<?	
+<?php	
 		}
 ?>
 		{ "label": "Other", "content": [

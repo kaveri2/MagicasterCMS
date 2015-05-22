@@ -5,43 +5,43 @@
 { "label": "Trigger immediately?", "type": "node", "data": { "name": "immediate", "content": [ { "type": "boolean" } ] } },
 { "label": "Triggering events", "type": "list", "data": { "content": [ 
 	{ "type": "node", "data": { "name": "event", "content": [ 
-<?
+<?php
 	include("event.php");
 ?>
 	] } }
 ] } },
 { "label": "Condition", "type": "node", "data": { "name": "condition", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 ], "delay": true } },
 { "label": "Actions to run", "type": "list", "data": { "content": [ 
 	{ "type": "node", "data": { "name": "action", "content": [ 
 		{ "label": "Wait (seconds)", "type": "node", "data": { "name": "wait", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 		] } },
 		{ "label": "Condition", "type": "node", "data": { "name": "condition", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 		], "delay": true } },
 		{ "type": "select", "data": { "options": [
-<?
+<?php
 foreach ($CONFIG['magicast/xmleditor_data/html5']['action_options'] as $option) {
 ?>
-			{ "label": "<?= $option['label'] ?>", "content": [
-<?
+			{ "label": "<?php echo $option['label'] ?>", "content": [
+<?php
 	include($option['include_file']);
 ?>
 			] },
-<?
+<?php
 }
 ?>
 			{ "label": "Other", "content": [
 				{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 				], "delay": true } },

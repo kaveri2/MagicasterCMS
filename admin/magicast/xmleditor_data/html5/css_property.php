@@ -4,7 +4,7 @@
 		{ "label": "Magicast (empty = this)", "type": "node", "data": { "name": "magicast", "content": [ { "type": "text" } ] } },
 		{ "label": "Additional CSS selector", "type": "node", "data": { "name": "selector", "content": [ { "type": "text" } ] } },
 		{ "label": "Name", "type": "node", "data": { "name": "name", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("css_property_names.php");
 ?>
 		] } } ] } }
@@ -17,7 +17,7 @@
 		] } },
 		{ "label": "Additional CSS selector", "type": "node", "data": { "name": "selector", "content": [ { "type": "text" } ] } },
 		{ "label": "Name", "type": "node", "data": { "name": "name", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("css_property_names.php");
 ?>
 		] } } ] } }

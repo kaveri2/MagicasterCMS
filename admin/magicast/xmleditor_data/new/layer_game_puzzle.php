@@ -8,7 +8,7 @@
 			] },
 			{ "label": "Value", "content": [
 				{ "type": "node", "data": { "name": "imageValue", "content":  [
-<?
+<?php
 include("value.php");
 ?>
 				] } }
@@ -44,12 +44,12 @@ include("value.php");
 		},		
 		{ "label": "Background alpha (%)", "type": "node", "data": { "name": "backgroundAlpha", "content": [ { "type": "text" } ] } },
 		{ "label": "Style (draggable)", "type": "node", "data": { "name": "draggableStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
 		{ "label": "Style (dragged)", "type": "node", "data": { "name": "draggedStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } }

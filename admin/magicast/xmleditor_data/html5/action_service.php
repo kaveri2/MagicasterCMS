@@ -6,7 +6,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -18,7 +18,7 @@
 					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "label": "Time (s)", "type": "node", "data": { "name": "time", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 						], "delay": true } }

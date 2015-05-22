@@ -10,7 +10,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "label": "Time", "type": "node", "data": { "name": "timeValue", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
@@ -39,7 +39,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setVolume" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
@@ -53,7 +53,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setStyle" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 					] } }
@@ -63,7 +63,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "changeAsset" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("asset.php");
 ?>
 					] } }
@@ -77,7 +77,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setValue" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
@@ -91,7 +91,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setFps" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
@@ -130,7 +130,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setInterval" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 					] } }
@@ -140,7 +140,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setRepeats" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 					] } }

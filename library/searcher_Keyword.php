@@ -1,4 +1,4 @@
-<?
+<?php
 class searcher_Keyword
 {
 	public $id 					= 0;

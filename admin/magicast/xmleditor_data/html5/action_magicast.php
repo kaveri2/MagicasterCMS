@@ -5,7 +5,7 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "actions/2015/triggerevent.js", "hint": {"failure": true, "success": true} } ] } }
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
-<?
+<?php
 	include("event_to_trigger.php");
 ?>
 		] } }
@@ -17,7 +17,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } }
@@ -30,12 +30,12 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "node", "data": { "name": "property", "content": [
-<?
+<?php
 	include("property.php");
 ?>
 			] } },
 			{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -48,12 +48,12 @@
 				] }
 			] } },
 			{ "label": "Ease", "type": "node", "data": { "name": "ease", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("ease_names.php");
 ?>
 			] } } ] } },
 			{ "label": "Complete event", "type": "node", "data": { "name": "completeEvent", "content": [
-<?
+<?php
 	include("event_to_trigger.php");
 ?>
 			] } }
@@ -66,23 +66,23 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "node", "data": { "name": "property", "content": [
-<?
+<?php
 	include("css_property.php");
 ?>
 			] } },
 			{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
 			{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [ { "type": "text" } ] } },
 			{ "label": "Ease", "type": "node", "data": { "name": "ease", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("ease_names.php");
 ?>
 			] } } ] } },
 			{ "label": "Complete event", "type": "node", "data": { "name": "completeEvent", "content": [
-<?
+<?php
 	include("event_to_trigger.php");
 ?>
 			] } }
@@ -95,12 +95,12 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [
 			{ "type": "node", "data": { "name": "variable", "content": [
-<?
+<?php
 	include("variable.php");
 ?>
 			] } },
 			{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } }
@@ -165,7 +165,7 @@
 		{ "type": "node", "data": { "name": "parameters", "content": [
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
 			{ "label": "Collision detection group", "type": "node", "data": { "name": "collisionDetectionGroup", "content": [ 
-<?
+<?php
 	include("collisionDetectionGroup.php");
 ?>
 			] } }
@@ -179,7 +179,7 @@
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
 			{ "label": "Variable", "type": "node", "data": { "name": "variable", "content": [
-<?
+<?php
 	include("variable.php");
 ?>
 			] } }
@@ -192,12 +192,12 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "URL", "type": "node", "data": { "name": "url", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
 			{ "label": "Target", "type": "node", "data": { "name": "target", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } }

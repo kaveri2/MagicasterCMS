@@ -6,17 +6,17 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Event", "type": "node", "data": { "name": "event", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
 			{ "label": "Label", "type": "node", "data": { "name": "label", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
 			{ "label": "Value", "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } }
@@ -49,7 +49,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Name", "type": "node", "data": { "name": "name", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } }

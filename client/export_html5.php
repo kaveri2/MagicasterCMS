@@ -15,13 +15,13 @@ ob_start();
 <body style="margin: 0px; padding: 0px; background-color: #000000;">
 	<div style="position: absolute; width: 100%; height: 100%; background-image: url('http://tubequiz.s3.amazonaws.com/2015/loading.gif'); background-repeat: no-repeat; background-position: 50% 50%;">
 	</div>
-<? 
+<?php 
 	if ($_REQUEST['data']) { 
 ?>
 	<div style="position: absolute; width: 100%; height: 100%;" data-magicaster-magicast-xml>
-		<textarea style="display: none;"><id><?= (0 + $_REQUEST['id']) ?></id><data><?= $_REQUEST['data'] ?></data></textarea>
+		<textarea style="display: none;"><id><?php echo (0 + $_REQUEST['id']) ?></id><data><?php echo $_REQUEST['data'] ?></data></textarea>
 	</div>
-<? 
+<?php 
 	} 
 ?>
 </body>

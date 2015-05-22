@@ -1,13 +1,13 @@
 <?php
 	require_once("../core.php");
 ?>
-<?
+<?php
 	$sql = "SELECT UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP(created) AS time FROM " . DB::$table_prefix . "session WHERE updated > NOW() - INTERVAL 2 MINUTE";
-	$result = mysql_query($sql);
+	$result = mysqli_query($sql);
 	$counters = array();
 	$total = 0;
 	
-	while ($row = mysql_fetch_assoc($result)) {
+	while ($row = mysqli_fetch_assoc($result)) {
 	
 		$time = $row["time"];
 		if ($time<3600) {
@@ -60,10 +60,10 @@
 		}
 ?>
 	<tr>
-		<td style="vertical-align: top;"><h4><?= $key ?>:</h4><?= $sub1 ?></td>
-		<td style="vertical-align: top;"><h4><span class="accent"><?= $p ?> %</span> (<?= $a["count"] ?>)</h4><?= $sub2 ?></td>
+		<td style="vertical-align: top;"><h4><?php echo $key ?>:</h4><?php echo $sub1 ?></td>
+		<td style="vertical-align: top;"><h4><span class="accent"><?php echo $p ?> %</span> (<?php echo $a["count"] ?>)</h4><?php echo $sub2 ?></td>
 	</tr>
-<?
+<?php
 	}
 ?>
 </table>

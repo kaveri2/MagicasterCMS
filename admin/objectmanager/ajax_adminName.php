@@ -1,4 +1,4 @@
-<?
+<?php
 	require_once("../core.php");
 
 	$class = $_REQUEST['class'];

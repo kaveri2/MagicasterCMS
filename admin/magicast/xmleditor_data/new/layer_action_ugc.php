@@ -3,7 +3,7 @@
 		{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setBrushColor" } ] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 			] } }
@@ -13,7 +13,7 @@
 		{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setBrushAlpha" } ] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 			] } }
@@ -23,7 +23,7 @@
 		{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setBrushThickness" } ] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 			] } }
@@ -33,7 +33,7 @@
 		{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setBrushBlendMode" } ] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 			] } }
@@ -48,7 +48,7 @@
 		{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "fillCanvas" } ] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 			] } }

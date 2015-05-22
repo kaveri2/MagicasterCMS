@@ -1,3 +1,6 @@
+SET GLOBAL innodb_file_per_table=1;
+SET GLOBAL innodb_file_format=Barracuda;
+
 CREATE TABLE IF NOT EXISTS magicaster_access (
   id int(11) NOT NULL auto_increment,
   adminName varchar(256) NOT NULL,
@@ -80,7 +83,7 @@ CREATE TABLE IF NOT EXISTS magicaster_magicastBackup (
   public tinyint(1) NOT NULL,
   PRIMARY KEY  (id),
   KEY magicastId (magicastId)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPRESSED KEY_BLOCK_SIZE=8;
 
 CREATE TABLE IF NOT EXISTS magicaster_path (
   id int(11) NOT NULL auto_increment,

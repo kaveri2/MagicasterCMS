@@ -1,4 +1,4 @@
-<?
+<?php
 class UGC_Context
 {
 	public $id 					= 0;

@@ -1,8 +1,8 @@
-<?
+<?php
 	function public_Path_search($xml) {
 
 		$name = "" . $xml->name;
-		$name = DB::mysql_real_escape_string($name);
+		$name = DB::mysqli_real_escape_string($name);
 		
 		$_SESSION['path'] = $name;
 

@@ -8,7 +8,7 @@
 	);
 	
 	$sql = "SELECT value, stamp, name FROM " . DB::$table_prefix . "sessionCount AS t1 LEFT JOIN " . DB::$table_prefix . "client AS t2 ON (t1.clientId = t2.id) WHERE stamp > NOW() - INTERVAL 7 DAY AND stamp < NOW() - INTERVAL 0 DAY ORDER BY stamp";
-	$result = DB::mysql_query($sql);
+	$result = DB::mysqli_query($sql);
 	
 	$max_val = 0;
 	$min_s = 0;
@@ -18,7 +18,7 @@
 	$totals = array();
 	
 	$lastStamp = 0;
-	while($row = mysql_fetch_object($result)) {
+	while($row = mysqli_fetch_object($result)) {
 		if (!$row->name) $row->name = "N/A";
 		$v = 0 + $row->value;
 		$s = strtotime($row->stamp);

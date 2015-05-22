@@ -17,14 +17,14 @@
 	{ "label": "Show bar?", "type": "node", "data": { "name": "showBar", "content": [ { "type": "boolean" } ] } },
 	{ "label": "Close path", "type": "node", "data": { "name": "closePath", "content": [ { "type": "text" } ] } },
 	{ "label": "Color", "type": "node", "data": { "name": "color", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include('../../xmleditor_data/p2_color_options.php');
 ?>
 	] } } ] } },
 	{ "label": "Icon image asset", "type": "node", "data": { "name": "iconImageAsset", "content": [ { "type": "asset" } ] } },
 	{ "label": "Name", "type": "node", "data": { "name": "name", "content": [ { "type": "text" } ] } },
 	{ "label": "Type", "type": "node", "data": { "name": "type", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include('../../xmleditor_data/p2_action_type_options.php');
 ?>
 	] } } ] } },

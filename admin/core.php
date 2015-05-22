@@ -28,9 +28,8 @@ if ($CONFIG['debug']) {
 
 require_once('helpers.php');
 
-if (!$connection = mysql_connect($CONFIG['db_host'], $CONFIG['db_username'], $CONFIG['db_password'])) throw new Exception("");
-if (!mysql_select_db($CONFIG['db_database'], $connection)) throw new Exception("");
-mysql_query("SET NAMES 'utf8'", $connection);
+if (!$connection = mysqli_connect($CONFIG['db_host'], $CONFIG['db_username'], $CONFIG['db_password'], $CONFIG['db_database'], $CONFIG['db_port'])) throw new Exception("");
+mysqli_query($connection, "SET NAMES 'utf8'");
 
 DB::$connection = $connection;
 DB::$table_prefix = $CONFIG['db_table_prefix'];

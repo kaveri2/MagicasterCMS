@@ -1,4 +1,4 @@
-<?
+<?php
 class UGC_SentItemType
 {
 	public $id = 0;

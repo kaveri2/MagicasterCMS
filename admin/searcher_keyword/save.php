@@ -16,7 +16,7 @@
 ?>
 	<div id="content-head">
 		<div id="content-head-left">
-			<h1><?= $searcher_keyword->id ? "Edit" : "Create" ?> Searcher Keyword</h1>
+			<h1><?php echo $searcher_keyword->id ? "Edit" : "Create" ?> Searcher Keyword</h1>
 		</div>
 		<div id="content-head-right">
 			
@@ -29,7 +29,7 @@
 	<form id="form" method="post">
 		<p>
 			<label class="top-label">Admin name</label>
-			<input type="text" name="adminName" id="adminName" value="<?= $searcher_keyword->adminName; ?>" />
+			<input type="text" name="adminName" id="adminName" value="<?php echo $searcher_keyword->adminName; ?>" />
 		</p>
 		<p>
 			<input id="save" name="save" type="submit" class="big-button" value="Save" />
@@ -43,5 +43,5 @@
 	});
 	</script>
 	
-<?
+<?php
 	include("../footer.php");

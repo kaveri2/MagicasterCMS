@@ -5,7 +5,7 @@
 { "label": "Trigger immediately?", "type": "node", "data": { "name": "immediate", "content": [ { "type": "boolean" } ] } },
 { "label": "Triggering events", "type": "list", "data": { "content": [ 
 	{ "type": "node", "data": { "name": "event", "content": [ 
-<?
+<?php
 	include("event.php");
 ?>
 	] } }
@@ -22,7 +22,7 @@
 		] } } ] } },
 		{ "label": "Values", "type": "list", "data": { "content": [ 
 			{ "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			] } }
@@ -35,22 +35,22 @@
 		{ "label": "Magicast", "type": "node", "data": { "name": "magicast", "content": [ { "type": "text" } ] } },
 		{ "type": "select", "data": { "options": [
 			{ "label": "Magicast actions", "content": [
-<?
+<?php
 	include("magicast_action.php");
 ?>
 			] },
 			{ "label": "Layer actions", "content": [
 				{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
 				{ "type": "select", "data": { "options": [
-<?
+<?php
 foreach ($CONFIG['magicast/xmleditor_data/new']['layer_action_options'] as $option) {
 ?>
-					{ "label": "<?= $option['label'] ?>", "content": [
-<?
+					{ "label": "<?php echo $option['label'] ?>", "content": [
+<?php
 	include($option['include_file']);
 ?>
 					] },
-<?
+<?php
 }
 ?>
 					{ "label": "Other", "content": [

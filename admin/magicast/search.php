@@ -1,4 +1,4 @@
-<?
+<?php
 	require_once("../core.php");
 
 	$page = isset($_REQUEST['page']) ? 0 + $_REQUEST['page'] : 0;
@@ -17,7 +17,7 @@
 			
 			<div id="content-head-right">
 				<form id="search" method="get" action="search.php">
-					<input type="text" name="search" class="search-field" id="search-magicast" value="<?= $search ?>" />
+					<input type="text" name="search" class="search-field" id="search-magicast" value="<?php echo $search ?>" />
 					<input type="submit" id="searchSubmit" class="big-button" value="Search" />
 				</form>
 			</div>
@@ -28,7 +28,7 @@
 
 <div id="content">
 
-<?
+<?php
 
 $search = strtolower($search);
 $where = "(LOWER(adminName) LIKE '%" . $search . "%') ";
@@ -76,5 +76,5 @@ printPager($page, ceil($count / $per_page), "pageLink");
 		$('input.search-field').focus();
 	});
 </script>
-<?
+<?php
 	include("../footer.php");

@@ -32,7 +32,7 @@
 ?>
 	<div id="content-head">
 		<div id="content-head-left">
-			<h1><?= $searcher_result->id ? "Edit" : "Create" ?> Searcher Result</h1>
+			<h1><?php echo $searcher_result->id ? "Edit" : "Create" ?> Searcher Result</h1>
 		</div>
 		<div id="content-head-right">
 			
@@ -45,24 +45,24 @@
 	<form id="form" method="post">
 		<p>
 			<label class="top-label">Admin name</label>
-			<input type="text" name="adminName" id="adminName" value="<?= $searcher_result->adminName; ?>" />
+			<input type="text" name="adminName" id="adminName" value="<?php echo $searcher_result->adminName; ?>" />
 			<label class="top-label">Access</label>
-			<div id="access"><?= $searcher_result->access->id ?></div>
+			<div id="access"><?php echo $searcher_result->access->id ?></div>
 			<label class="top-label">Data</label>
-			<div id="xmleditor_data"><textarea><?= $searcher_result->data ?></textarea></div>
+			<div id="xmleditor_data"><textarea><?php echo $searcher_result->data ?></textarea></div>
 		</p>
 		<p>
 			<input id="save" name="save" type="submit" class="big-button" value="Save" />
 		</p>
 	</form>	
 	
-<?
+<?php
 	if ($searcher_result->id) {
 ?>
 	
 	<fieldset class="grouping">
 	<legend>Search Keywords</legend>
-<?
+<?php
 	function removeItem($item) {
 		global $searcher_result;
 		return "<a class='remove' href='save.php?id=" . $item->id . "&remove_searcher_keywordId=" . $item->id . "'>[remove]</a>";
@@ -95,7 +95,7 @@
 	</form>			
 	</fieldset>
 	</fieldset>
-<?
+<?php
 	}
 ?>	
 	
@@ -117,5 +117,5 @@
 	});
 	</script>
 	
-<?
+<?php
 	include("../footer.php");

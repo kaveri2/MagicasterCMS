@@ -59,14 +59,14 @@
 								{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "changeProperty" } ] } },
 								{ "type": "node", "data": { "name": "parameters", "content": [ 
 									{ "label": "Property", "type": "node", "data": { "name": "property", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("node_property_names.php");
 ?>
 									] } } ] } },
 									{ "label": "Value", "type": "node", "data": { "name": "value", "content": [ { "type": "text" } ] } },
 									{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [ { "type": "text" } ] } },
 									{ "label": "Ease", "type": "node", "data": { "name": "ease", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("ease_names.php");
 ?>
 									] } } ] } },
@@ -79,14 +79,14 @@
 								{ "type": "node", "data": { "name": "parameters", "content": [ 
 									{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
 									{ "label": "Property", "type": "node", "data": { "name": "property", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("layer_property_names.php");
 ?>
 									] } } ] } },
 									{ "label": "Value", "type": "node", "data": { "name": "value", "content": [ { "type": "text" } ] } },
 									{ "label": "Time (seconds)", "type": "node", "data": { "name": "time", "content": [ { "type": "text" } ] } },
 									{ "label": "Ease", "type": "node", "data": { "name": "ease", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include("ease_names.php");
 ?>
 									] } } ] } },
@@ -168,15 +168,15 @@
 							] }
 						] } } 
 					] },
-<?
+<?php
 	foreach ($CONFIG['magicast/xmleditor_data/bofori']['node_action_options'] as $option) {
 ?>
-					{ "label": "<?= $option['label'] ?>", "content": [
-<?
+					{ "label": "<?php echo $option['label'] ?>", "content": [
+<?php
 	include($option['include_file']);
 ?>
 					] },		
-<?
+<?php
 	}
 ?>
 					{ "label": "Other", "content": [
@@ -188,15 +188,15 @@
 			{ "label": "Layer actions", "content": [
 				{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [ { "type": "text" } ] } },
 				{ "type": "select", "data": { "options": [
-<?
+<?php
 	foreach ($CONFIG['magicast/xmleditor_data/bofori']['layer_action_options'] as $option) {
 ?>
-					{ "label": "<?= $option['label'] ?>", "content": [
-<?
+					{ "label": "<?php echo $option['label'] ?>", "content": [
+<?php
 	include($option['include_file']);
 ?>
 					] },
-<?
+<?php
 	}
 ?>
 					{ "label": "Other", "content": [

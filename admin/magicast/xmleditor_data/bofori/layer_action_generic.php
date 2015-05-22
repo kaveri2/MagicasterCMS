@@ -35,7 +35,7 @@
 				{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "changeStyle" } ] } },
 				{ "type": "node", "data": { "name": "parameters", "content": [ 
 					{ "label": "Style", "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 					] } }

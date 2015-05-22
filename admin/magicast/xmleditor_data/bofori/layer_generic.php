@@ -55,7 +55,7 @@
 					{ "label": "Variable name", "type": "node", "data": { "name": "name", "content": [ { "type": "text" } ] } }
 				] } },
 				{ "label": "Style", "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 				] } }
@@ -78,7 +78,7 @@
 				{ "label": "Loop?", "type": "node", "data": { "name": "loop", "content": [ { "type": "boolean" } ] } },
 				{ "label": "Paused?", "type": "node", "data": { "name": "paused", "content": [ { "type": "boolean" } ] } },
 				{ "label": "Style", "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 				] } }

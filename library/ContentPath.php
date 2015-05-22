@@ -1,4 +1,4 @@
-<?
+<?php
 class ContentPath
 {
 	public $weight = 0;

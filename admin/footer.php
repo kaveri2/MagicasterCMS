@@ -1,8 +1,8 @@
-<?
+<?php
 	if ($CONFIG['debug'] && DB::$debugOutput) {
 ?>
-	<div class="debug-text"><pre><?= htmlentities(DB::$debugOutput) ?></pre></div>
-<?
+	<div class="debug-text"><pre><?php echo htmlentities(DB::$debugOutput) ?></pre></div>
+<?php
 	}
 ?>
 		</div>

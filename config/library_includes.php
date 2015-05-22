@@ -1,4 +1,4 @@
-<?
+<?php
 	$library_path = dirname(dirname(__FILE__)) . "/library/";
 
 	require_once($library_path . "DB.php");

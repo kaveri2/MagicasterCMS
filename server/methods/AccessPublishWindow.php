@@ -1,4 +1,4 @@
-<?
+<?php
 
 function private_AccessPublishWindow_calculateAccessCache() 
 {

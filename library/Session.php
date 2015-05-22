@@ -43,9 +43,9 @@ class Session
 			$row = DB::$mc->get(DB::$mc_key_prefix . "_SESSION_" . $this->key);
 		}
 		if (!$row) {
-			$sql = "SELECT * FROM " . DB::getTableName($this) . " WHERE `key`='" . DB::mysql_real_escape_string($this->key) . "' AND updated>=DATE_SUB(NOW() , INTERVAL " . (0 + $time) . " SECOND)";
-			$result = DB::mysql_query($sql);
-			$row = mysql_fetch_object($result);
+			$sql = "SELECT * FROM " . DB::getTableName($this) . " WHERE `key`='" . DB::mysqli_real_escape_string($this->key) . "' AND updated>=DATE_SUB(NOW() , INTERVAL " . (0 + $time) . " SECOND)";
+			$result = DB::mysqli_query($sql);
+			$row = mysqli_fetch_object($result);
 			if (!$row) {
 				throw new Exception("");
 			}
@@ -58,12 +58,12 @@ class Session
 	}
 
 	public function create() {
-		$sql = "INSERT INTO " . DB::getTableName($this) . " (`key`, secret, created) VALUES ('" . DB::mysql_real_escape_string($this->key) . "', '" . DB::mysql_real_escape_string($this->secret) . "', NOW())";
-		DB::mysql_query($sql);
-		if (!DB::mysql_affected_rows()) {
+		$sql = "INSERT INTO " . DB::getTableName($this) . " (`key`, secret, created) VALUES ('" . DB::mysqli_real_escape_string($this->key) . "', '" . DB::mysqli_real_escape_string($this->secret) . "', NOW())";
+		DB::mysqli_query($sql);
+		if (!DB::mysqli_affected_rows()) {
 			throw new Exception("");
 		}
-		$this->id = DB::mysql_insert_id();
+		$this->id = DB::mysqli_insert_id();
 	}
 
 	public function update($cacheTime) {
@@ -84,14 +84,14 @@ class Session
 		$sql = "UPDATE  " . DB::getTableName($this) . "
 				SET 
 					clientId=" . ($this->client ? $this->client->id : 'clientId') .",
-					data='" . DB::mysql_real_escape_string($this->data) . "',
+					data='" . DB::mysqli_real_escape_string($this->data) . "',
 					updated=NOW(),
-					ip='" . DB::mysql_real_escape_string($this->ip) . "', 
-					userAgent='" . DB::mysql_real_escape_string($this->userAgent) . "',
-					browserCookie='" . DB::mysql_real_escape_string($this->browserCookie) . "'
+					ip='" . DB::mysqli_real_escape_string($this->ip) . "', 
+					userAgent='" . DB::mysqli_real_escape_string($this->userAgent) . "',
+					browserCookie='" . DB::mysqli_real_escape_string($this->browserCookie) . "'
 				WHERE id=" . $this->id;
-		DB::mysql_query($sql);
-		if (!DB::mysql_affected_rows()) {
+		DB::mysqli_query($sql);
+		if (!DB::mysqli_affected_rows()) {
 			throw new Exception("");
 		}
 	}
@@ -105,7 +105,7 @@ class Session
 	
 	public function updateAccessCache() {
 		$sql = "DELETE FROM " . DB::$table_prefix . "accessCache WHERE sessionId=" . $this->id;
-		DB::mysql_query($sql);
+		DB::mysqli_query($sql);
 		$sql = "INSERT INTO " . DB::$table_prefix . "accessCache (sessionId, accessId, granted) VALUES ";
 		foreach ($this->accessCache as $accessId => $granted) {
 			if ($granted) $granted = "'" . $granted . "'";
@@ -113,14 +113,14 @@ class Session
 			$sql = $sql . "(" . $this->id . "," . $accessId . "," . $granted . "),";
 		}
 		$sql = substr($sql, 0, strlen($sql) - 1);
-		$result = DB::mysql_query($sql);
+		$result = DB::mysqli_query($sql);
 	}
 	
 	public function calculateAccessCache() {
 		$a = array();
 		$sql = "SELECT accessId, granted FROM " . DB::$table_prefix . "sessionAccess WHERE sessionId=" . $this->id . " AND grantOrDeny=1";
-		$result = DB::mysql_query($sql);
-		if ($result) while ($row = mysql_fetch_object($result)) {
+		$result = DB::mysqli_query($sql);
+		if ($result) while ($row = mysqli_fetch_object($result)) {
 			$a[$row->accessId] = $row->granted;
 		}
 		return $a;

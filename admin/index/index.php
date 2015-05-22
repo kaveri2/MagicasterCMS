@@ -1,4 +1,4 @@
-<?
+<?php
 	require_once("../core.php");
 
 	$HTML_title = "Frontpage";
@@ -32,7 +32,7 @@
 	$(function() {
 		function loadSessionCount() {
 			$.ajax({
-				url: 'ajax_session_count.php?time=<?= time() ?>',
+				url: 'ajax_session_count.php?time=<?php echo time() ?>',
 				success: function(data) {
 					$("#session_count").html(data);
 				}
@@ -40,19 +40,19 @@
 		}
 		function loadSessionDetails() {
 			$.ajax({
-				url: 'ajax_session_durations.php?time=<?= time() ?>',
+				url: 'ajax_session_durations.php?time=<?php echo time() ?>',
 				success: function(data) {
 					$("#session_durations").html(data);
 				}
 			});
 			$.ajax({
-				url: 'ajax_session_paths.php?time=<?= time() ?>',
+				url: 'ajax_session_paths.php?time=<?php echo time() ?>',
 				success: function(data) {
 					$("#session_paths").html(data);
 				}
 			});
 			$.ajax({
-				url: 'ajax_session_cities.php?time=<?= time() ?>',
+				url: 'ajax_session_cities.php?time=<?php echo time() ?>',
 				success: function(data) {
 					$("#session_cities").html(data);
 				}
@@ -65,7 +65,7 @@
 				"../open-flash-chart.swf", "graph", "100%", "350",
 				"9.0.0", "expressInstall.swf",
 				{
-					"data-file": "ajax_session_count_graph.php?time=<?= time() ?>"
+					"data-file": "ajax_session_count_graph.php?time=<?php echo time() ?>"
 				}
 			)
 		}

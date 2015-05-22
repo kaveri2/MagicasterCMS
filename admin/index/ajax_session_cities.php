@@ -4,7 +4,7 @@
 	require_once("../geoip/geoipcity.inc");
 ?>
 <h3>Countries and cities</h3>
-<?
+<?php
 	if (file_exists("../geoip/GeoIPCity.dat")) {
 		$gi = geoip_open("../geoip/GeoIPCity.dat", GEOIP_STANDARD);
 	} else {
@@ -12,11 +12,11 @@
 	}
 
 	$sql = "SELECT ip FROM " . DB::$table_prefix . "session WHERE updated > NOW() - INTERVAL 2 MINUTE";
-	$result = mysql_query($sql);
+	$result = mysqli_query($sql);
 	$counters = array();
 	$total = 0;
 	
-	while ($row = mysql_fetch_assoc($result)) {
+	while ($row = mysqli_fetch_assoc($result)) {
 		$ip = $row['ip'];
 		$record = geoip_record_by_addr($gi, $ip);
 		$s = "" . $record->country_name != "" ? utf8_encode($record->country_name) : "N/A";
@@ -39,7 +39,7 @@
 	uasort($counters, 'cmp');
 ?>
 <table id="stats-cities">
-<?
+<?php
 	foreach ($counters as $key => $a) {
 		$p = round($a["count"] / $total * 100, 1);
 		$useSub = false;
@@ -59,10 +59,10 @@
 		}
 ?>
 	<tr>
-		<td style="vertical-align: top;"><h4><?= $key ?>:</h4><?= $sub1 ?></td>
-		<td style="vertical-align: top;"><h4><span class="accent"><?= $p ?> %</span> (<?= $a["count"] ?>)</h4><?= $sub2 ?></td>
+		<td style="vertical-align: top;"><h4><?php echo $key ?>:</h4><?php echo $sub1 ?></td>
+		<td style="vertical-align: top;"><h4><span class="accent"><?php echo $p ?> %</span> (<?php echo $a["count"] ?>)</h4><?php echo $sub2 ?></td>
 	</tr>
-<?
+<?php
 	}
 ?>
 </table>

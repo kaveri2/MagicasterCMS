@@ -3,33 +3,33 @@
 	{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2012/game/drag.swf", "hint": {"failure": true, "success": true} } ] } },
 	{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 					
 		{ "label": "Style", "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },		
 		{ "label": "Style (clickable)", "type": "node", "data": { "name": "clickableStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
 		{ "label": "Style (clicked)", "type": "node", "data": { "name": "clickedStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
 		{ "label": "Style (draggable)", "type": "node", "data": { "name": "draggableStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
 		{ "label": "Style (dragged)", "type": "node", "data": { "name": "draggedStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
 		
 		{ "label": "Style (complete)", "type": "node", "data": { "name": "completeStyle", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 		] } },
@@ -102,7 +102,7 @@
 									] },
 									{ "label": "Value", "content": [
 										{ "type": "node", "data": { "name": "imageValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 										] } }

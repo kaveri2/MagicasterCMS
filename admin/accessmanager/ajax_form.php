@@ -15,10 +15,10 @@
 ?>
 
 <fieldset class="grouping">
-	<legend><?= $access->id ? "Select" : "Create" ?> access</legend>
-	<input type="text" id="adminName" value="<?= $access->adminName; ?>" <?= $access->id ? 'disabled="disabled"' : '' ?> />
+	<legend><?php echo $access->id ? "Select" : "Create" ?> access</legend>
+	<input type="text" id="adminName" value="<?php echo $access->adminName; ?>" <?php echo $access->id ? 'disabled="disabled"' : '' ?> />
 	<br/>	
-	<input id="accessSave" type="button" class="small-button" value="<?= $access->id ? "Select" : "Create" ?>" />
+	<input id="accessSave" type="button" class="small-button" value="<?php echo $access->id ? "Select" : "Create" ?>" />
 	<input id="accessCancel" type="button" class="small-button" value="Cancel" />
 
 </fieldset>

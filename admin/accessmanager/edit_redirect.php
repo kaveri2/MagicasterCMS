@@ -1,4 +1,4 @@
-<?
+<?php
 	require_once("../core.php");
 	
 	$id = 0 + $_REQUEST['id'];	

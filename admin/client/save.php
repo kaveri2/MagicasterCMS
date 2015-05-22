@@ -29,7 +29,7 @@
 	<div id="content-head">
 		
 		<div id="content-head-left">
-			<h1><?= $client->id ? "Edit" : "New" ?> client</h1>
+			<h1><?php echo $client->id ? "Edit" : "New" ?> client</h1>
 		</div>
 		
 		<div id="content-head-right"></div>
@@ -43,20 +43,20 @@
 	<form id="saveForm" method="post">
 		<p>
 			<label class="top-label">Name</label>
-			<input type="text" name="name" id="adminName" value="<?= $client->name; ?>" />
+			<input type="text" name="name" id="adminName" value="<?php echo $client->name; ?>" />
 		</p>
 		<p>
 			<input name="save" type="submit" class="big-button" value="Save" />
 		</p>
 	</form>	
 	
-<?
+<?php
 	if ($client->id) {
 ?>
 	
 	<fieldset class="grouping">
 	<legend>Accesses</legend>
-<?
+<?php
 	function removeAccess($object) {
 		global $client;
 		return "<a class='remove' href='save.php?id=" . $client->id . "&remove_clientAccess_accessId=" . $object->id . "'>[remove]</a>";
@@ -90,7 +90,7 @@
 	</form>			
 	</fieldset>
 	</fieldset>
-<?
+<?php
 	}
 ?>
 
@@ -109,6 +109,6 @@
 	});
 	</script>
 	
-<?
+<?php
 	include("../footer.php");
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 function private_AccessCache_update()
 {

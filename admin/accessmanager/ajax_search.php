@@ -1,4 +1,4 @@
-<?
+<?php
 	require_once("../core.php");
 	$page = isset($_REQUEST['page']) ? 0 + $_REQUEST['page'] : 0;
 	$per_page = 20;
@@ -10,11 +10,11 @@
 <legend>Search access</legend>
 
 <form id="accessSearch">
-	<input type="text" class="normal_text" id="search" value="<?= $search ?>" />
+	<input type="text" class="normal_text" id="search" value="<?php echo $search ?>" />
 	<input type="button" id="searchSubmit" value="Search" class="small-button" />
 </form>
 
-<?
+<?php
 	if ($page != -1) {
 
 		$where = "adminName LIKE '%" . $search  . "%'";

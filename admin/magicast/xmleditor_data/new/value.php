@@ -10,7 +10,7 @@
 	{ "label": "Variable", "content": [
 		{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "variable", "hint": { "failure": true, "success": true } } ] } },
 		{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("variable.php");
 ?>
 		] } }
@@ -18,7 +18,7 @@
 	{ "label": "Property", "content": [
 		{ "type": "node", "data": { "name": "type", "content": [ { "type": "constant", "data": "property", "hint": { "failure": true, "success": true } } ] } },
 		{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("property.php");
 ?>
 		] } }

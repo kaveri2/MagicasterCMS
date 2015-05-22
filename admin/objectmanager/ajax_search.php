@@ -1,4 +1,4 @@
-<?
+<?php
 	require_once("../core.php");
 	$class = $_REQUEST['class'];
 	$page = isset($_REQUEST['page']) ? 0 + $_REQUEST['page'] : 0;
@@ -6,12 +6,12 @@
 	$search = isset($_REQUEST['search']) ? "" . $_REQUEST['search'] : "";
 ?>
 <fieldset class="grouping">
-<legend><?= $class ?> search</legend>
+<legend><?php echo $class ?> search</legend>
 <form>
-	<input type="text" class="normal_text" id="search" value="<?= $search ?>" />
+	<input type="text" class="normal_text" id="search" value="<?php echo $search ?>" />
 	<input type="button" id="searchSubmit" class="small-button" value="Search" />
 </form>
-<?
+<?php
 $search = strtolower($search);
 $where = "(LOWER(adminName) LIKE '%" . $search  . "%')";
 $objects = DB::search(

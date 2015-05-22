@@ -5,7 +5,7 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2012/etusivu/contentIcon.swf", "hint": {"failure": true, "success": true} } ] } },
 			{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 				{ "label": "Color", "type": "node", "data": { "name": "color", "content": [ { "type": "text","data": { "options": [
-<?
+<?php
 	include('../../xmleditor_data/p2_color_options.php');
 ?>
 				] } } ] } },
@@ -19,7 +19,7 @@
 					{ "label": "Popup Magicast Data", "type": "node", "data": { "name": "data", "content": [ { "type": "text", "data": { "multiline": true } } ] } },
 					{ "type": "node", "data": { "name": "bar", "content": [ 
 						{ "label": "Popup Magicast Bar Color", "type": "node", "data": { "name": "color", "content": [ { "type": "text","data": { "options": [
-<?
+<?php
 	include('../../xmleditor_data/p2_color_options.php');
 ?>
 						] } } ] } },
@@ -29,7 +29,7 @@
 							{ "type": "node", "data": { "name": "action", "content": [
 								{ "label": "Name", "type": "node", "data": { "name": "name", "content": [ { "type": "text", "data": { "multiline": false } } ] } },
 								{ "label": "Type", "type": "node", "data": { "name": "type", "content": [ { "type": "text", "data": { "options": [
-<?
+<?php
 	include('../../xmleditor_data/p2_action_type_options.php');
 ?>
 								] } } ] } },

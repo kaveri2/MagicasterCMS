@@ -5,7 +5,7 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2012/video.swf", "hint": {"failure": true, "success": true} } ] } },
 			{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 				{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("asset.php");
 ?>
 				] } },
@@ -18,7 +18,7 @@
 				{ "label": "Loop?", "type": "node", "data": { "name": "loop", "content": [ { "type": "boolean" } ] } },
 				{ "label": "Paused?", "type": "node", "data": { "name": "paused", "content": [ { "type": "boolean" } ] } },
 				{ "label": "Volume (%)", "type": "node", "data": { "name": "volumeValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 				] } },
@@ -33,7 +33,7 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2012/audio.swf", "hint": {"failure": true, "success": true} } ] } },
 			{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 				{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("asset.php");
 ?>
 				] } },
@@ -46,7 +46,7 @@
 				{ "label": "Loop?", "type": "node", "data": { "name": "loop", "content": [ { "type": "boolean" } ] } },
 				{ "label": "Paused?", "type": "node", "data": { "name": "paused", "content": [ { "type": "boolean" } ] } },
 				{ "label": "Volume (%)", "type": "node", "data": { "name": "volumeValue", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 				] } },
@@ -62,21 +62,21 @@
 				{ "type": "select", "data": { "options": [
 					{ "label": "Asset", "content": [
 						{ "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("asset.php");
 ?>
 						] } }
 					] },
 					{ "label": "Value", "content": [
 						{ "type": "node", "data": { "name": "value", "content":  [
-<?
+<?php
 	include("value.php");
 ?>
 						] } }
 					] }
 				] } },
 				{ "label": "Style", "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 				] } }
@@ -89,7 +89,7 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2012/animation.swf", "hint": {"failure": true, "success": true} } ] } },
 			{ "type": "node", "data": { "name": "parameters", "errorCatcher": true, "content": [ 
 				{ "label": "Asset", "type": "node", "data": { "name": "asset", "content": [
-<?
+<?php
 	include("asset.php");
 ?>
 				] } },
@@ -103,7 +103,7 @@
 				{ "label": "Loop?", "type": "node", "data": { "name": "loop", "content": [ { "type": "boolean" } ] } },
 				{ "label": "Paused?", "type": "node", "data": { "name": "paused", "content": [ { "type": "boolean" } ] } },
 				{ "label": "Style", "type": "node", "data": { "name": "style", "errorCatcher": true, "content": [ 
-<?
+<?php
 	include("../../xmleditor_data/style.php");
 ?>
 				] } }
@@ -140,12 +140,12 @@
 			{ "type": "node", "data": { "name": "value", "content": [ { "type": "constant", "data": "2012/timer.swf", "hint": {"failure": true, "success": true} } ] } },
 			{ "type": "node", "data": { "name": "parameters", "content": [
 				{ "label": "Interval (seconds, 0 = every frame)", "type": "node", "data": { "name": "intervalValue", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 				] } },
 				{ "label": "Repeats (0 = infinite)", "type": "node", "data": { "name": "repeatsValue", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 				] } },

@@ -30,7 +30,7 @@
 	<div id="content-head">
 		
 		<div id="content-head-left">
-			<h1><?= $path->id ? "Edit" : "New" ?> path</h1>
+			<h1><?php echo $path->id ? "Edit" : "New" ?> path</h1>
 		</div>
 		
 		<div id="content-head-right">
@@ -47,17 +47,17 @@
 	
 		<p>
 			<label for="adminName" class="top-label">Admin name</label>
-			<input class="text" type="text" name="adminName" id="adminName" value="<?= $path->adminName; ?>" />
+			<input class="text" type="text" name="adminName" id="adminName" value="<?php echo $path->adminName; ?>" />
 			<label class="top-label">Search (regular expression)</label>
-			<input type="text" name="search" value="<?= $path->search; ?>" />
+			<input type="text" name="search" value="<?php echo $path->search; ?>" />
 			<label class="top-label">Weight</label>
-			<input type="text" name="weight" value="<?= $path->weight; ?>" />
+			<input type="text" name="weight" value="<?php echo $path->weight; ?>" />
 			<label class="top-label">Access</label>
-			<div id="access"><?= $path->access->id ?></div>
+			<div id="access"><?php echo $path->access->id ?></div>
 			<label class="top-label">Data</label>
-			<div id="xmleditor_data"><textarea><?= $path->data ?></textarea></div>
+			<div id="xmleditor_data"><textarea><?php echo $path->data ?></textarea></div>
 			<label class="top-label">SEO</label>
-			<div id="xmleditor_seo"><textarea><?= $path->seo ?></textarea></div>
+			<div id="xmleditor_seo"><textarea><?php echo $path->seo ?></textarea></div>
 		</p>
 		<p>
 			<input id="save" name="save" type="submit" class="big-button" value="Save" />
@@ -82,6 +82,6 @@
 	});
 	</script>
 	
-<?
+<?php
 	include("../footer.php");
 ?>

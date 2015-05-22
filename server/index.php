@@ -28,7 +28,7 @@ function exception_handler($e) {
 		createEvent("Core.exception", "");
 	}
 	
-	echo("<?xml version='1.0' encoding='UTF-8' ?>\n" . "<response>" . Core::$output . "</response>");
+	echo("<?phpxml version='1.0' encoding='UTF-8' ?>\n" . "<response>" . Core::$output . "</response>");
 }
 set_exception_handler('exception_handler');
 
@@ -41,9 +41,9 @@ function ob_callback($buffer) {
 }
 ob_start("ob_callback");
 
-if (!$connection = mysql_connect($CONFIG['db_host'], $CONFIG['db_username'], $CONFIG['db_password'])) throw new Exception("");
-if (!mysql_select_db($CONFIG['db_database'], $connection)) throw new Exception("");
-mysql_query("SET NAMES 'utf8'", $connection);
+if (!$connection = mysqli_connect($CONFIG['db_host'], $CONFIG['db_username'], $CONFIG['db_password'])) throw new Exception("");
+if (!mysqli_select_db($CONFIG['db_database'], $connection)) throw new Exception("");
+mysqli_query("SET NAMES 'utf8'", $connection);
 
 DB::$connection = $connection;
 DB::$table_prefix = $CONFIG['db_table_prefix'];
@@ -159,4 +159,4 @@ session_write_close();
 
 header("Content-type: text/xml");
 ob_end_flush();
-echo("<?xml version='1.0' encoding='UTF-8' ?>\n" . "<response>" . Core::$output . "</response>");
+echo("<?phpxml version='1.0' encoding='UTF-8' ?>\n" . "<response>" . Core::$output . "</response>");

@@ -29,10 +29,10 @@
 
 <div id="content-head">
 	<div id="content-head-left">
-		<h1><?= $magicast->id ? "Edit" : "New" ?> magicast</h1>
+		<h1><?php echo $magicast->id ? "Edit" : "New" ?> magicast</h1>
 	</div>
 	<div id="content-head-right">
-<?	
+<?php	
 	if ($magicast->id) {
 		echo '<input class="big-button" type="button" id="backupButton" value="Load a backup" title="Load an older version of this Magicast"/>';
 	}
@@ -44,7 +44,7 @@
 <div id="templates">
 	<h3>Step 1: Select template</h3>
 	<p>
-<?
+<?php
 	$magicasts = DB::search(
 		array(
 			"class" => "Magicast", 
@@ -53,8 +53,8 @@
 	));
 	foreach ($magicasts as $tmpMagicast) {
 ?>
-	<a href="#" class="templateButton" magicastId="<?= $tmpMagicast->id ?>"><?= substr($tmpMagicast->adminName, 10) ?></a>
-<?
+	<a href="#" class="templateButton" magicastId="<?php echo $tmpMagicast->id ?>"><?php echo substr($tmpMagicast->adminName, 10) ?></a>
+<?php
 	}
 ?>
 	</p>
@@ -74,30 +74,30 @@
 
 	<p>
 		<label for="adminName" class="top-label">Admin name</label>
-		<input class="text" type="text" name="adminName" id="adminName" value="<?= $magicast->adminName; ?>" />
+		<input class="text" type="text" name="adminName" id="adminName" value="<?php echo $magicast->adminName; ?>" />
 	</p>
 
 	<p>
 		<label for="adminName" class="top-label">Public?</label>
-		<input class="text" type="text" name="public" id="public" value="<?= $magicast->public; ?>" />
+		<input class="text" type="text" name="public" id="public" value="<?php echo $magicast->public; ?>" />
 	</p>
 	
 	<p>
-		<div id="data"><textarea><?= $magicast->data; ?></textarea></div>
+		<div id="data"><textarea><?php echo $magicast->data; ?></textarea></div>
 	</p>
 
-	<input type="hidden" name="id" value="<?= $magicast->id; ?>" />
+	<input type="hidden" name="id" value="<?php echo $magicast->id; ?>" />
 	<input type="hidden" name="save" value="true" />
 		
 	<p>
 		<input class="big-button" type="submit" id="save" value="Save" title="ctrl+s" />
 	</p>
 	<p>
-<?
+<?php
 		foreach ($CONFIG['magicast']['action_buttons'] as $index => $b) {
 ?>	
-			<input class="big-button" type="button" id="actionButton_<?= $index ?>" value="<?= $b['label'] ?>" title="<?= $b['shortcut'] ?>" />
-<?
+			<input class="big-button" type="button" id="actionButton_<?php echo $index ?>" value="<?php echo $b['label'] ?>" title="<?php echo $b['shortcut'] ?>" />
+<?php
 		}
 ?>
 	</p>
@@ -145,23 +145,23 @@
 			$("#form").append("<textarea name=\"data\">" + $("#data").xmleditor("val") + "</textarea>");
 			return true;
 		});
-<?
+<?php
 		foreach ($CONFIG['magicast']['action_buttons'] as $index => $b) {
 ?>	
 
-		$("#actionButton_<?= $index ?>").click(function() {
+		$("#actionButton_<?php echo $index ?>").click(function() {
 			var xml = $("#data").xmleditor("val");					
-			$("body").append("<form id='form_action' method='post' action='<?= $b['url'] ?>' target='_blank' style='display: none;'><textarea name='data'>" + xml + "</textarea><input type='text' name='id' value='<?= $magicast->id ?>' /></form>");
+			$("body").append("<form id='form_action' method='post' action='<?php echo $b['url'] ?>' target='_blank' style='display: none;'><textarea name='data'>" + xml + "</textarea><input type='text' name='id' value='<?php echo $magicast->id ?>' /></form>");
 			$("#form_action").submit();
 			$("#form_action").remove();
 			return false;
 		});
 
-		$(document).bind('keydown', '<?= $b["shortcut"] ?>', function() {
-			$('input#actionButton_<?= $index ?>').trigger('click');
+		$(document).bind('keydown', '<?php echo $b["shortcut"] ?>', function() {
+			$('input#actionButton_<?php echo $index ?>').trigger('click');
 			return false;
 		});
-<?
+<?php
 		}
 ?>
 		$('input#adminName').focus();
@@ -191,7 +191,7 @@
 				}
 			});
 			
-			$.get('backup_search.php?magicastId=<?= $mId ?>', function(data){
+			$.get('backup_search.php?magicastId=<?php echo $mId ?>', function(data){
 				dialog.empty();
 				dialog.append(data);
 			}); 
@@ -208,7 +208,7 @@
 
 		$(document).on("click", ".magicastBackup_dialog a.link_pager", function(evt){
 			var page = $(this).attr('page');
-			$.get('backup_search.php?magicastId=<?= $mId ?>&page='+page, function(data){
+			$.get('backup_search.php?magicastId=<?php echo $mId ?>&page='+page, function(data){
 				dialog.empty();
 				dialog.append(data);
 			}); 
@@ -225,6 +225,6 @@
 	});
 	</script>
 
-<?
+<?php
 	include("../footer.php"); 
 ?>

@@ -2,20 +2,20 @@
 	require_once("../core.php");
 
 	$q 		= "SELECT COUNT(*) FROM " . DB::$table_prefix . "session WHERE updated > NOW() - INTERVAL 2 MINUTE";
-	$r 		= DB::mysql_query($q);
-	$row 	= mysql_fetch_row($r);	
+	$r 		= DB::mysqli_query($q);
+	$row 	= mysqli_fetch_row($r);	
 ?>
 <h3>Total sessions</h3>
 <p>
-	<span class="accent"><?= $row[0] ?></span>
+	<span class="accent"><?php echo $row[0] ?></span>
 </p>
-<?
+<?php
 	$sql = "SELECT COUNT(*) as c, name FROM " . DB::$table_prefix . "session AS t1 LEFT JOIN " . DB::$table_prefix . "client AS t2 ON (t1.clientId=t2.id) WHERE updated > NOW() - INTERVAL 2 MINUTE GROUP BY name";
-	$result = mysql_query($sql);
+	$result = mysqli_query($sql);
 	$counters = array();
 	$total = 0;
 	
-	while ($row = mysql_fetch_assoc($result)) {
+	while ($row = mysqli_fetch_assoc($result)) {
 	
 		$s = "" . $row['name'];
 		if (!$s) $s = "N/A";
@@ -61,10 +61,10 @@
 		}
 ?>
 	<tr>
-		<td style="vertical-align: top;"><h4><?= $key ?>:</h4><?= $sub1 ?></td>
-		<td style="vertical-align: top;"><h4><span class="accent"><?= $p ?> %</span> (<?= $a["count"] ?>)</h4><?= $sub2 ?></td>
+		<td style="vertical-align: top;"><h4><?php echo $key ?>:</h4><?php echo $sub1 ?></td>
+		<td style="vertical-align: top;"><h4><span class="accent"><?php echo $p ?> %</span> (<?php echo $a["count"] ?>)</h4><?php echo $sub2 ?></td>
 	</tr>
-<?
+<?php
 	}
 ?>
 </table>

@@ -6,8 +6,8 @@
 	$sql = "SELECT adminName FROM " . DB::$table_prefix . "access WHERE id=" . $id;
 	try
 	{
-		$result = DB::mysql_query($sql);
-		if ($row = mysql_fetch_object($result)) {
+		$result = DB::mysqli_query($sql);
+		if ($row = mysqli_fetch_object($result)) {
 			echo($row->adminName);
 		} else {
 			echo("N/A");

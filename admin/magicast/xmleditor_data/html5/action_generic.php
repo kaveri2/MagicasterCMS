@@ -6,7 +6,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -18,7 +18,7 @@
 					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "label": "Time (s)", "type": "node", "data": { "name": "time", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 						], "delay": true } }
@@ -43,7 +43,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -52,7 +52,7 @@
 					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setAsset" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 						], "delay": true } }
@@ -62,7 +62,7 @@
 					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setData" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 						], "delay": true } }
@@ -78,7 +78,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -87,7 +87,7 @@
 					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setText" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 						], "delay": true } }
@@ -103,7 +103,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -112,7 +112,7 @@
 					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setTextureAsset" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "type": "node", "data": { "name": "value", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 						], "delay": true } }
@@ -122,7 +122,7 @@
 					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "setTextureData" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "type": "node", "data": { "name": "value", "content": [ 
-<?
+<?php
 	include("value.php");
 ?>
 						], "delay": true } }
@@ -138,7 +138,7 @@
 		] } },
 		{ "type": "node", "data": { "name": "parameters", "content": [ 
 			{ "label": "Layer", "type": "node", "data": { "name": "layer", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 			], "delay": true } },
@@ -150,7 +150,7 @@
 					{ "type": "node", "data": { "name": "method", "content": [ { "type": "constant", "data": "seek" } ] } },
 					{ "type": "node", "data": { "name": "parameters", "content": [ 
 						{ "label": "Time (s)", "type": "node", "data": { "name": "time", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 						], "delay": true } }

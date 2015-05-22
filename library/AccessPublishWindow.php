@@ -1,4 +1,4 @@
-<?
+<?php
 class AccessPublishWindow
 {
 	public $access = null;
@@ -32,8 +32,8 @@ class AccessPublishWindow
 	public static function calculateAccessCache() {
 		$a = array();
 		$sql = "SELECT accessId, `start` AS granted FROM " . DB::$table_prefix . AccessPublishWindow::$table_name . " WHERE (`start` IS NULL OR `start`<NOW()) AND (`end` IS NULL OR `end`>NOW())";
-		$result = DB::mysql_query($sql);
-		while ($row = mysql_fetch_object($result)) {
+		$result = DB::mysqli_query($sql);
+		while ($row = mysqli_fetch_object($result)) {
 			$a[$row->accessId] = $row->granted;
 		}
 		return $a;

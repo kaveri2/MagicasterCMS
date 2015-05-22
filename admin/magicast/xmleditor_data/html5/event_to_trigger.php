@@ -1,29 +1,29 @@
 { "type": "select", "data": { "options": [
 	{ "label": "N/A", "content": [
 	] },
-<?
+<?php
 		foreach ($CONFIG['magicast/xmleditor_data/html5']['event_options'] as $option) {
 ?>
-	{ "label": "<?= $option['label'] ?>", "content": [
+	{ "label": "<?php echo $option['label'] ?>", "content": [
 		{ "label": "Delay (seconds)", "type": "node", "data": { "name": "delay", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 		] } },
-<?
+<?php
 			include($option['include_file']);
 ?>
 	] },
-<?
+<?php
 		}
 ?>
 	{ "label": "Other", "content": [
 		{ "label": "Delay (seconds)", "type": "node", "data": { "name": "delay", "content": [
-<?
+<?php
 	include("value.php");
 ?>
 		] } },
-<?
+<?php
 			include('event.php');
 ?>,
 		{ "label": "Arguments", "type": "list", "data": { "content": [

@@ -20,7 +20,7 @@
 ?>
 	<div id="content-head">
 		<div id="content-head-left">
-			<h1><?= $UGC_context->id ? "Edit" : "Create" ?> UGC Context</h1>
+			<h1><?php echo $UGC_context->id ? "Edit" : "Create" ?> UGC Context</h1>
 		</div>
 		<div id="content-head-right">
 			
@@ -33,11 +33,11 @@
 	<form id="form" method="post">
 		<p>
 			<label class="top-label">Admin name</label>
-			<input type="text" name="adminName" id="adminName" value="<?= $UGC_context->adminName; ?>" />
+			<input type="text" name="adminName" id="adminName" value="<?php echo $UGC_context->adminName; ?>" />
 			<label class="top-label">Name</label>
-			<input type="text" name="name" id="name" value="<?= $UGC_context->name; ?>" />
+			<input type="text" name="name" id="name" value="<?php echo $UGC_context->name; ?>" />
 			<label class="top-label">Access</label>
-			<div id="access"><?= $UGC_context->access->id ?></div>
+			<div id="access"><?php echo $UGC_context->access->id ?></div>
 		</p>
 		<p>
 			<input id="save" name="save" type="submit" class="big-button" value="Save" />
@@ -55,5 +55,5 @@
 	});
 	</script>
 	
-<?
+<?php
 	include("../footer.php");
